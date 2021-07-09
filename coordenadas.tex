@@ -1,0 +1,289 @@
+\section{Coordenadas y cambios de base.}
+\label{sec:coordenadas}
+
+\subsection*{Coordenadas}
+
+Si $E=\set{e_{1},...,e_{n}}$ es base de un espacio vectorial $V,$ entonces todo vector $v\in V$ se puede escribir de la
+forma
+\[
+ \label{coordenadas}
+ v=v_{1}e_{1}+...+v_{n}e_{n}.
+\]
+
+Esto es cierto para cualquier otro conjunto que genere $V.$ Lo importante de una base es que, debido a la independencia
+lineal de $E$, esta manera de escribir el vector es \emph{única}.
+
+Supongamos que podemos escribir $v=c_{1}e_{1}+...+c_{n}e_{n}.$ Entonces
+\begin{align*}
+ 0&=v-v \\
+ &=(v_{1}e_{1}+...+v_{n}e_{n})-(c_{1}e_{1}+...+c_{n}e_{n}) \\
+&=(v_{1}-c_{1})e_{1}+...+(v_{n}-c_{n})e_{n}.
+\end{align*}
+
+Como $E$ es linealmente independiente, entonces $v_{1}-c_{1}=...=v_{n}-c_{n}=0.$ Es decir,
+$$
+v_{1}=c_{1},  ...,v_{n}=c_{n}.
+$$
+En otras palabras, los escalares $v_{1},...,v_{n}$ en la expresi\'on (\ref{coordenadas}) es \emph{única.}
+
+Para simplificar la expresi\'on (\ref{coordenadas}) necesitamos el concepto de orden de una base.
+
+\begin{definicion}
+ Una base ordenada $\left( e_{1},...,e_{n} \right)$ es una sucesi\'on de vectores en $V$ tal que
+ $\set{e_{1},...,e_{n}}$ es una base.
+
+ Dos bases ordendas $\left( e_{1},...,e_{n} \right), \left( f_{1},...,f_{n} \right)$ son iguales si y solo si
+$$e_{1}=f_{1},..., e_{n}=f_{n}.$$
+\end{definicion}
+
+\begin{observacion}
+ Si intercambiamos un par de elementos de una base ordenada obtendremos una base ordenada distinta, aunque como
+conjuntos sean diferentes.
+\end{observacion}
+
+\begin{problema}
+ $$
+\left( \begin{bmatrix}
+        1 \\ 0
+       \end{bmatrix},
+       \begin{bmatrix}
+        0 \\ 1
+       \end{bmatrix}
+ \right)
+ $$ y
+ $$
+\left( \begin{bmatrix}
+        0 \\ 1
+       \end{bmatrix},
+       \begin{bmatrix}
+        1 \\ 0
+       \end{bmatrix}
+ \right)
+ $$
+ son dos bases ordenadas distintas de $\R^{2}.$
+\end{problema}
+
+Si consideramos $E$ como la base ordenada $\left( e_{1},...,e_{n} \right)$ entonces, la expresi\'on (\ref{coordenadas})
+se puede escribir como
+$$
+\begin{bmatrix}
+ v_{1} \\ ... \\ v_{n}
+\end{bmatrix}_{E}.
+$$
+Decimos que $v_{1},...,v_{n}$ son las cordenadas de $v$ en la base $E.$
+
+\begin{problema}
+ Si consideramos la base ordenada $$E=(\bm{1\\1}, \bm{0\\1},)$$ de $\R^{2},$ entonces
+ $$
+\bm{u\\v}=\bm{u\\v}_{E}.
+ $$
+
+ En cambio, si consideramos $$
+F=\left( \bm{0\\1}, \bm{1\\0} \right),
+ $$
+ entonces
+ $$
+\bm{u\\v}=\bm{v\\u}_{F}.
+ $$
+\end{problema}
+
+\begin{definicion}
+ La base $$
+\left( \bm{1\\0\\ \vdots \\ 0}, \bm{0\\1\\ \vdots \\ 0}, ..., \bm{0\\0\\ \vdots \\ 1} \right)
+ $$
+ de $\R^{n}$ se conoce como \emph{base can\'onica.}
+\end{definicion}
+
+\subsection*{Cambios de base}
+
+Supongamos que tenemos dos bases $B=\basis{e_{1},...,e_{n}}$ y $F=\basis{f_{1},..,f_{n}}$ de $\R^{n}.$ ¿Como podemos
+comparar las cordenadas de un vector $v\in \R^{n}$ en ambas bases? Digamos que sus coordenadas son
+$$
+v=\bm{v_{1}\\ \vdots \\ v_{n}}_{B} = \bm{w_{1} \\ \vdots \\ w_{n}}_{F}.
+$$
+
+Para realizar la comparación, digamos que
+las coordenadas de cada elemento de la base $F$ en la base $B$ son
+$$
+f_{k}=\bm{f_{k,1}\\ \vdots \\ f_{k,n}}_{B}.
+$$
+
+Ahora bien
+\begin{align*}
+ \bm{w_{1} \\ \vdots \\ w_{n}}_{F}
+ &=w_{1}f_{1}+...+w_{n}f_{n} \\
+ &=w_{1}\bm{f_{1,1}\\ \vdots \\ f_{1,n}}_{B}+...+w_{n}\bm{f_{n,1}\\ \vdots \\ f_{n,n}}_{B} \\
+ &=\bm{w_{1}f_{1,1}+...+w_{n}f_{n,1}\\  \vdots \\
+w_{1}f_{1,n}+...+w_{n}f_{n,n} }_{B},
+\end{align*}
+y como las coordenadas en una base son únicas, tenemos que
+\begin{align*}
+ \bm{v_{1}\\ \vdots \\ v_{n}} & = \bm{w_{1}f_{1,1}+...+w_{n}f_{n,1}\\  \vdots \\
+w_{1}f_{1,n}+...+w_{n}f_{n,n} } \\
+&= \bm{f_{1,1} & ... & f_{1,n} \\ \vdots & & \vdots \\ f_{n,1} & ... & f_{n,n}} \bm{w_{1} \\ \vdots \\ w_{n}}
+\end{align*}
+
+\begin{definicion}
+ $$P_{F,B}:=\bm{f_{1,1} & ... & f_{1,n} \\ \vdots & & \vdots \\ f_{n,1} & ... & f_{n,n}}$$ se conoce como \emph{matriz
+de paso} de $F$ a $B$. También decimos que es la matriz cambio de base de $F$ a $B$.
+\end{definicion}
+
+Así como podemos cambiar las coordenadas de la base $F$ a la base $B,$ podemos aplicar el mismo procedimiento para
+encontrar la matriz de paso de $B$ a $F$. Sin embargo, al ser el procedimiento inverso, basta encontrar la matriz
+inversa. En otras palabras.
+
+\begin{proposicion}
+\label{PBF}
+ $P_{B,F}=P_{F,B}^{-1}.$
+\end{proposicion}
+
+\begin{observacion}
+ El hecho de que $P_{F,B}$ sea invertible se debe a que esta formada por los vectores columna que son las coordenadas
+de cada elemento de la base $F$ en términos de $B.$ Estos vectores generen todo $\R^{n}$, que es equivalente a
+que la matriz $P_{F,B}$ sea invertible.
+\end{observacion}
+
+\begin{problema}
+ \begin{enumerate}
+  \item Verifique que $$F=\basis{
+\bm{1\\0\\0} , \bm{0 \\ -2 \\ 0} , \bm{1 \\ 0 \\ 1}
+  }$$ es una base de $\R^{3}.$
+  \item Si denotamos por $E$ la base estandar de $\R^{3}$, encuentre las matrices de paso $P_{F,E}$ y $P_{E,F}$.
+ \end{enumerate}
+
+\begin{solucion}
+ Por la proposición \ref{prop:1}, basta verificar que $F$ es un conjunto linealmente independiente. Ahora bien, por la
+proposición \ref{prop:2}, basta verificar que 
+ $$\begin{vmatrix}
+    1 & 0 & 1 \\ 0 & -2 & 0 \\ 0 & 0 & 1
+   \end{vmatrix}\neq 0.
+$$
+
+Aunque esto lo podemos hacer \emph{a mano}, usaremos $\texttt{WxMaxima}$ para hacer dichas cuentas. Primero
+introducimos la matriz, a partir de la cual calcularemos el determinante y la denotaremos por $P.$
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+P: matrix(
+ [1,0,1],
+ [0,-2,0],
+ [0,0,1]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\begin{pmatrix}1 & 0 & 1\cr 0 & -2 & 0\cr 0 & 0 & 1\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+Posteriormente, calculamos su determinante.
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i2)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+determinant(%);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+-2
+\end{math}
+%%%%%%%%%%%%%%%
+
+y concluimos que $F$ es una base.
+
+Note que
+$$
+\bm{1\\0\\0} , \bm{0 \\ -2 \\ 0} , \bm{1 \\ 0 \\ 1}
+$$
+estan ya dados en terminos de la base canónica $E$ y por tanto
+$$
+P_{F,E}=P.
+$$
+
+Por la proposición \ref{PBF}, sabemos que $P_{E,F}=P^{-1}$ y usando nuevamente \texttt{WxMaxima}, calculamos esta
+matriz inversa.
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i3)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+invert(P);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+\begin{pmatrix}1 & 0 & -1\cr 0 & -\frac{1}{2} & 0\cr 0 & 0 & 1\end{pmatrix}
+\end{math}.
+%%%%%%%%%%%%%%%
+
+\end{solucion}
+
+ 
+\end{problema}
+
+
+\subsection*{Ejemplos}
+
+\begin{problema}
+ \label{matriz:paso}
+ Encuentre las matrices de paso $P_{F,E}$ y $P_{E,F}$ para los siguientes casos.
+  \begin{enumerate}
+  \item $E$ la base canónica de $\R^{2}$, $F=\left(\bm{1\\0},\bm{0\\-1}\right)$,
+  \item $E$ la base canónica de $\R^{2}$, $F=\left(\bm{1\\0},\bm{1\\1}\right)$
+  \item $E$ la base canónica de $\R^{3}$, $F=\left(\bm{1\\0\\0},\bm{1\\1\\0},\bm{1\\1\\1}\right)$.
+ \end{enumerate}
+
+\end{problema}
+
+
+\begin{problema}
+ Encuentre las coordenadas de los siguientes vectores $v$, en las bases ordendas $F$ indicadas. Utilice el resultado en
+el ejercicio \ref{matriz:paso}.
+ \begin{enumerate}
+  \item $v=\bm{-1\\2}$, $F=\left(\bm{1\\0},\bm{0\\-1}\right)$,
+  \item $v=\bm{-1\\2}$, $F=\left(\bm{1\\0},\bm{1\\1}\right)$
+  \item $v=\bm{3\\-1\\5}$, $F=\left(\bm{1\\0\\0},\bm{1\\1\\0},\bm{1\\1\\1}\right)$.
+ \end{enumerate}
+
+\end{problema}
+
+\begin{problema}
+ Encuentre las coordendas de los elementos de la base canonica de $V$ en terminos de las bases ordenadas $F$ indicadas.
+Utilice el resultado en el ejercicio \ref{matriz:paso}.
+ \begin{enumerate}
+  \item $V=\R^{2}$, $F=\left(\bm{1\\0},\bm{0\\-1}\right)$,
+  \item $V=\R^{2}$, $F=\left(\bm{1\\0},\bm{1\\1}\right)$
+  \item $V=\R^{3}$, $F=\left(\bm{1\\0\\0},\bm{1\\1\\0},\bm{1\\1\\1}\right)$.
+ \end{enumerate} 
+\end{problema}
+

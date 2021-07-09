@@ -1,0 +1,136 @@
+\section{Ecuaciones Diferenciales Lineales Homog\'eneas de $n-$\'esimo Orden con Coeficientes Constantes}
+
+
+La ecuaci\'on caracter\'istica de la ecuaci\'on diferencial
+\[
+	\label{bron:10.1}
+	y^{(n)}+a_{n-1}y^{(n-1)}+...+a_{1}y'+a_{0}y=0
+\]
+con coeficientes constantes es
+\[
+	\label{bron:10.2}
+	\lam^{n}+a_{n-1}\lam^{n-1}+...+a_{1}\lam+a_{0}=0.
+\]
+
+
+
+
+La ecuaci\'on caracter\'istica de
+$$
+y^{(4)}-3y'''+2y''-y=0
+$$
+es
+$$
+\lam^{4}-3\lam^{3}+2\lam^{2}-1=0.
+$$
+
+
+\subsection{La soluci\'on general}
+
+
+Si las soluciones de la ecuaci\'on caracter\'istica
+$$
+\lam_{1},...,\lam_{n}
+$$ son todas distintas, la soluci\'on es
+\[
+	\label{bron:10.3}
+	y=c_{1}e^{\lam_{1}x}+...+c_{n}e^{\lam_{n}x}.
+\]
+
+
+
+
+Diremos que una ra\'iz $\lam_{k}$ tiene multiplicidad $p$ si $\left( \lam-\lam_{k} \right)^{p}$ es factor de la ecuaci\'on caracter\'istica, pero $\left( \lam-\lam_{k} \right)^{p+1}$ no.
+
+En este caso, podemos asociar $p$ soluciones linealmente independiente con $\lam_{k}:$
+$$
+e^{\lam_{k}x}, xe^{\lam_{k}x},..., x^{p-1}e^{\lam_{k}x}.
+$$
+
+
+\subsection{Ejemplos}
+
+
+\begin{problema}
+	Resuelva $$\begin{cases}
+		y'''+y'=0\\
+		y(0)=3, y'(0)=1, y''(0)=2
+	\end{cases}
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	Resuelva
+	$$\begin{cases}
+		y^{(4)}-2y^{(3)}+6y^{(2)}-10y^{(1)}+5y=0 \\
+		y(0)=1, y'(0)=0, y''(0)=1, y'''(0)=0.
+	\end{cases}
+	$$
+\end{problema}
+
+
+
+\subsection{Ejemplos}
+
+
+\begin{problema}
+	\label{bron:exmp:10.1}
+	Resuelva
+	$$
+	y'''-6y''+11y'-6y=0.
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{bron:10.2}
+	Resuelva
+	$$
+	y^{(4)}-9y''+20y=0.
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{bron:10.4}
+	Resuelva
+	$$
+	y'''-6y''+2y'+36y=0.
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{bron:10.6}
+	Resuelva
+	$$
+	y^{(4)}+8y'''+24y''+32y'+16y=0.
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{bron:10.7}
+	Resuelva
+	$$
+	\dfrac{d^{5}P}{dt^{5}}
+	-\dfrac{d^{4}P}{dt^{4}}
+	-2\dfrac{d^{3}P}{dt^{3}}
+	+2\dfrac{d^{2}P}{dt^{2}}
+	+\dfrac{dP}{dt}-P=0.
+	$$
+\end{problema}
+
+
+

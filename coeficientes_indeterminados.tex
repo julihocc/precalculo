@@ -1,0 +1,243 @@
+\section{M\'etodo de Coeficientes Indeterminados}
+
+
+Por el teorema \ref{bron:thm:8.4}, la soluci\'on de $L(y)=0$ está dada por la soluci\'on particular $y_{p}$ más la soluci\'on general $y_{h},$ la cuál es la soluci\'on de la ecuaci\'on lineal homog\'enea $L(y)=0.$
+
+
+
+En esta secci\'on, aprenderemos a obtener $y_{p},$ una vez que $y_{h}$ es conocida, a trav\'es del \emph{coeficientes indeterminados.}
+
+
+\subsection{Forma simple del m\'etodo}
+
+
+\begin{observacion}
+	Para aplicar este m\'etodo a la ecuaci\'on diferencial $L(y)=\phi(x),$ \emph{$\phi$ y TODAS sus derivadas} deben estar generadas por un conjunto \emph{finito} de funciones linealmente independientes
+	$$
+	\set{y_{1}(x),...,y_{n}(x)}.
+	$$
+\end{observacion}
+
+
+
+En ese caso, comenzaremos suponiendo que $y_{p}(x)$ es una combinanci\'on lineal de $y_{1}(x),...,y_{n}(x):$
+$$
+y_{p}(x)=A_{1}y_{1}(x)+...+A_{n}y_{n}(x)
+$$
+donde $A_{1},A_{2},...,A_{n}$ son constantes.
+
+
+
+A continuaci\'on, revisaremos algunos casos comunes, en los que podemos aplicar dicho m\'etodo.
+
+
+
+\subsection{Caso $\phi(x)=p_{n(x)}$}
+Si suponemos que $\phi(x)$ es un polinomio de grado $n,$ entonces
+\[
+	\label{bron:11.1}
+	y_{p}(x)=A_{n}x^{n}+A_{n-1}x^{n-1}+...+A_{1}x+A_{0}.
+\]
+
+
+
+
+{}
+Recordemos que la solución general de la ecuación $y''-y'-2y=0$ está dada por...
+\begin{align*}
+	y_{h}(x)=c_{1}e^{-x}+c_{2}e^{2x}
+\end{align*}
+
+{}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=10cm,keepaspectratio=true]{../ed_ejemplos/ed_ejemplos_p2/img_2-7.png}
+%	img_2-7.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=
+%	\label{fig:2-7}
+%\end{figure}
+
+
+
+\begin{problema}
+	\label{bron:exmp:11.1}
+	Resuelva
+	$$
+	y''-y'-2y=4x^{2}
+	$$
+\end{problema}
+
+
+
+
+\subsection{Caso $\phi(x)=ke^{\a x}$}
+Si suponemos que $\phi(x)$ es una funci\'on exponencial, entonces
+\[
+	\label{bron:11.1}
+	y_{p}(x)=Ae^{\a x}.
+\]
+
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:11.2}
+	Resuelva
+	$$
+	y''-y'-2y=e^{3x}.
+	$$
+\end{problema}
+
+
+
+
+\subsection{Caso $\phi(x)=ke^{\a x}$}
+Si suponemos que $\phi(x)$ es una funci\'on exponencial, entonces
+\[
+	\label{bron:11.2}
+	y_{p}(x)=Ae^{\a x}.
+\]
+
+
+
+
+\subsection{Caso $\phi(x)=k_{1}\sin(\b x)+k_{2}\cos(\b x)$}
+Si suponemos que $\phi(x)$ es una funci\'on senoidal, entonces
+\[
+	\label{bron:11.3}
+	y_{p}(x)=A\sin(\b x)+B\cos(\b x)
+\]
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:11.3}
+	Resuelva
+	$$
+	y''-y'-2y=\sin(2x).
+	$$
+\end{problema}
+
+
+
+\subsection{Generalizaciones}
+
+
+Si $\phi(x)=e^{\a x}p_{n}(x),$ entonces
+\[
+	\label{bron:11.4}
+	y_{p}=e^{\a x}\left( A_{n}x^{n}+...+A_{1}x +A_{0}\right).
+\]
+
+
+
+{}
+\begin{problema}
+	Resolver
+	\begin{align*}
+		y'' = e^{-x}x^2
+	\end{align*}
+	
+\end{problema}
+
+
+
+
+Si $\phi(x)=ke^{\a x}\sin(\b x)$ o $\phi(x)=ke^{\a x}\cos(\b x),$ entonces
+\[
+	\label{bron:11.5}
+	y_{p}(x)=A_{0}e^{\a x}\sin(\b x)+B_{0}e^{\a x}\cos(\b x).
+\]
+
+
+
+{}
+\begin{problema}
+	Resuelva 
+	\begin{align*}
+		y'' = e^{-x}\cos(3x)
+	\end{align*}
+	
+\end{problema}
+
+
+
+
+Aun más, si $\phi(x)=ke^{\a x}\sin(\b x)p_{n}(x)$ o $\phi(x)=ke^{\a x}\cos(\b x)p_{n}(x),$ entonces
+\[
+	\begin{split}
+		\label{bron:11.5}
+		y_{p}(x)=A_{0}e^{\a x}\sin(\b x)\left( A_{n}x^{n}+...+A_{1}x +A_{0}\right)\\+B_{0}e^{\a x}\cos(\b x)\left( B_{n}x^{n}+...+B_{1}x +B_{0}\right).
+	\end{split}
+\]
+
+
+
+
+\begin{observacion}
+	Si cualquier t\'ermino de $y_{p},$ salvo por los t\'erminos constantes, es tambi\'en un t\'ermino de $y_{h},$ entonces $y_{p}$ \emph{debe ser modificada} multiplicandola por $x^{m}.$
+	
+	
+	Aqu\'i $m$ es el entero positivo más pequeño tal que el producto $x^{m}y_{p}$ no tiene t\'erminos en común con $y_{h}.$
+\end{observacion}
+
+
+
+%%%%%%%%%%%%%%%%%
+{}
+\begin{problema}
+	Resuelve la ecuación
+	\begin{align*}
+		y''-y'-2y = \dfrac{1}{2}e^{-x}
+	\end{align*}
+	
+\end{problema}
+
+
+%%%%%%%%%%%%%%%%%% 
+
+\begin{observacion}
+	Si  $\phi(x)$ no tiene alguna de las formas anteriores o la ecuaci\'on diferencial no tiene coeficientes constantes, este m\'etodo no se puede aplicar.
+\end{observacion}
+
+
+\subsection{Principio de superposición}
+
+%%%%%%%%%%%%%%%%%
+{}
+Consideremos la ecuación diferencial 
+\begin{align*}
+	\label{superposicion}
+	L[y] = \phi_{1}(x) + \phi_{2}(x)
+\end{align*}
+donde $L$ es un operador diferencial lineal con coeficientes constantes de la forma 
+\begin{align*}
+	L[y] = y^{(n)}+...+a_{1}y'+a_{0}y
+\end{align*}
+
+
+
+%%%%%%%%%%%%%%%%%
+{}
+Digamos que $y_{h}(x)$ es la solución de la ecuación homogénea asociada, es decir, $$L[y_{h}]=0,$$ mientras que $y_{p1(x)}$ resuelve $$L[y_{p1}]=\phi_{1}(x)$$ y $y_{p2}(x)$, $$L[y_{p2}]=\phi_{2}(x).$$
+
+%%%%%%%%%%%%%%%%%
+{}
+Entonces $y(x)=y_{h}(x)+y_{p1}(x)+y_{p2}(x)$ resuelve la ecuación 
+$$
+L[y]=\phi_{1}(x)+\phi_{2}(x).
+$$
+
+%%%%%%%%%%%%%%%%%
+{}
+\begin{problema}
+	Resuelve la ecuación
+	\begin{align*}
+		y''-y'-2y=2e^{3x}-3t^{2}
+	\end{align*}
+	
+\end{problema}
+
+
+%%%%%%%%%%%%%%%%%% 

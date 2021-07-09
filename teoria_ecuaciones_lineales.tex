@@ -1,0 +1,223 @@
+\section{Ecuaciones Diferenciales Lineales}
+
+
+	Una ec. dif. lineal de $n-$\'esimo orden tiene la forma
+	\[
+		\label{bron:8.1}
+		b_{n}(x)y^{(n)}+\cdots+b_{1}(x)y'+b_{0}(x)y=g(x)
+	\]
+	donde $g(x)$ y los \emph{coeficientes} $b_{j}(x)$ dependen \emph{s\'olo} de $x.$
+
+
+
+	Si $g(x)\equiv 0,$ diremos que \eqref{bron:8.1} es \emph{homog\'enea.}\footnote{Observe que es homog\'enea en un sentido diferente a la secci\'on previa;} tambi\'en diremos que es de \emph{coeficientes constantes} si cada $b_{j}(x)$ es precisamente una constante.
+	
+
+
+
+	\begin{teorema}
+		\label{bron:thm:8.1}
+		Consideremos el problema de valor inicial dado por \eqref{bron:8.1} y $n$ condiciones iniciales dadas
+		\[
+			\label{bron:8.2}
+			y(x_{0})=c_{0}, \, y'(x_{0})=c_{1}, \, \cdots \, y^{(n-1)}=c_{n-1}.
+		\]
+		
+		Si $g(x)$ y $b_{j}(x), j=0,1,...,n$ son continuas en algún intervalo $\mathcal{I}$ que contiene a $x_{0}$ y si $b_{n}(x)\neq 0$ en $\mathcal{I},$ entonces el problema de valor inicial dado por \eqref{bron:8.1} y \eqref{bron:8.2} tiene una \emph{única} soluci\'on definida a trav\'es de $\mathcal{I}.$
+	\end{teorema}
+	
+
+
+
+	Cuando las condiciones en $b_{n}(x)$ en el teorema \ref{bron:thm:8.1} se satisfacen, podemos dividir \eqref{bron:8.1} y obtenemos
+	\[
+		\label{bron:8.3}
+		y^{(n)}+a_{n-1}(x)y^{(n-1)}+...+a_{0}(x)y=\phi(x)
+	\]
+	donde $$a_{j}(x)=\dfrac{b_{j}(x)}{b_{n}(x)}, \, j=0,1,\cdot, n-1$$ y
+	$\phi(x)=\frac{g(x)}{b_{n}(x)}.$
+	
+
+
+
+	Definimos el operador diferencial $L(y)$ por
+	\[
+		\label{bron:8.4}
+		L(y)\equiv y^{(n)}+a_{n-1}(x)y^{(n-1)}+...+a_{0}(x)y
+	\]
+	donde $a_{i}(x), \, i=0,1,...,n-1,$ son continuas en un intervalo de inter\'es.
+	
+
+
+
+	Entonces \eqref{bron:8.3} puede reescribirse como
+	\[
+		\label{bron:8.5}
+		L(y)=\phi(x),
+	\]
+	y en particular, una ec. dif. lineal homog\'enea se puede reescribir como
+	\[
+		\label{bron:8.6}
+		L(y)=0
+	\]
+	
+
+
+\subsection{Soluciones Linealmente Independientes}
+
+
+	Un conjunto de funciones
+	$$
+	\set{y_{1}(x),...,y_{n}(x)}
+	$$
+	es \emph{linealmente independiente} en $a\leq x \leq b$ si existe un conjunto de constantes
+	$$
+	\set{c_{1}, ..., c_{n}}
+	$$ \emph{no todas iguales a cero} (es decir, al menos una de estas debe ser diferente de cero) tales que
+	\[
+		\label{bron:8.7}
+		c_{1}y_{1}(x)+\cdots+c_{n}y_{n}(x)\equiv 0
+	\]
+	en $a\leq x \leq b.$
+
+
+
+	\begin{problema}
+		El conjunto
+		$$
+		\set{x, 5x, 1, \sin(x)}
+		$$es linealmente dependiente en $\R$ ya que con las constantes
+		$$c_{1}=-5, \, c_{2}=1, \, c_{3}=0, \, c_{4}=0,$$ se satisface \eqref{bron:8.7}:
+		$$
+		-5\cdot x+1\cdot 5x+0\cdot 1+0\cdot \sin(x)=0.
+		$$
+	\end{problema}
+	
+
+
+
+	\begin{observacion}
+		El conjunto $$c_{1}=\cdots =c_{n}=0$$ siempre resuelve \eqref{bron:8.7}. De hecho, \emph{si es la única soluci\'on}  diremos que $\set{y_{i}(x)}_{i=1,...,n}$ es \emph{linealmente independiente.}
+	\end{observacion}
+	
+
+
+
+	La ec. dif. lineal homog\'enea de orden $n$ $L(y)=0$ siempre tiene $n$ soluciones linealmente independientes. Si $y_{1}(x),...,y_{n}(x)$ representan tales soluciones, entonces la soluci\'on general de $L(y)=0$ es
+	\[
+		\label{bron:8.8}
+		y(x)=c_{1}y_{1}(x)+...+c_{n}y_{n}(x)
+	\]
+	donde $c_{1},...,c_{2}$ son constantes arbitrarias.
+
+
+\subsection{El Wronskiano}
+
+
+	El \emph{wronskiano} de un conjunto de funciones
+	$$
+	\set{z_{1}(x),...,z_{n}(x)}
+	$$en el intervalo $a\leq x \leq b,$ (que tengan al menos $n-1$ derivadas en dicho intervalo) es el determinante
+	$$
+	W(z_{1},...,z_{n})=
+	\begin{vmatrix}
+		z_{1} & z_{2} & \cdots & z_{n} \\
+		z'_{1} & z'_{2} & \cdots & z'_{n} \\
+		\vdots & & \cdots & \vdots \\
+		z^{(n-1)}_{1} & z^{(n-1)}_{2} & \cdots & z^{(n-1)}_{n} \\
+	\end{vmatrix}
+	$$
+
+
+
+	\begin{teorema}
+		\label{bron:thm:8.3}
+		\begin{enumerate}
+			\item   Si el Wronskiano de un conjunto de $n$ funciones definidas en un intervalo $a \leq x \leq b$ es diferente de cero, para al menos en un punto en este intervalo, entonces el conjunto de funciones es linealmente independiente.			
+			\item
+			Si el Wronskiano es \emph{identicamente cero} en dicho intervalo y cada uno de las funciones es una \emph{soluci\'on de la misma ecuaci\'on diferencial}, entonces el conjunto de funciones es linealmente dependiente.
+		\end{enumerate}
+	\end{teorema}
+	
+
+
+
+	\begin{observacion}
+		El teorema \ref{bron:thm:8.3} no es concluyente cuando el wronskiano es identicamente cero, pero las funciones no son soluciones de una misma ecuaci\'on diferencial.
+	\end{observacion}
+	
+
+
+\subsection{Ecuaciones No Homogeneas}
+
+
+	Sea $y_{p}$ cualquier soluci\'on particular de la ecuaci\'on \eqref{bron:8.5} y $y_{h}$ la soluci\'on \emph{general} de la ecuaci\'on homog\'enea asociada $L(y)=0,$ (a $y_{h}$ se le llama soluci\'on complementaria).
+
+
+	\begin{teorema}
+		\label{bron:thm:8.4}
+		La soluci\'on general de la ecuaci\'on $L(y)=\phi(x)$ es $y=y_{p}+y_{h}.$
+	\end{teorema}
+	
+
+
+\subsection{Ejemplos}
+
+
+	\begin{problema}
+		\begin{itemize}
+			\item Encuentre el wronskiano de $\set{e^{x},e^{-x}}.$
+			
+			\item Determine si el conjunto es linealmente independiente en $(-\infty,+\infty).$
+			
+			\item Verifique directamente la definición.
+		\end{itemize}
+		
+	\end{problema}
+	
+
+
+
+	\begin{problema}
+		\begin{itemize}
+			\item Encuentre el wronskiano de $\set{\sin(3x), \cos(3x)}.$
+			\item Determine si el conjunto es linealmente independiente en $(-\infty,+\infty).$
+			
+			\item Verifique directamente la definición.
+		\end{itemize}
+		
+	\end{problema}
+	
+
+
+
+	\begin{problema}
+		\begin{itemize}
+			\item Encuentre el wronskiano de $\set{x,x^{2}, x^{3}}.$
+			
+			\item Determine si el conjunto es linealmente independiente en $(-\infty,+\infty).$
+			
+			\item Verifique directamente la definición.
+		\end{itemize}
+	\end{problema}
+	
+
+
+
+	\begin{problema}
+		\begin{itemize}
+			\item  Encuentre el wronskiano de $\set{1-x, 1+x, 1-3x}.$
+			
+			\item Verifique directamente si el linealmente independiente a partir de  la definición.
+			
+			\item Realice nuevamente el ejercicio, sabiendo que las funciones son soluci\'on de la ecuaci\'on $y''=0.$
+		\end{itemize}
+		
+	\end{problema}
+	
+
+
+
+%%%%%%%
+%%%%%%%
+

@@ -1,0 +1,214 @@
+\section{Bases y dimensi\'on}
+
+\begin{definicion}
+ Sea $V$ un espacio vectorial y $B=\set{u_{1},...,u_{k}}\subset V.$ Decimos que $B$ es unconjunto \emph{linealmente
+independiente} si para cualesquiera $c_{1},...,c_{k}\in \R,$
+$$
+c_{1}u_{1}+...+c_{k}u_{k}=0 \Rightarrow c_{1}=...=c_{k}=0,
+$$
+es decir, la única relaci\'on lineal entre los elementos de $B$ es la trivial. En otro caso, decimos que $B$ es
+\emph{linealmente dependiente.}
+\end{definicion}
+
+\begin{definicion}
+ Decimos que $B\subset V$ es una base de $V$ si:
+ \begin{enumerate}
+  \item $V=\gen{B}$ y
+  \item $B$ es linealmente independiente.
+ \end{enumerate}
+
+\end{definicion}
+
+\begin{observacion}
+Es decir, $B$ es un base si cualquier $v\in V$ es una combinaci\'on lineal de sus elementos, no falta informaci\'on, y
+ninguno de los elementos de la base es combinaci\'on lineal de los restantes, es decir, no sobra informaci\'on. Una vez
+que tenemos una base, toda lo que necesitamos saber sobre el espacio vectorial se puede obtener a partir de los
+elementos de la base. 
+\end{observacion}
+
+\begin{proposicion}
+Toda base de un espacio vectorial tiene el mismo número de elementos. 
+\end{proposicion}
+
+\begin{definicion}
+\begin{enumerate}
+ \item  Si $B=\set{u_{1},...,u_{n}}$ es una base de $V,$ decimos que $n$ es la \emph{dimensi\'on} de $V$ y escribimos
+ $\dim{V}=n.$
+ \item  Si $T:V\to W$ es una transformaci\'on lineal decimos que $\dim(\ker{T})$ es la \emph{nulidad} de $T$ y la
+denotamos por $\nul{T}.$
+\item Si $T:V\to W$ es una transformaci\'on lineal decimos que $\dim(\Im{T})$ es el rango de $T$ y la
+denotamos por $\ran{T}.$
+\end{enumerate}
+\end{definicion}
+
+Determinar si un conjunto forma una base de $\R^{n}$ puede ser bastante laborioso. Sin embargo, las siguientes dos
+proposiciones, que se presentan sin prostración, sirven como criterios avanzados para determinar si un conjuntos es
+base.
+
+\begin{proposicion}
+\label{prop:1}
+ Si $n=\dim{V},$ cualquier conjunto $B\subset V$ linealmente independiente con $n$ elementos es una base de $V.$
+\end{proposicion}
+
+\begin{proposicion}
+\label{prop:2}
+ $B=\set{\bm{a_{1,1}\\ \vdots \\ a_{1,n}},...,\bm{a_{n,1}\\ \vdots \\ a_{n,n}}}$ es un conjunto de vectores linealmente
+independientes en $\R^{n}$ si y solo si
+$$
+\begin{vmatrix}
+ a_{1,1} & ... & a_{1,n} \\
+ \vdots & & \vdots \\
+ a_{n,1} & ... & a_{n,n} \\
+\end{vmatrix}
+$$
+\end{proposicion}
+
+\begin{problema}
+ Determine si
+  $$B'=\set{\begin{bmatrix}
+         1 \\ 0
+        \end{bmatrix},
+        \begin{bmatrix}
+         1 \\ 1
+        \end{bmatrix}
+}$$ es base de $\R^{2}$.
+\end{problema}
+
+
+\begin{solucion} Sabemos que
+ $$B=\set{\begin{bmatrix}
+         1 \\ 0
+        \end{bmatrix},
+        \begin{bmatrix}
+         0 \\ 1
+        \end{bmatrix}
+}$$
+es una base de $\R^{2}.$ Entonces $\dim{\R^{2}}=2.$
+
+Pero como
+$$\begin{vmatrix}
+   1 & 1 \\
+   0 & 1
+  \end{vmatrix} = 1 \neq 0,
+$$ entonces
+ $$B'=\set{\begin{bmatrix}
+         1 \\ 0
+        \end{bmatrix},
+        \begin{bmatrix}
+         1 \\ 1
+        \end{bmatrix}
+}$$
+es un conjunto de 2 vectores \emph{linealmente independientes}. Por tanto, $B'$ tambi\'en es una base de $\R^{2}.$
+\end{solucion}
+
+
+\begin{problema}
+ Encuentre una base para $\ker{T}$ y otra para $\Im{T},$ para la transformaci\'on definida en el ejercicio de muestra
+\ref{trans_exmp}. Indique cuál es la dimensi\'on de cada espacio. 
+\end{problema}
+
+\begin{solucion}
+ Como ya vimos en el ejercicio de muestra \ref{texmp:ker},
+  $$
+\ker(T)=\gen{\begin{bmatrix}
+   -2 \\ 1 \\ 1
+  \end{bmatrix}}.
+  $$
+
+  Consideremos la ecuaci\'on
+  $$
+c_{1}\begin{bmatrix}
+   -2 \\ 1 \\ 1
+  \end{bmatrix}=0,
+  $$
+es decir $$
+\begin{bmatrix}
+   -2c_{1} \\ c_{1} \\ c_{1}
+  \end{bmatrix}=
+  \begin{bmatrix}
+   0 \\ 0 \\ 0
+  \end{bmatrix}.
+  $$
+  La única soluci\'on es $c=0$ y por tanto $$
+B=\set{\begin{bmatrix}
+   -2 \\ 1 \\ 1
+  \end{bmatrix}}
+  $$
+  es un conjunto linealmente independiente.
+
+  Por tanto, $B$ es una base de $\ker{T}$ y $\nul{T}=1.$
+
+De manera similar, en el ejercicio de muestra \ref{texmp:im},
+$$
+\Im(T)=\gen{\begin{bmatrix}
+     1 \\ 0 \\ 2
+    \end{bmatrix}, \begin{bmatrix}
+         2 \\ -1 \\ 7
+        \end{bmatrix}}.
+$$
+
+Entonces \begin{align*}
+          c_{1}\begin{bmatrix}
+     1 \\ 0 \\ 2
+    \end{bmatrix}+c_{2} \begin{bmatrix}
+         2 \\ -1 \\ 7
+        \end{bmatrix}&=
+        \begin{bmatrix}
+         0 \\ 0\\ 0
+        \end{bmatrix}\\
+        \Rightarrow
+        \begin{bmatrix}
+         c_{1}+c_{2} \\ -c_{2} \\ 2c_{1}+7c_{2}
+        \end{bmatrix}&=
+        \begin{bmatrix}
+         0 \\ 0\\ 0
+        \end{bmatrix}\\
+\Rightarrow c_{1}=c_{2}&=0.
+         \end{align*}
+         
+Por tanto, $$\set{\begin{bmatrix}
+     1 \\ 0 \\ 2
+    \end{bmatrix}, \begin{bmatrix}
+         2 \\ -1 \\ 7
+        \end{bmatrix}}$$  es un conjunto linealmente independiente,  y por tanto una base de $\Im(T).$ Entonces
+$\ran{T}=2.$  
+
+\end{solucion}
+
+Finalmente, enunciaremos una de las proposicones importantes en nuestro curso. Si $T:V\to W$ es una transformaci\'on
+lineal, tenemos ls siguiente relaci\'on entre las dimensiones de $V, \ker{T}$ e $\Im{T}.$
+\begin{proposicion}[Teorema de la dimensi\'on]
+\label{thm:dim}
+$$\dim{V}=\nul{T}+\ran{T}.$$
+\end{proposicion}
+
+\subsection*{Ejemplos}
+
+\begin{problema}
+ Determine si el conjunto $E$ es base del espacio vectorial $V.$
+ \begin{enumerate}
+  \item $E=\set{\bm{1\\0},\bm{0\\-1}}$, $V=\R^{2}$,
+  \item $E=\set{\bm{1\\0},\bm{1\\1}}$, $V=\R^{2}$,
+  \item $E=\set{\bm{1\\0\\0},\bm{1\\1\\0},\bm{1\\1\\1}}$, $V=\R^{3}.$
+ \end{enumerate}
+
+\end{problema}
+
+
+\begin{problema}
+ Para cada una de las transformaciones lineales $T:V \to W,$ del ejercicio \ref{exe:trans}, encuentre
+ \begin{enumerate}
+  \item Una base de $\ker{T},$
+  \item Una base de $\Im{T},$
+  \item $\nul{T},$
+  \item $\ran{T},$
+\end{enumerate}
+y verifique la afirmaci\'on del teorema \ref{thm:dim}.
+\end{problema}
+
+
+
+
+
+
+

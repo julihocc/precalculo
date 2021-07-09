@@ -1,0 +1,191 @@
+
+%403
+\section{Determinantes}
+
+\subsection{Determinantes de Segundo Orden}
+
+{Definición}
+	\begin{definicion}
+		$$
+		\begin{vmatrix}
+			a & b \\ c & d
+		\end{vmatrix}=ad-bc.
+		$$
+	\end{definicion}
+	
+
+
+
+	\begin{problema}
+		$$
+		\begin{vmatrix} 2 & 3 \\ -1 & -2 \end{vmatrix}=
+		$$
+	\end{problema}
+	
+
+
+
+	Si consideremos el siguiente sistema de ecuaciones
+	\[
+		\begin{cases}
+			a_{1}x+b_{1}y=c_{1}\\
+			a_{2}x+b_{2}y=c_{2}
+		\end{cases}...
+	\]
+	
+
+
+
+	...y definimos
+	\begin{align*}
+		\Delta&=\begin{vmatrix} a_{1} & b_{1} \\ a_{2} & b_{2} \end{vmatrix}\\
+		\Delta_{x}&=\begin{vmatrix} c_{1} & b_{1} \\ c_{2} & b_{2} \end{vmatrix}\\
+		\Delta_{y}&=\begin{vmatrix} a_{1} & c_{1} \\ a_{2} & c_{2} \end{vmatrix}...
+	\end{align*}
+
+
+
+	...entonces
+	\[
+		\label{spi:28.2}
+		\begin{split}
+			x&=\dfrac{\Delta_{x}}{\Delta}\\
+			y&=\dfrac{\Delta_{y}}{\Delta}
+		\end{split}
+	\]
+	
+
+
+
+	\begin{problema}
+		Resuelva el sistema
+		$$\begin{cases}
+			2x+3y=8\\
+			x-2y=-3
+		\end{cases}
+		$$
+	\end{problema}
+	
+
+\subsection{Ejemplos}
+
+
+	El m\'etodo de soluci\'on de sistemas de ecuaciones linales, por medio de determinantes, se conoce como Regla de Cramer.
+
+
+
+	\begin{problema} Resuelva el siguiente sistema por la Regla de Cramer
+		\label{spi:28.4a}
+		$$
+		\begin{cases}
+			4x+2y=5\\
+			3x-4y=1
+		\end{cases}
+		$$
+	\end{problema}
+	
+
+
+
+	\begin{problema} Resuelva el siguiente sistema por la Regla de Cramer
+		\label{spi:28.4b}
+		$$
+		\begin{cases}
+			3u+2v=18\\
+			-5u-v=12
+		\end{cases}
+		$$
+	\end{problema}
+	
+
+
+\subsection{Sistemas Indeterminados}
+
+
+	Un sistema de $ n $ ecuaciones con $ n $ incognitas tiene una única solución si y solo si su determinante principal $ \Delta \neq 0. $  
+	
+	En este caso, decimos que el sistema es consistente.
+
+
+
+	Si $ \Delta =0 $, entonces o bien existen multiples soluciones, o bien no existe alguna en absoluto.
+	
+	En cualquier caso, decimos que el sistema es inconsistente.
+
+
+
+	Determine si 
+	$$\begin{cases}
+		5x-2y=10\\
+		10x-4y=20
+	\end{cases}$$
+	es consistente; y de no ser el caso, explique que sucede con las soluciones.
+
+
+
+	Determine si 
+	$$\begin{cases}
+		5x+3y=15\\
+		10x+6y=60
+	\end{cases}$$
+	es consistente; y de no ser el caso, explique que sucede con las soluciones.
+
+
+
+
+\subsection{Ejemplos}
+
+
+	\begin{problema}
+		\begin{align*}
+			2x-y&=4\\
+			x+y&=5
+		\end{align*}
+		
+	\end{problema}
+	
+
+
+
+	\begin{problema}
+		\begin{align*}
+			5x+2y&=3\\
+			2x+3y&=-1
+		\end{align*}
+		
+	\end{problema}
+	
+
+
+
+	\begin{problema}
+		\begin{align*}
+			2x+3y=3\\
+			6y-6x=1
+		\end{align*}
+		
+	\end{problema}
+	
+
+
+
+	\begin{problema}
+		\begin{align*}
+			5y&=3-2x\\
+			3x&=2y+1
+		\end{align*}
+		
+	\end{problema}
+	
+
+
+
+	\begin{problema}
+		\begin{align*}
+			\dfrac{x-2}{3}+\dfrac{y+1}{6}=2\\
+			\dfrac{x+3}{4}-\dfrac{2y-1}{2}=1
+		\end{align*}
+		
+	\end{problema}
+	
+

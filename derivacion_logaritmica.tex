@@ -1,0 +1,136 @@
+\section{Derivación logarítmica}
+
+
+    Recordemos que $y=e^{x}$ si y solo si $x=\ln(y),$ por lo cual $\ln(y)$ solamente está definido para $y>0.$ Dos
+    propiedades fundamentales del logaritmo son las siguientes:
+    \begin{enumerate}
+        \item $\ln(ab)=\ln(a)+\ln(b),$
+        \item $\ln(a^{b})=b\ln(a).$
+    \end{enumerate}
+
+
+    De esto se deduce, usando leyes de los exponentes, que $\ln\left( \frac{a}{b} \right)=\ln(a)-\ln(b).$
+
+
+    Por regla de la cadena,
+    $$
+    \dfrac{d}{dx}\ln(y)=\dfrac{d}{dy}\ln(y)\dfrac{dy}{dx},
+    $$
+    es decir,
+    $$
+    \left( \ln(y) \right)'=\dfrac{y'}{y}.
+    $$
+
+
+    De esto se deduce que
+    \[
+        \label{form:log}
+        y'=y\left( \dfrac{d}{dx}\ln(y) \right).
+    \]
+
+
+    Esta forma de derivar, conocida como \emph{derivación logarítmica}, es especialmente útil si necesitamos derivar
+    funciones que involucren multiplicación, división, exponenciación y radicales.
+
+
+
+    \begin{problema}
+        Si $y=\dfrac{x+1}{\sqrt{x-2}},$ encontrar $y'.$
+    \end{problema}
+
+
+{Solución}
+    Primero, escribimos $y=(x+1)(x-2)^{-1/2}.$ Entonces
+    $$
+    \ln(y)=\ln(x+1)-\dfrac{1}{2}\ln(x-2),
+    $$
+    de donde
+    $$
+    \dfrac{d}{dx}\ln(y)=\dfrac{1}{1+x}-\dfrac{1}{2}\left( \dfrac{1}{x-2} \right).
+    $$
+
+
+
+    Simplificando la última expresión obtenemos
+    $$
+    \dfrac{d}{dx}\ln(y)=\dfrac{x-3}{2(x+1)(x-2)},
+    $$
+    de donde obtenemos
+    $$
+    y'=\left( \dfrac{x+1}{(x-2)^{1/2}} \right)\left( \dfrac{x-3}{2(x+1)(x-2)} \right),
+    $$
+    y simplificando obtenemos,
+    $$
+    y'=\dfrac{x-3}{2(x-2)^{3/2}}.
+    $$
+
+
+
+    De hecho, podemos obtener la fórmula para la derivada del cociente usando la fórmula (\ref{form:log}). En efecto,
+    $$
+    \ln\left( \dfrac{f}{g} \right)=\ln(fg^{-1})=\ln(f)-\ln(g).
+    $$
+
+
+
+    Derivando obtenemos
+    $$
+    \dfrac{d}{dx} \ln\left( \dfrac{f}{g} \right)=\dfrac{f'}{f}-\dfrac{g'}{g}.
+    $$
+
+
+
+    Entonces
+    $$\left( \dfrac{f}{g} \right)'=\left( \dfrac{f}{g} \right)\left( \dfrac{f'}{f}-\dfrac{g'}{g}
+    \right)=\dfrac{f'g-g'f}{g^{2}}.
+    $$
+
+
+    
+    Otro ejemplo del uso de la derivada es el siguiente. Supongamos que $y=x^{\a},$ con $x\neq0.$ Entonces
+    $
+    \ln(y)=\a\ln(x),
+    $
+    y por tanto
+    $$
+    \dfrac{d}{dx}\ln(y)=\dfrac{\a}{x}.
+    $$
+    Entonces
+    $y'=\left( x^{\a} \right)\left( \a x^{-1} \right)=\a x^{\a-1}.$
+
+
+    
+    Por último, derivaremos $y=\ln\abs{x}.$ Observe que solamente necesitamos deducir el caso cuando $x<0,$ es decir
+    $\abs{x}=-x.$ En esta situación $y=\ln(-x)$y por regla de la cadena, sustituyendo $u=-x, \, y=\ln(u)$
+    $$
+    \dfrac{dy}{dx}=\dfrac{dy}{du}\dfrac{du}{dx}=\dfrac{1}{u}u'=\dfrac{u'}{u}.$$
+    Pero $u'=-1, $ y por tanto $\dfrac{d}{dx}\ln(-x)=\dfrac{-1}{-x}=\dfrac{1}{x}.$ Entonces, siempre que $x\neq 0,$
+    $$
+    \dfrac{d}{dx}\ln\abs{x}=\dfrac{1}{x.}
+    $$
+
+
+
+
+    \begin{problema}
+        Encuentre $y'$ \emph{usando derivación logarítmica.}
+        \begin{enumerate}
+            \item $y=\dfrac{x^{3/4}\sqrt{x^{2}+1}}{(3x+2)^{5}},$
+            \item $y=x^{\sqrt(x)},$
+            \item $y=\ln(e^{-x}+xe^{-x}),$
+            \item $y=\dfrac{x}{1-\ln(x-1)}$
+            \item $y=x^{x},$
+            \item $y=x^{\sin(x)},$
+            \item $x^{y}=y^{x}.$
+        \end{enumerate}
+        
+    \end{problema}
+
+
+    \begin{problema}
+        Use la definición de derivada para demostrar que
+        $$
+        \lim_{x\to 0}\dfrac{\ln(1+x)}{x}=1.
+        $$
+    \end{problema}
+

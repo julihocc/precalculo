@@ -1,0 +1,383 @@
+\section{Transformada Inversa de Laplace}
+
+%\subsection{Definici\'on}
+
+
+ \subsection{Definici\'on}
+ Una \emph{transformada inversa de Laplace} de $F(s),$ denotada por $\lapin{F(s)},$ es una funci\'on $f(x)$ tal que
+ $$
+ \lap{f(x)}=F(s).
+ $$
+
+
+
+ La manera más práctica de encontrar las inversas es identificar, en una tabla de transformadas, la funci\'on $F(s)$ como una transformada de Laplace de una funci\'on $f(x).$
+ 
+
+
+
+
+	
+	Generalmente, esto se hace manipulando algebraicamente $F(s).$
+
+
+\subsection{Manipulaci\'on de denominadores}
+
+
+	Para poder encontrar transformadas inversas de Laplace, necesitaremos manipular expresiones algebraicas.
+	
+
+{Métodos algebraicos}
+	Especialmente, necesitaremos dos técnicas:
+	\begin{itemize}
+		\item Complemento de cuadrados. 
+		\item Fracciones parciales. 
+	\end{itemize}
+
+	
+{Complemento de cuadrados}
+Si $p(x)=ax^2+bx+c,$ entonces
+$$
+p(x)=a\left( x-h \right)^2+k,
+$$ donde $h=-\dfrac{b}{2a}$ y $k=p(h).$
+
+
+{Fracciones parciales}
+Otro m\'etodo útil que se recomienda repasar es la
+ \href{http://mathworld.wolfram.com/PartialFractionDecomposition.html}{descomposici\'on en fracciones parciales.}
+
+
+{Linealidad}
+
+ 
+ \begin{proposicion}
+  \label{bron:prop:22.1}
+  Si $\lap{f(x)}=F(s),$ $\lap{g(x)}=G(s)$ y $c_{1},c_{2}\in \R,$ entonces
+  $$
+  \lapin{c_{1}F(s)+c_{2}G(s)}=c_{1}f(x)+c_{2}g(x).
+  $$
+ \end{proposicion}
+
+
+
+\subsection{Ejemplos}
+
+
+ \begin{problema}
+  \label{bron:exmp:22.1}
+  Encontrar $\lapin{\dfrac{1}{s}}$
+ \end{problema}
+
+
+
+ \begin{problema}
+  \label{bron:exmp:22.2}
+  Encontrar $\lapin{\dfrac{1}{s-8}}$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{bron:exmp:22.3}
+  Encontrar $\lapin{\dfrac{s}{s^{2}+6}}$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{bron:exmp:22.4}
+  Encontrar $\lapin{\dfrac{5s}{\left( s^{2}+1 \right)^{2}}}$
+ \end{problema}
+
+
+
+%
+% \begin{problema}
+%  \label{bron:exmp:22.5}
+%  Encontrar $\lapin{\dfrac{1}{\sqrt{s}}}$
+% \end{problema}
+%
+%
+
+
+ \begin{problema}
+  \label{bron:exmp:22.6}
+  Encontrar $\lapin{\dfrac{s+1}{s^{2}-9}}$
+ \end{problema}
+
+
+
+% \section{Complemento de cuadrados}
+% 
+% 
+%  Cualquier funci\'on cuadrática se puede reescribir en la forma
+%  $$
+%  f(x)=a(x-h)^2+k,
+%  $$
+%  por el m\'etodo de \emph{complementos de cuadrado.}
+% 
+% 
+% 
+%   El punto $(h,k)$ se llama \emph{v\'ertice,} y corresponde al \emph{extremo} de la parábola
+%   $$
+%   y=a(x-h)^2+k.
+%   $$
+% 
+% 
+% 
+%  La f\'ormula para encontrar el v\'ertice de la parábola
+%  $y=f(x)=ax^2+bx+c$ es
+%  $$\begin{cases}
+%     h=-\dfrac{b}{2a}\\
+%     k=f(h).
+%    \end{cases}
+% $$
+% 
+% 
+% 
+%  Para completar el cuadrado, podemos usar el \emph{m\'etodo de divisi\'on sint\'etica:}
+%  \begin{center}
+% \begin{tabular}{l|lll}
+% $h$ & $a$ & $b$ & $c$\\
+%   & $\downarrow$ & $+ah$ & $\dots$\\\hline
+%   & $a$ & $\dots$ & $k$
+%  \end{tabular}
+%  \end{center}
+% 
+% 
+% \subsection{Ejemplos}
+% 
+%   \begin{problema}
+%       Complete el cuadrado de
+%  $$y=x^2-4x+7.$$
+%   \end{problema}
+% 
+% 
+% 
+% 
+%  \begin{problema}
+%   Complete el cuadrádo de
+%   $$
+%   y=3x^2+30x+63.
+%   $$
+%  \end{problema}
+% 
+% 
+% 
+% 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.7}
+%   Encuentre
+%   $$
+%   \lapin{\dfrac{s}{(s-2)^{2}+9}}
+%   $$
+%  \end{problema}
+% 
+% 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.8}
+%   Encuentre
+%   $$
+%   \lapin{\dfrac{1}{s^{2}-2s+9}}
+%   $$
+%  \end{problema}
+% 
+% 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.9}
+%   Encuentre
+%   $$\lapin{\dfrac{s+4}{s^{2}+4s+8}}$$
+%  \end{problema}
+% 
+% 
+% 
+%  \section{Fracciones parciales}
+% 
+% 
+% {Ejemplo}
+% \begin{align*}
+%  \dfrac{1}{x-1}+\dfrac{1}{2x+1}
+%  &= \dfrac{(2x+1)+(x-1)}{(x-1)(2x+1)} \\
+%  &= \dfrac{3x}{2x^{2}-x-1}
+% \end{align*}
+% 
+% {}
+% El proceso inverso se conoce como \emph{fracciones parciales}.
+% 
+% {}
+% En esta sección supondremos que $$r(x)=\dfrac{P(x)}{Q(x)}$$ es una función racional, con $P,Q$ polinomios tales que el grado de $P$ es estrictamente menor que el de $Q$.
+% 
+% 
+% {Caso 1}
+% Supongamos que podemos factorizar
+% \begin{align*}
+%  Q(x) = \left( a_{1}x+b_{1} \right)...\left( a_{n}x+b_{n} \right)
+% \end{align*}
+% sin factores repetidos. En este caso,
+% \begin{align*}
+%  \dfrac{P(x)}{Q(x)} =
+%  \dfrac{A_{1}}{a_{1}x+b_{1}}+...+\dfrac{A_{n}}{a_{n}x+b_{n}}.
+% \end{align*}
+% 
+% {}
+% \begin{problema}
+%  \label{pre:exmp:9.8.1}
+% Encuentre la descomposición en fracciones parciales de
+% \begin{align*}
+%  \dfrac{5x+7}{x^{3}+2x^{2}-x-2}.
+% \end{align*}
+% \end{problema}
+% 
+% 
+% {Caso 2}
+% Suponga que la factorización de $Q(x)$ contiene el factor lineal $ax+b$ repetido $k$ veces, es decir, $(ax+b)^{k}$ es un factor de $Q(x)$.
+% 
+% Entonces, en el caso de tal factor, la descomposición en fracciones parciales de $P(x)/Q(x)$ contiene
+% \begin{align*}
+%  \dfrac{A_{1}}{ax+b}+\dfrac{A_{2}}{\left( ax+b \right)^{2}}+...+\dfrac{A_{k}}{\left( ax+b \right)^{k}}
+% \end{align*}
+% 
+% {}
+% \begin{problema}
+%  \label{pre:exmp:9.8.2}
+%  Encuentre la descomposición en fracciones parciales de
+%  \begin{align*}
+%  \dfrac{x^{2}+1}{x\left( x-1
+%  \right)^{3}}
+% \end{align*}
+% \end{problema}
+% 
+% 
+% {Caso 3}
+% Supongamos que la factorización completa de $Q(x)$ contiene factores cuadráticos irreducibles $ax^{2}+bx+c$. Entonces, en el caso de tal facto, la descomposición en fracciones parciales de $P(x)/Q(x)$ tiene un termino de la forma
+% \begin{align*}
+%  \dfrac{Ax+B}{ax^{2}+bx+c}.
+% \end{align*}
+% 
+% {}
+% \begin{problema}
+%  \label{pre:exmp:9.8.3}
+%  Encuentre la descomposición en fracciones parciales de
+%  \begin{align*}
+%  \dfrac{2x^2-x+4}{x^{3}+4x}.
+% \end{align*}
+% \end{problema}
+% 
+% 
+% {Caso 4}
+% Supongamos que la factorización de $Q(x)$ contiene el factor $\left( ax^{2}+bx+c \right)^{k},$ con $ax^{2}+bx+c$ irreducible.
+% 
+% Entonces, la descomposición en fracciones parciales contiene los términos correspondientes
+% \begin{align*}
+%  \dfrac{A_{1}x+B_{1}}{ax^{2}+bx+c}+...
+%  \dfrac{A_{2}x+B_{2}}{\left( ax^{2}+bx+c \right)^{2}}+...
+%  \dfrac{A_{k}x+B_{k}}{\left( ax^{2}+bx+c \right)^{k}}
+% \end{align*}
+% 
+% {}
+% \begin{problema}
+%  \label{pre:exmp:9.8.4}
+%  Escriba la descomposición en fracciones parciales de
+%  \begin{align*}
+%  \frac{x^{5}-3x^{2}+12x-1}{x^{3}\left( x^{2}+x+1 \right)\left( x^{2}+3 \right)^{3}}
+% \end{align*}
+% sin determinar los respectivos coeficientes.
+% \end{problema}
+% 
+% 
+% {}
+% En el caso de que el grado de $P(x)$ sea mayor que el de $Q(x)$, es necesario primero utilizar la división larga de polinomios.
+% 
+% {}
+% \begin{problema}
+%  \label{pre:exmp:9.8.5}
+%  Encuentre la descomposición en fracciones parciales de
+%  \begin{align*}
+%  \dfrac{2x^{4}+4x^{3}-2x^{2}+x+7}{x^{3}+2x^{2}-x-2}
+% \end{align*}
+% sin determinar los coeficientes.
+% \end{problema}
+% 
+% 
+% \subsection{Ejemplos}
+% 
+% % 
+% %  \begin{problema}
+% %   \label{bron:exmp:22.12}
+% %   Descomponga en fracciones parciales
+% %   $$
+% %   \dfrac{1}{\left( s^{2}+1 \right)\left( s^{2}+4s+8 \right)}
+% %   $$
+% %  \end{problema}
+% %
+% % 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.13}
+%   Descomponga en fracciones parciales
+%   $$
+%   \dfrac{s+3}{(s-2)(s+1)}
+%   $$
+%  \end{problema}
+% 
+% 
+% 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.15}
+%   Usando el resultado del ejemplo \ref{bron:exmp:22.13}, encuentre
+%   $$\lapin{\dfrac{s+3}{(s-2)(s+1)}}.$$
+%  \end{problema}
+% 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.14}
+%   Descomponga en fracciones parciales
+%   $$
+%   \dfrac{8}{s^{3}\left( s^{2}-s-2 \right)}
+%   $$
+%  \end{problema}
+% 
+% 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.16}
+%   Usando el resultado del ejemplo \ref{bron:exmp:22.14}, encuentre
+%   $$\lapin{\dfrac{8}{s^{3}(s^{2}-s-2)}}.$$
+%  \end{problema}
+% 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.11}
+%   Descomponga en fracciones parciales
+%   $$
+%   \dfrac{1}{(s+1)(s^{2}+1)}
+%   $$
+%  \end{problema}
+% 
+% 
+% 
+% 
+%  \begin{problema}
+%   \label{bron:exmp:22.17}
+%   Usando el resultado del ejemplo \ref{bron:exmp:22.11}, encuentre
+%   $$\lapin{\dfrac{1}{(s+1)(s^2+1)}}.$$
+%  \end{problema}
+% 
+% 
+% 
+
+

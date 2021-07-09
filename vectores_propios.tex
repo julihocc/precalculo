@@ -1,0 +1,124 @@
+\section{Vectores propios}
+\label{sec:eigenvectors}
+
+
+\begin{definicion}
+ Si $T:\R^{n}\to \R^{n}$ es una transformación lineal y $A$ su representación matricial, en la base estandar, y $\lam$
+un valor propio de $A,$ entonces cualquier vector $v\in \R^{n}$ que satisfaga la ecuación
+$$
+Av =\lam v
+$$
+se conoce como $\lam$-vector propio.
+
+Al conjunto de $\lam$-vectores propios se le conoce como $\lam$-espacio propio y se denota por $E_{\lam}.$
+\end{definicion}
+
+\begin{observacion}
+ En el caso anterior, tenemos que
+ $$
+E_{\lam}=\ker\left( A-\lam I \right).
+ $$
+\end{observacion}
+
+\begin{problema}
+ Encuentre el espacio propio asociado al valor propio $\lam_{1}=2$ de la matriz $A$ definida en (\ref{no:diagonal}).
+\end{problema}
+
+\begin{solucion}
+ Si $$v=\bm{x \\ y \\ z}\in E_{\lam_{1}},$$ entonces $\left( A- 2I \right)v=0,$ es decir,
+ $$
+ \bm{1&1&-1\\2&0&-1\\2&2&-2}\bm{x \\ y \\ z}=\bm{0\\0\\0},
+ $$
+ que se reduce al sistema de ecuaciones
+ $$\begin{cases}
+    2x=z\\
+    z=2y
+   \end{cases}.
+ $$
+Escogiendo $z=2t,$ donde $t\in \R,$ obtenemos
+$$
+\bm{x \\ y \\ z}=\bm{t \\ t \\ 2t}=t\bm{1 \\ 1 \\ 2}.
+$$
+
+ Es decir $\ker(A-2I)$ esta generado por el conjunto $\set{\bm{1 \\ 1 \\ 2}}$ y al consistir de un solo vector, este es
+linealmente independiente, y por tanto es una base. En resumen,
+$$
+\ker(A-2I)=\basis{\bm{1 \\ 1 \\ 2}}.
+$$
+ \end{solucion}
+
+ \begin{problema}
+  Encuentre el espacio propio asociado al valor propio $\lam_{2}=1$ de la matriz $A$ definida en (\ref{no:diagonal}).
+ \end{problema}
+
+ \begin{solucion}
+  $$
+\ker(A-I)=\basis{\bm{1\\0\\2}}.
+  $$
+ \end{solucion}
+
+
+ Para comprobar nuestros resultados, podemos usar \texttt{WxMaxima}. Primero, introducimos nuestra matriz.
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+matrix(
+ [3,1,-1],
+ [2,2,-1],
+ [2,2,0]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\begin{pmatrix}3 & 1 & -1\cr 2 & 2 & -1\cr 2 & 2 & 0\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+Posteriormente, calculamos los vectores propios de la siguiente manera.
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i2)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+eigenvectors(%);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+[[[1,2],[1,2]],[[[1,0,2]],[[1,1,2]]]]
+\end{math}
+%%%%%%%%%%%%%%%
+
+El primer arreglo $[1,2]$ nos dice los dos valores propios, mientras que el segundo $[1,2]$ nos dice su multiplicidad
+algebráica. El tercer arreglo $[1,0,2]$ es un vector propio de $\lam=1,$ mientras que el último $[1,1,2]$ es uno
+asociado a $\lam=2$. Como explicamos anteriormente, cada uno de estos constituye una base de sus respectivos espacios
+propios.
+
+\subsection*{Ejemplos}
+
+\begin{problema}
+ Encuentre los espacios propios de los diferentes valores propios de las matrices dadas en el ejercicio
+ \ref{exe:diagonal}.
+\end{problema}
+

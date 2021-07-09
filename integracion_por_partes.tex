@@ -1,0 +1,663 @@
+
+\section{Integraci\'on por partes}
+A partir de la regla del producto
+$$
+\dfrac{d}{dx}\left( uv \right)=u\dfrac{dv}{dx}+v\dfrac{du}{dx},
+$$ se deduce la f\'ormula de integraci\'on por partes:
+\[
+ \label{int:partes}
+ \int udv=uv-\int vdu
+\]
+
+
+
+
+	Para elegir $u$, podemos seguir la regla empírica \textbf{LIATE}: 
+	\begin{itemize}
+		\item \textbf{L}ogaritmos 
+		\item \textbf{I}nversas trigonométricas 
+		\item \textbf{A}lgebraicas 
+		\item \textbf{T}rigonométricas 
+		\item \textbf{E}xponenciales 
+	\end{itemize}
+
+
+
+ \begin{problema}
+  Encuentre $$\int x \ln(x) dx.$$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  Encuentre $$\int x e^{x} dx.$$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  Encuentre $$\int e^{x}\cos(x) dx.$$
+ \end{problema}
+
+
+
+\subsection{Ejemplos Resueltos}
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int x^{3}e^{x^{2}} dx
+ $$
+\end{problema}
+
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int \ln\left( x^{2}+2 \right)dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int \ln(x) dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int x\sin(x) dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int x^{2}\ln(x) dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int \sin^{-1}(x) dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int \tan^{-1}(x) dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int \sec^{3}(x) dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int x^{2}\sin(x) dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema} Por medio de integraci\'on por partes, encuentre la siguiente integral indefinida
+ $$
+ \displaystyle \int x^{3}e^{2x} dx
+ $$
+\end{problema}
+
+
+
+
+\begin{problema}
+ Deduzca la siguiente \emph{f\'ormula de reducci\'on}
+\[
+ \label{reduccion}
+ \tag{FR}
+ \begin{split}
+   \displaystyle \int \sin^{m}(x)dx= & -\dfrac{\sin^{m-1}(x)\cdot \cos(x)}{m}\\
+ &+\dfrac{m-1}{m}\int \sin^{m-2}(x)dx.
+ \end{split}
+\]
+
+\end{problema}
+
+
+
+
+ \begin{problema}
+  Aplique la formula de reducci\'on \eqref{reduccion} para hallar 
+  $$
+  \displaystyle \int \sin^{2}(x)dx.
+  $$
+ \end{problema}
+
+
+
+
+  \begin{problema}
+  Aplique la formula de reducci\'on \eqref{reduccion} para hallar 
+  $$
+  \displaystyle \int \sin^{3}(x)dx.
+  $$
+ \end{problema}
+%
+%
+%\subsection{Técnicas de integaci\'on trigonométrica}
+%
+%\subsection{Integrados trigonométricos}
+%
+%
+% \subparagraph{Caso 1}
+% Considérense las integrales de la forma 
+% $$
+% \int \sin^{k}(x)cos^{n}(x)dx, 
+% $$ con $k,n$ enteros no negativos.
+%
+%
+%
+% \subparagraph{Tipo 1.1}
+% Si Al menos uno de los números $k,n$ es impar, entonces podemos escoger $u=\cos(x)$ o $u=\sin(x).$
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:32.1}
+%  $$
+%  \int \sin^{3}(x)\cos^{2}(x)dx.
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \begin{problema}
+% \label{ayr:32.2}
+%  $$
+%  \int sin^{4}(x)cos^{7}(x)dx
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:32.3}
+%  $$
+%  \int sin^{5}(x)dx
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \subparagraph{Tipo 1.2}
+% Si ambas potencias $k,n$ son pares. Entonces utilizaremos las identidades
+% $$\begin{cases}
+%    cos^{2}(x)=\dfrac{1+cos(2x)}{2}\\
+%    sin^{2}(x)=\dfrac{1-cos(2x)}{2}
+%   \end{cases}
+%$$
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:32.4}
+%  $$
+%  \int cos^{2}(x)sin^{4}(x)dx
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \subparagraph{Caso 2}
+% Consideraremos integrales de la forma 
+% $$
+% \int tan^{k}(x)sec^{n}(x)dx.
+% $$
+% y utilizaremos la identidad
+%$$
+%sec^{2}(x)=1+tan^{2}(x).
+%$$
+% 
+% 
+% 
+%  \subparagraph{Tipo 2.1} Si $n$ es par, entonces se sustituye $u=\tan(x).$
+% 
+%
+% 
+% 
+%  \begin{problema}
+%   \label{ayr:32.5}
+%   $$
+%   \int tan^{2}(x)sec^{4}(x)dx
+%   $$
+%  \end{problema}
+%
+% 
+%
+% 
+%  \subparagraph{Tipo 2.2} Si $n,k$ son impares, se sustituye $u=sec(x).$
+% 
+%
+% 
+%
+% \begin{problema}
+%  \label{ayr:32.6}
+%  $$
+%  \int tan^{3}(x)sec(x)dx.
+%  $$
+% \end{problema}
+%
+%
+%
+%
+%\subparagraph{Tipo 2.3}
+%Si $n$ es impar y $k$ par, reducimos a los casos anteriores y utilizaremos la f\'ormula
+%$$
+%\displaystyle \int \sec(x)dx= \ln\abs{\tan(x)+\sec(x)}
+%$$
+%
+%
+%
+%\begin{problema}
+% $$
+% \int \tan^{2}(x)\sec(x)dx=
+% $$
+%\end{problema}
+%
+%
+%
+% \subparagraph{Caso 3} Consideremos ahora integrales de la forma $\int f(Ax)g(Bx)dx,$ donde $f,g$ pueden ser o bien $sin$ o bien $cos.$ 
+%
+%
+%
+%
+% Necesitaremos las identidades
+% \begin{align*}
+%  sin(Ax)cos(Bx)&=\dfrac{1}{2}\left( sin\left( (A+B)x \right)+sin\left( (A-B)x \right) \right)\\
+%  sin(Ax)sin(Bx)&=\dfrac{1}{2}\left( cos\left( (A-B)x \right)-cos\left( (A+B)x \right) \right)\\
+%  cos(Ax)cos(Bx)&=\dfrac{1}{2}\left( cos\left( (A-B)x \right)+cos\left( (A+B)x \right) \right)
+% \end{align*}
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:32.7}
+%  $$
+%  \int sin(7x)cos(3x)
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:exmp:32.8}
+%  $$
+%  \int sin(7x)cos(3x)
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:32.9}
+%  $$
+%  \int sin(7x)sin(3x)
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:32.10}
+%  $$
+%  \int cos(7x)cos(3x)
+%  $$
+% \end{problema}
+%
+%
+%
+%\subsection{Sustituci\'on trigonométrica}
+%
+%
+%Existen tres principales tipos de sustituci\'on trigonométrica. Introduciremos cada uno por medio de ejemplos típicos.
+%
+%
+%
+%\begin{problema}
+% \label{ayr:exmp:32.11}
+% Encuentre
+% $$
+% \displaystyle \int \dfrac{dx}{x^{2}\sqrt{4+x^{2}}}
+% $$
+%\end{problema}
+%
+%
+%
+%% 
+%%  \subparagraph{Estrategia I}
+%%  \begin{center}
+%% %\Huge 
+%% Si $\sqrt{a^{2}+x^{2}}$ aparece en el integrando, intente $x=a\tan(\theta)$
+%% \end{center}
+%%  
+%% 
+%
+%%[c]
+%%\begin{center}
+% \subparagraph{Estrategia I}
+% 
+% Si $\sqrt{a^{2}+x^{2}}$ aparece en el integrando, intente $x=a\tan(\theta)$
+%
+%%\end{center}
+%
+%
+%
+%\begin{problema}
+% \label{ayr:exmp:32.12}
+% Encuentre $$
+% \displaystyle \int \dfrac{dx}{x^{2}\sqrt{9-x^{2}}}
+% $$
+%\end{problema}
+%
+%
+%
+%%[c]
+%\subparagraph{Estrategia II}
+%
+% Si $\sqrt{a^{2}-x^{2}}$ aparece en un integrando, trate con la sustituci\'on $x=a\sin(\theta).$
+%
+%
+%
+%
+%
+%\begin{problema}
+%\label{ayr:exmp:32.13}
+%Encuentre 
+%$$
+%\displaystyle \int \dfrac{x^{2}}{\sqrt{x^{2}-4}}dx.
+%$$
+%\end{problema}
+%
+%
+%
+%\subsection{Estrategia III}
+% Si $\sqrt{x^{2}-a^{2}}$ aparece en un integrando, trate con la sustituci\'on $x=a\sec{\theta}.$
+%
+%
+%
+%\section{Fracciones parciales}
+%
+%
+% La técnica de fracciones parciales se utiliza para integrar funciones racionales, es decir, aquellas de la forma $$\dfrac{N(x)}{D(x)},$$ donde $N, D$ son polinomios.
+%
+%
+%
+% Por simplicidad, supondremos que
+% \begin{enumerate}
+%  \item El coeficiente líder de $D(x)$ es igual a $1.$
+%  \item El grado de $D(x)$ es mayor que el de $N(x).$
+% \end{enumerate}
+%Sin embargo, ninguna de estas dos condiciones son esenciales.
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:exmp:33.1}
+%  $$
+%    \int\dfrac{2x^{3}}{5x^{8}+3x-4}dx=
+%    \dfrac{1}{5}\int\dfrac{2x^{3}}{x^{8}+\frac{3}{5}x-\frac{4}{5}}
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \begin{problema}
+%  $$
+%  \dfrac{2x^{5}+7}{x^{2}+3}=2x^{3}-6x+\dfrac{18x+7}{x^{2}+3}
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \begin{definicion}
+%  Un polinomio es irreducible si no se puede expresar como el producto de dos polinomios de grado menor. 
+% \end{definicion}
+%
+%
+%
+%
+% Todo polinomio lineal es irreducible
+%
+%
+%Un polinomio cuadrático 
+% $$g(x)=ax^{2}+bx+c, \, a\neq0$$ es irreducible si y solo $b^{4}-4ac<0.$
+%
+%
+% \begin{problema}
+%  \label{ayr:exmp:33.3}
+%  Verifique que 
+%  \begin{enumerate}
+%   \item $x^{2}+4$ es irreducible;
+%   \item $x^{2}+x-4$ es reducible.
+%  \end{enumerate}
+%
+% \end{problema}
+%
+%
+%
+%
+% \begin{teorema}
+%  \label{ayr:thm:33.1}
+%  Todo polinomio cuyo coeficiente líder sea igual a $1$ se puede expresar como producto de factores lineales, o factores cuadráticos irreducibles.
+% \end{teorema}
+%
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:exmp:33.4}
+%  \begin{enumerate}
+%   \item $x^{3}-4x=$ 
+%   \item $x^{3}+4x=$ 
+%   \item $x^{4}-9=$ 
+%   \item $x^{3}-3x^{2}-x+3=$
+%  \end{enumerate}
+%
+% \end{problema}
+%
+%
+%
+%\subsection{Método de Fracciones Parciales}
+%
+%
+% \subsection{Caso I. $D(x)$ es producto de factores lineales distintos}
+% \begin{problema}
+%  \label{ayr:exmp:33.5}
+%  Resuelva $$\int \dfrac{dx}{x^{2}-4}$$
+% \end{problema}
+%
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:exmp:33.6}
+%  Resuelva $$\int\dfrac{(x+1)dx}{x^{3}+x^{2}-6x}$$
+% \end{problema}
+%
+%
+%
+%
+% \subsection{Regla General para Caso 1}
+% El integrando se representa como una suma de términos de la form $\dfrac{A}{x-a},$ para cada factor $x-a,$ y $A$ una constante por determinar.
+%
+%
+%
+% \subsection{Caso 2. $D(x)$ es producto de factores lineales repetidos.}
+% \begin{problema}
+%  \label{ayr:exmp:33.7}
+%  Encuentre $$
+%  \int\dfrac{(3x+5)dx}{x^{3}-x^{2}-x+1}
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \begin{problema}
+%  \label{ayr:33.8}
+%  $$
+%  \int \dfrac{(x+1)dx}{x^{3}(x-2)^{2}}
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \subsection{Regla General para el Caso 2.}
+% Para cada factor $x-c$ de multiplicidad $k,$ se utiliza la expresi\'on
+% $$
+% \dfrac{A_{1}}{x-r}+\dfrac{A_{2}}{(x-r)^{2}}+...+\dfrac{A_{k}}{(x-r)^{k}}.
+% $$
+%
+%
+%
+% \subsection{Caso 3. Factores cuadráticos irreducibles distintos, y lineales repetidos}
+% A cada factor irreducible $x^{2}+bx+c$ de $D(x)$ le corresponde el integrando
+% $$
+% \dfrac{Ax+B}{x^{2}+bx+c}.
+% $$
+%
+%
+%
+% \begin{problema}
+%  Encuentre $$
+%  \int \dfrac{(x-1)dx}{x(x^{2}+1)(x^{2}+2)}
+%  $$
+% \end{problema}
+%
+%
+%
+%
+% \subsection{Caso IV. Factores cuadráticos irreusibles repetidos}
+% 
+% A cada factor cuadráticos irreducible $x^{2}+bx+c$ de mutiplicidad $k$ le corresponde el integrando
+% $$
+% \sum_{i=1}^{k}\dfrac{A_{i}x+B_{i}}{(x^{2}+bx+c)^{i}}
+% $$
+% 
+%
+%
+%
+% \begin{problema}
+%  Encuentre $$\int\dfrac{2x^{2}+3}{(x^{2}+1)^{2}}dx.$$
+% \end{problema}
+%
+%
+%
+%\section{Sustituciones misceláneas}
+%
+%{Caso I}
+%Supondremos que en una funci\'on racional, una variable se reemplaza por alguno de los siguientes radicales
+%\begin{enumerate}
+% \item $\sqrt[n]{ax+b}.$ Entonces, la sustituci\'on $ax+b=z^{n}$ producirá una funci\'on racional.
+% \item $\sqrt{q+px+x^2}.$ Aquí la sustituci\'on $q+px+x^{2}=(z-x)^2$ resultará en una funci\'on racional.
+% \item $\sqrt{q+px-x^{2}}=\sqrt{(\a+x)(\b-x)}.$ En este caso, la sustituci\'on $q+px-x^{2}=(\a+x)^{2}z^{2}$ producirá una funci\'on racional. 
+%\end{enumerate}
+%
+%
+%{Caso II}
+%Supondremos que en una funci\'on raiconal, algunas variables se reemplazan por $\sin(x),$ $\cos(x)$ o ambas. Entonces, la sustituci\'on $x=2\tan^{-1}(z)$ resultará en una integral de una funci\'on racional de $z.$ 
+%
+%
+%Esto es porque 
+%\[
+% \label{ayr:34.1}
+% \sin(x)=\dfrac{2z}{1+z^{2}}, \; \cos(x)=\dfrac{1-z^2}{1+z^2}, \;
+% dx=\dfrac{2}{1+z^2}dz
+%\]
+%
+%
+%
+%
+%Resuelva $$\displaystyle \int \dfrac{dx}{x\sqrt{1-x}}$$
+%
+%
+%
+%Resuelva $$\displaystyle \int \dfrac{dx}{(x-2)\sqrt{x+2}}$$
+%
+%
+%
+%Resuelva $$\displaystyle \int \dfrac{dx}{x^{1/2}-x^{1/4}}$$
+%
+%
+%
+%Resuelva $$\displaystyle \int \dfrac{dx}{x\sqrt{x^2+x+2}}$$
+%
+%
+%
+%Resuelva $$\displaystyle \int \dfrac{xdx}{\left( 5-4x-x^{2} \right)^{3/2}}$$
+%
+%
+%
+%Demuestras las dos primeras f\'ormulas de \eqref{ayr:34.1}.
+%
+%
+%
+% Resuelva $$\displaystyle \int \dfrac{dx}{1+\sin(x)-\cos(x)}$$
+%
+%
+%
+%Resuelva $$\displaystyle \int \dfrac{dx}{3-2\cos(x)}$$
+%
+%
+%
+%Resuelva $$\displaystyle \int \dfrac{dx}{5+4\sin(x)}$$
+%
+%
+%
+%Use la sustituci\'on $1-x^{3}=z^{2}$ para resolver 
+%$$\displaystyle \int x^{5}\sqrt{1-x^{3}}dx$$
+%
+%
+%
+%Use $x=\dfrac{1}{z}$, para resolver $$\displaystyle \int \dfrac{\sqrt{x-x^{2}}}{x^{4}}dx$$
+%
+%
+%
+%Resuelva $$\displaystyle \int \dfrac{dx}{x^{1/2}+x^{1/3}}$$

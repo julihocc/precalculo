@@ -1,0 +1,175 @@
+\documentclass[
+%xcolor={dvipsnames},
+%hyperref={colorlinks},
+%hyperref,
+%twoside,
+%12pt,
+%letterpaper, 
+%justified
+%]{book}
+%]{amsbook}
+]{tufte-book}
+%]{elegantbook}
+%,graybox,envcountchap,sectrefs]{svmono}
+\input{_paquetes}
+\input{_tufte}
+\input{_comandos}
+\input{_entornos}
+\input{_comandos_md}
+\input{_entornos_md}
+\input{_comandos_trig}
+\input{_comandos_pe}
+\input{_color-listings}
+
+\title{Fundamentos de Matemáticas Aplicadas}
+\author{Juliho Castillo Colmenares}
+\publisher{www.asimovian.academy}
+
+\begin{document}
+	\maketitle
+\begin{tabular}{|p{.9\textwidth}|}
+	\hline
+	This work is licensed under the Creative Commons Reconocimiento 4.0 Internacional License. To view a copy of this license, visit
+	http://creativecommons.org/licenses/by/4.0/.
+	\begin{center}
+		\includegraphics[scale=1]{./licencia/by.png}
+	\end{center}\\
+	\hline
+\end{tabular}
+\tableofcontents
+
+
+\part{Precálculo}
+
+\chapter{Teoría de conjuntos}
+\input{logica}
+\input{logica(p)}
+\input{conjuntos}
+\input{conjuntos(p)} 
+\input{particiones}
+\input{particiones(p)}
+\input{induccion}
+\input{induccion(p)}
+\input{relaciones}
+\input{relaciones(p)} 
+\input{funciones}
+\input{funciones(p)}
+\input{analisis_combinatorio}
+\input{analisis_combinatorio(p)}
+
+\chapter{Fundamentos de Aritmética}
+
+\input{numeros_enteros}
+\input{numeros_enteros(p)}
+\input{numeros_racionales}
+\input{razones_proporciones}
+\input{teorema_fundamental_aritmetica}
+
+\chapter{Sistemas numéricos}
+
+\input{numeros_reales}
+\input{funciones_reales}
+\input{numeros_complejos}
+
+\chapter{Álgebra}
+
+\input{reduccion_terminos_semejantes}
+\input{supresion_signos_agrupacion}
+\input{multiplicacion_polinomios}
+\input{productos_notables}
+\input{sumas_diferencias_potencias}
+
+
+\chapter{Factorización}
+
+\input{division_sintetica}
+\input{teorema_ceros_racionales}
+\input{algoritmo_factorizacion}
+\input{criterios_evaluar_raices}
+\input{ecuaciones_segundo_grado}
+
+\chapter{Trigonometría}
+\input{trigonometria}
+\input{trigonometria_analitica}
+
+
+\part{Álgebra Lineal}
+
+\chapter{Sistemas lineales}
+\input{sistemas_ecuaciones_lineales}
+\input{determinantes}
+\input{fracciones_parciales}
+\input{fracciones_parciales(p)}
+
+\chapter{Espacios Vectoriales}
+\input{espacios_vectoriales}
+\input{subespacios_vectoriales}
+\input{transformaciones_lineales}
+\input{nucleo_e_imagen}
+\input{bases_y_dimension}
+\input{coordenadas}
+
+\chapter{Teoría espectral}
+\input{valores_propios}
+\input{vectores_propios}
+\input{diagonalizacion}
+
+
+\part{Cálculo}
+
+\chapter{Cálculo Diferencial}
+\input{limites_continuidad}
+\input{derivadas}
+\input{derivacion_implicita}
+\input{derivacion_logaritmica}
+\input{linealizacion}
+\input{optimizacion_univariada}
+\input{analisis_graficas}
+
+\chapter{Cálculo Integral}
+\input{antiderivadas}	
+\input{integral_definida}
+\input{teorema_fundamental_calculo}
+\input{integracion_por_partes}
+\input{fracciones_parciales}
+\input{integracion_trigonometrica}
+\input{area_longitud_arco}
+\input{volumen}
+
+\chapter{Cálculo en varias variables}
+\input{curvas_parametrizadas}
+\input{derivadas_parciales}
+
+\part{Ecuaciones Diferenciales}
+
+\chapter{Ecuaciones de primer orden}
+
+\input{fundamentos_ecuaciones_diferenciales}
+\input{edos_primer_orden}
+\input{aplicaciones_edos}
+
+\chapter{Ecuaciones de Orden Superior}
+
+\input{teoria_ecuaciones_lineales}
+\input{edos_segundo_orden}
+\input{ecuaciones_orden_superior}
+\input{coeficientes_indeterminados}
+\input{aplicaciones_segundo_orden}
+\input{variacion_parametros}
+
+\chapter{Transformada de Laplace}
+
+\input{transformada_laplace}
+\input{transformada_inversa_laplace}
+\input{transformada_laplace_derivadas}
+\input{transformada_funciones_discontinuas}
+
+\chapter{Sistemas de Ecuaciones Diferenciales}
+
+\input{exponencial_matrix}
+\input{transformada_sistemas_lineales}
+
+%\input{bibliografia}
+\bibliography{_biblio}{}
+\bibliographystyle{apa}
+\end{document}

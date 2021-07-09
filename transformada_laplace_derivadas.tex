@@ -1,0 +1,126 @@
+\section{E.D. Lineales con Coeficientes Constantes}
+
+\subsection{Transformadas de Laplace de Derivadas}
+
+
+ Denotaremos $\lap{y(x)}$ por $Y(s).$ Bajo condiciones muy generales, la transformada de Laplace de la $n-$\'esima derivada, $n=1,2,3...$ de $y(x)$ está dada por
+ \[
+ \label{bron:24.1}
+ \begin{split}
+  \lap{\dfrac{d^{n}y}{dx^{n}}}=&
+  s^{n}Y(s)-s^{n-1}y(0)-s^{n-2}y'(0)-\cdots\\
+    &-sy^{(n-2)}(0)-y^{(n-1)}(0).
+    \end{split}
+ \]
+
+
+
+
+ Si las condiciones iniciales en $y(x)$ en $x=0$ está dada por
+ \[
+  \label{bron:24.2}
+  y(0)=c_{0}, \, y'(0)=c_{1}, \cdots , \, y^{(n-1)}(0)=c_{n-1},
+ \]
+entonce \eqref{bron:24.3} se puede reescribir como
+ \[
+ \label{bron:24.3}
+ \begin{split}
+  \lap{\dfrac{d^{n}y}{dx^{n}}}=&
+  s^{n}Y(s)-s^{n-1}c_{0}-s^{n-2}c_{1}-\cdots\\
+    &-sc_{n-2}-c_{n-1}.
+    \end{split}
+ \]
+
+
+
+
+ \subsection{Casos Especiales}
+ \begin{align*}
+  \label{bron:24.4}
+  \lap{y'(x)}&=sY(s)-c_{0}\\
+  \lap{y''(x)}&=s^{2}Y(s)-c_{0}s-c_{1}.
+ \end{align*}
+
+
+
+\subsection{Ejemplos}
+
+
+ \begin{problema}
+  \label{bron:exmp:24.1}
+  Resuelva
+  $$\begin{cases}
+     y'-5y=0;\\
+     y(0)=2
+    \end{cases}
+$$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{bron:exmp:24.2}
+  Resuelva
+  $$\begin{cases}
+     y'-5y=e^{5x};\\
+     y(0)=0
+    \end{cases}
+$$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{bron:exmp:24.3}
+  Resuelva
+  $$\begin{cases}
+     y'+y=\sin(x);\\
+     y(0)=1
+    \end{cases}
+$$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{bron:exmp:24.4}
+  Resuelva
+  $$\begin{cases}
+     y''+4y=0;\\
+     y(0)=2, \, y'(0)=2.
+    \end{cases}
+$$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{bron:exmp:24.6}
+  Resuelva
+  $$\begin{cases}
+     y''-y'-2y=4x^{2};\\
+     y(0)=1, \, y'(0)=4.
+    \end{cases}
+$$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{bron:exmp:24.5}
+  Resuelva
+  $$\begin{cases}
+     y''-3y'+4y=0;\\
+     y(0)=1, \, y'(0)=5.
+    \end{cases}
+$$
+ \end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

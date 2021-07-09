@@ -1,0 +1,219 @@
+
+%302
+\section{Teorema de los ceros racionales}
+
+
+	Decimos que $c$ es un \emph{cero racional} del polinomio $p(x)$ si $p(c)=0$ y $c$ es un número racional, es decir, una fracci\'on.
+
+
+
+	\begin{observacion}
+		No todo cero de un polinomio es racional. Por ejemplo, los ceros del polinomio $p(x)=x^{2}-2$ son $c=\pm\sqrt{2},$ y desde los tiempos de Pitágoras es sabido que \href{https://www.youtube.com/watch?v=gVkB3XuK6MU}{las ra\'ices de números primos no son números racionales.}
+	\end{observacion}
+	
+
+
+
+
+	\begin{teorema}[Teorema de los ceros racionales, caso particular]
+		Si el polinomio {\color{blue}$p(x)=x^{n}+a_{n-1}x^{n-1}+...+a_{1}x+a_{0}$} tiene {\color{green}coeficientes enteros}, entonces \emph{todo cero racional es divisor de t\'ermino constante $a_{0}.$}
+	\end{teorema}
+	
+
+
+
+	\begin{problema}
+		Hallar los ceros racionales de 
+		$$
+		p(x)=x^{3}-3x+2.
+		$$
+	\end{problema}
+	
+
+
+
+	\begin{teorema}[Teorema de los ceros racionales, caso particular]
+		Si el polinomio {\color{blue}$$p(x)=a_{n}x^{n}+a_{n-1}x^{n-1}+...+a_{1}x+a_{0}, \; a_{n}\neq 0$$} tiene {\color{green}coeficientes enteros}, entonces \emph{todo cero racional de la forma $\displaystyle\dfrac{p}{q}$ d\'onde $p$ es divisor de coeficiente constante $a_{0}$ y $q$ es divisor de coeficiente l\'ider $a_{n}$.} 
+	\end{teorema}
+
+
+
+	\begin{problema}
+		Encuentre los ceros racionales del polinomio $$p(x)=2x^{3}+x^{2}-13x+6.$$
+	\end{problema}
+	
+
+
+
+ 	\begin{definicion}
+ 		Un número entero $p$ es llamado \emph{primo} si tiene exactamente cuatro divisores, que en ese caso serán, $\pm 1, \pm p.$  
+ 	\end{definicion}
+ 
+ 
+ 
+ 	\begin{problema}
+ 		Encuentre todos los número primos menores a 40.
+ 		\begin{sugerencia}
+ 			Utilice la \emph{cripta de Erat\'ostenes.}
+ 		\end{sugerencia}
+ 		
+ 	\end{problema}
+ 	
+ 
+ 
+ 
+ 	Como los números \emph{$\pm 1$} reciben un nombre especial, y son llamados \emph{unidades.}
+ 
+ 
+ 
+ 
+ 	\begin{teorema}[Factorizaci\'on prima]
+ 		Para cada número entero $n\neq \pm 1,$ existe una unidad $u$, una lista de números primos $$\set{ p_{1},...,p_{m}}, m>0$$ y una lista de potencias $\set{R_{1},...,R_{m}}$ con cada $R_{i}>0$, para $ i=1,...,m$ tal que 
+ 		$$
+ 		n=u\cdot p_{1}^{R_{1}}\cdots p_{m}^{R_{m}}.
+ 		$$
+ 		Más aun, la elecci\'on de la unidad y de las listas es única. 
+ 	\end{teorema}
+ 	
+ 
+ 
+ 
+ 	\begin{problema}
+ 		Factorice los siguientes números:
+ 		\begin{multicols}{2}
+ 			\begin{enumerate}
+ 				\item $7840$  $=2^{5}\cdot5\cdot7^{2}$
+ 				\item $4860$  $=2^{2}\cdot 3^{5} \cdot 5$
+ 				\item $8624$  $=2^{4}\cdot 7^{2}\cdot 11$
+ 				\item $2940$  
+ 				$=2^{2}\cdot 3 \cdot 5 \cdot 7^{2}$
+ 				\item $4050$ 
+ 				$= 2\cdot 3^{4} \cdot 5^{2}$
+ 				\item $3234$ 
+ 				$=2 \cdot 3 \cdot 7^{2} \cdot 11$
+ 				\item $8575$ 
+ 				$=5^{2} \cdot 7^{3}$
+ 				\item $1512$ 
+ 				$=2^{3}\cdot 3^{3} \cdot7$
+ 				\item $5850$ 
+ 				$=2\cdot 3^{2} \cdot 5^{2} \cdot 13$
+ 				\item $6912$
+ 				$=2^{8}\cdot 3^{3}$
+ 			\end{enumerate}
+ 			
+ 			
+ 		\end{multicols}
+ 		
+ 		
+ 	\end{problema}
+ 	
+ 
+ 
+ 
+ 	\begin{problema}
+ 		Factorice los siguientes números enteros:
+ 		\begin{multicols}{2}
+ 			\begin{enumerate}
+ 				\item $4116$
+ 				\item $3150$
+ 				\item $6600$
+ 				\item $4212$
+ 				\item $1920$
+ 				\item $640$
+ 				\item $3696$
+ 				\item $4455$
+ 				\item $9072$
+ 				\item $6174$
+ 			\end{enumerate}
+ 			
+ 		\end{multicols}
+ 		
+ 	\end{problema}
+ 	
+ 
+ 
+ 
+ 	\begin{algoritmo}[Como encontrar todos los divisores de un número entero]
+ 		\begin{enumerate}
+ 			\item Factorice el número entero
+ 			$n=p_{1}^{R_{1}}\cdots p_{m}^{R_{m}}$
+ 			\item Enliste cada posible $m-$tupla
+ 			$\left( r_{1},...,r^{m} \right)$
+ 			con $0\leq r_{1}\leq R_{1},...,0\leq r_{m}\leq R_{m}$
+ 			\item Enliste cada posible número entero de la forma $$\pm p_{1}^{r_{1}}\cdots p_{m}^{r_{m}},$$ para cada elemento $\left( r_{1},...,r_{m} \right)$ de la lista anterior.
+ 		\end{enumerate}
+ 	\end{algoritmo}
+ 	
+ 
+ 
+ 
+ 	\begin{observacion}
+ 		Con la notaci\'on anterior, el número exacto de divisores positivos de $n$ será 
+ 		$$
+ 		(R_{1}+1)\times \cdots \times(R_{m}+1).
+ 		$$
+ 	\end{observacion}
+ 	
+ 
+ 
+ 
+ 	\begin{problema}
+ 		Encuentre todos los divisores positivos de 
+ 		\begin{multicols}{2}
+ 			\begin{enumerate}
+ 				\item $288$
+ 				\item $540$
+ 				\item $600$
+ 				\item $567$
+ 				\item $896$
+ 				\item $675$
+ 				\item $504$
+ 				\item $640$
+ 				\item $810$
+ 				\item $672$
+ 			\end{enumerate}
+ 			
+ 		\end{multicols}
+ 		
+ 	\end{problema}
+ 
+ 
+ 
+ 	\begin{problema}
+ 		Encuentre todos los divisores positivos de
+ 		\begin{multicols}{2}
+ 			\begin{enumerate}
+ 				\item $324$
+ 				\item $192$
+ 				\item $840$
+ 				\item $720$
+ 				\item $980$
+ 				\item $336$
+ 				\item $420$
+ 				\item $300$
+ 				\item $972$
+ 				\item $486$
+ 			\end{enumerate}
+ 			
+ 		\end{multicols}
+ 		
+ 	\end{problema}
+ 	
+ 
+ 
+ 
+ 	\begin{problema} Encuentre los ceros racionales del polinomio
+ 		\begin{multicols}{2} 
+ 			\begin{enumerate}
+ 				\item $x^{3}+3x^{2}-4$
+ 				\item $x^{3}-x^{2}-8x+12$
+ 				\item $x^{4}-5x^{2}+4$
+ 				\item $x^{4}-x^{3}-5x^{2}+3x+6$
+ 				\item $4x^{3}-7x+3$
+ 				\item $6x^{4}-7x^{3}-12x^{2}+3x+2$
+ 				\item $2x^{6}-3x^{5}-13x^{4}+29x^{3}-27x^{2}+32x-12$
+ 			\end{enumerate}
+ 			
+ 		\end{multicols}
+ 	\end{problema}
+ 

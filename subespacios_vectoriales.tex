@@ -1,0 +1,198 @@
+\section{Subespacios vectoriales}
+
+
+
+\begin{problema}
+ $\R^{2}$ es un espacio vectorial con las operaciones $$(u_{1},u_{2})+(v_{1},v_{2})=(u_{1}+v_{1},u_{2}+v_{2})$$ y
+$$\a(u_{1}, u_{2})=(\a u_{1}, \a u_{2}).$$
+
+En la secci\'on anterior consideramos el subjunto $$L_{c}=\set{(u_{1},u_{2})|u_{2}=c u_{1}}\subset \R^{2}$$ para  $c$
+una pendiente fija, y verificamos que en efecto, con las mismas operaciones es un espacio vectorial.
+
+Decimos entonces que $L_{c}$ es un subespacio vectorial de $\R^{2}.$
+\end{problema}
+
+\begin{definicion}
+ Si $(V, +, \cdot )$ es un espacio vectorial  y
+$W\subset V$ es tambi\'en espacio vectorial, con las mismas operaciones $+,\cdot$ decirmos que $W$ es un subespacio
+vectorial de $V,$ y podemos escribir $W < V.$
+\end{definicion}
+
+En principio, si $W < V$, tendr\'iamos que verificar todos loa axiomas de espacio vectorial para $(W, +, \cdot).$ Sin
+embargo, si en el espacio $V,$ la suma es asociativa y conmutativa, tambi\'en lo será en $W.$ De igual manera, el
+elemento neutro $1\in V$ de la multiplicaci\'on por escalares es el mismo en $W,$ y se sigue cumpliendo la
+asociatividad de la multiplicaci\'on por escalares y las leyes de distribuci\'on.
+
+Entonces, basta demostrar que se cumplen los restantes axiomas, a saber:
+\begin{enumerate}
+ \item Si $u,v \in W,$ entonces $u+v\in W.$
+ \item Si $\a \in \R, v \in W,$ entonces $\a v\in W.$
+ \item $0\in W.$
+ \item Si $u\in W,$ entonces $-u\in W.$
+\end{enumerate}
+
+Sin embargo, los dos últimos incisos se siguen del segundo. En efecto, si escogemos $\a=0$ y cualquier $u\in
+W,$ entonces
+$$
+0=0\cdot u \in W.
+$$
+De igual manera, para cualquier $u\in W,$ si escogemos $\a=-1,$ entonces $-u=(-1)u\in W.$
+
+Por último, verificar los dos axiomas restantes es equivalente a verificar que para todo $\a \in \R, u,v \in W,$
+$$
+\a u + v \in W.
+$$
+
+\begin{proposicion}
+ Si $W\subset V,$ entonces $$
+W < V \iff \forall \a \in \R, u,v \in W, \a u+v\in W.
+ $$
+\end{proposicion}
+
+\begin{corolario}
+ Todo $W < V$ contiene a $0 \in V.$
+\end{corolario}
+
+
+\begin{definicion}
+ Si $W< V,$ pero $W\neq\set{0}$ y $W\neq V,$ entonces decimos que $W$ es un subespacio (vectorial) propio.
+\end{definicion}
+
+\begin{definicion}
+ Sean $u,v_{1},...,v_{k}$ vectores en un espacio vectorial $V.$ Decimos que $u$ es combinaci\'on lineal de
+$v_{1},...,v_{k}$ si existen escalares $\a_{1},...,\a_{k}\in \R$ tales que:
+$$
+u=\a_{1}v_{1}+...\a_{k}v_{k}.
+$$
+\end{definicion}
+
+\begin{definicion}
+ Sea $V$ un espacio vectorial. El subespacio generado por un subconjunto $S=\set{v_{1},...,v_{k}}\subset V$ se define
+como
+ $$
+\gen{S}=\set{\a_{1}v_{k},...,\a_{k}v_{k}\av \a_{1},...,\a_{k}\in \R},
+ $$
+ es decir, el conjunto de todas las combinaciones lineales de $v_{1},...,v_{k}.$
+\end{definicion}
+
+\begin{observacion}
+ $\gen{S}<V.$
+\end{observacion}
+
+
+\begin{problema}
+ $u=(2,0,2)$ es combinaci\'on lineal de $v_{1}=(1,0,1)$ y $v_{2}=(0,1,1)$ porque $u=2v_{1}-v_{2}.$
+
+ De hecho, $$\gen{v_{1},v_{2}}=\set{(a,b,a+b)\av a,b \in \R}<\R^{3}$$ es el plano que contiene a estos dos vectores.
+
+ $(-1,-1,1)\notin \gen{v_{1},v_{2}},$ porque no vive en este plano.
+\end{problema}
+
+
+
+
+
+\subsection*{Ejemplos}
+
+%Los siguientes ejercicios se pueden encontrar en \cite[sec. 4.3]{G} y \cite[sec. 2.2]{HK}.
+
+% \begin{problema} En los siguientes ejercicios, verificar que $W < V,$ con las operaciones $+,\cdot$ usuales en $V.$
+% Justifique su respuesta.
+%  \begin{enumerate}
+%   \item $V=\R^{2}, W=\set{(x,y)|ax+by=0},$ con $a,b\in \R$ fijos
+%   \item $V=\R^{3}, W=\set{(at,bt,ct)|t\in \R},$ con $a,b,c\in \R$ fijos
+%   \item $V=\R^{3}, W=\set{(a,y,z)|ax+by+cz=0},$ con $a,b,c\in \R$ fijos
+%   \item $V=P_{n}, W=P_{m},$ donde $P_{k}$ es el espacio de polinomios (con coeficientes reales) de grado menor
+% o igual a $k$ y $n\geq m.$
+% \item $V=M_{mn}, W=\set{(a_{ij})\in M_{mn}|a_{11}=0}$
+% \item $V=C[0,1], W=P_{n}[0,1],$ donde $P_{k}$ es el espacio de polinomios (con coeficientes reales) de grado
+% menor o igual a $k$ restringidos al intervalo $[0,1].$
+% \item $V=C[0,1], W=\set{f\in V|\int_{0}^{1}f(x)dx=0}$
+% 
+%  \end{enumerate}
+% \end{problema}
+
+\begin{problema}
+ ¿Cuál de los siguientes conjuntos de vectores $$u=(u_{1},u_{2},u_{3})$$ en $\R^{3}$ son subespacios de $\R^{3}$?
+ \begin{enumerate}
+  \item $\set{u\av u_{1}\geq 0}$
+  \item $\set{u\av u_{1}+3u_{2}=u_{3}}$
+  \item $\set{u\av u_{2}=u_{1}^{2}}$
+  \item $\set{u\av u_{1}u_{2}=0}$
+  \item $\set{u\av a_{2}\text{ es racional}}$
+ \end{enumerate}
+
+\end{problema}
+
+\begin{problema}
+ Sea $V$ el espacio vectorial (real) de todas las funciones $f:\R \to \R.$ ¿Cuales de los siguientes conjuntos son
+subespacios de V?
+\begin{enumerate}
+ \item todas las funciones $f$ tales que $f(x^{2})=f^{2}(x)$
+ \item todas las funciones $f$ tales que $f(0)=f(1)$
+ \item todas las funciones $f$ tales que $f(3)=1+f(-5)$
+ \item todas las funciones $f$ tales que $f(-1)=0$
+\end{enumerate}
+
+\end{problema}
+
+% \begin{problema} ¿Es cierto que
+% $$(3,-1,0,-1)\in \gen{(2,-1,3,2), (-1,1,1,-1), (1,1,9,-5)}$$?
+% \end{problema}
+
+\begin{problema}
+ Sea $W$ el conjunto de todos los vectores $(x_{1},...,x_{5})$ que satisfacen
+ \begin{align*}
+  2x_{1}-x_{2}+\frac{4}{3}x_{3}-x_{4}&=0 \\
+  x_{1}+\frac{2}{3}x_{3}-x_{5}&=0 \\
+  9x_{1}-3x_{2}+6x_{3}-3x_{4}-3x_{5}&=0.
+ \end{align*}
+Mostrar que $W$ es subespacio vectorial de $\R^{5}.$
+\end{problema}
+
+
+
+\begin{problema}[\dag]
+\begin{enumerate}
+   \item  Verificar que si $U,W < V,$ entonces $U\cap W < V.$
+   \item Demostrar que si $U=\set{u_{1},...,u_{m}}$ y $W=\set{w_{1},...,w_{m}},$ entonces
+   $$
+U\cap W = \gen{u_{1},...,u_{n},w_{1},...,w_{m}}.
+   $$
+\end{enumerate}
+
+
+\end{problema}
+
+% \begin{problema}
+%  En los siguientes ejercicios, verificar \emph{si} $W < V,$ con las operaciones $+,\cdot$ usuales en $V.$
+% Justifique su respuesta.
+% \begin{enumerate}
+% \item $V=M_{nn}, W=\set{A\in M_{nn}|A\text{ es invertible}}$
+% \item $V=M_{nn}, W=\set{A\in M_{nn}|A\text{ no es invertible}}$
+% \item $V=M_{nn}, W=\set{A\in M_{nn}|AB=BA}$ para alguna matriz $B\in M_{nn}$ fija.
+% \item $V=M_{nn}, W=\set{A\in M_{nn}|A^{2}=A}$
+% \item $V=M_{nn}, W=\set{A\in M_{nn}|A\text{ es diagonal}}$ \footnote{Consulte \cite[pag. 114]{G}}
+% \item $V=M_{nn}, W=\set{A\in M_{nn}|A\text{ es triangular}}$ \footnote{Consulte \cite[pag. 88]{G}}
+% \item $V=M_{nn}, W=\set{A\in M_{nn}|A\text{ es simetrica}}$ \footnote{Consulte \cite[pag. 123]{G}}
+%  \item $V=C^{1}[0,1], W=\set{f\in C^{1}[0,1]|f'(0)=0}$
+%  \item $V=C[a,b], W=\set{f\in C[a,b]| \int_{a}^{b}f(x)dx=0}$
+%  \item $V=C[a,b], W=\set{f\in C[a,b]| \int_{a}^{b}f(x)dx=0}$
+%  \end{enumerate}
+% 
+% 
+% \end{problema}
+
+
+\begin{problema}[\dag]
+\begin{itemize}
+ \item Sean $u,v \in \R^{2}.$ Mostrar que $$W=\set{\a u+ \b v| \a, \b \in \R} < \R^{2}.$$
+ \item Mostrar que si $u,v$ no son paralelos, entonces para cualquier $w\in \R^{2},$ podemos encontrar $\a,\b \in
+\R$ de manera que $w= \a u + \b v.$
+\end{itemize}
+\end{problema}
+
+\begin{problema}[\dag]
+ Sea $A$ una matriz $m\times n$ con entradas reales. Demostrar que el conjunto de todas los vectores columna $u$ de
+longitud $n,$ tales que $Au=0$ es un subespacio vectorial de todos los vectores columna $\R^{n}.$
+\end{problema}

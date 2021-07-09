@@ -1,0 +1,129 @@
+\section{Análisis combinatorio}
+
+El \emph{análisis combinatorio} es una manera sofisticada de contar.
+
+\begin{proposicion}[Principio fundamental del conteo y diagramas de árbol]
+	Si una tarea se puede realizar en $n$ formas diferentes y otra en $m$ formas diferentes, entonces las dos tareas se pueden realizar en $n\times m$ formas diferentes.	
+\end{proposicion}
+
+\begin{ejemplo}
+	\label{exmp:1.14}
+\end{ejemplo}
+\begin{enumerate}
+	\item Si una persona tiene 2 camisas y 4 corbatas, ?`de cuantas formas puede combinarlas?
+	\item Construya un diagrama de árbol para representar todas estas opciones.
+\end{enumerate}
+
+\subsection{Permutaciones}
+
+Consideremos un conjunto finito $X=\set{x_{1},...,x_{N}},$ esto es, $X$ tiene \emph{cardinalidad} $n(X)=N < \infty.$
+
+Una función biyectiva (invertible) $\sigma:X \to X$ es llamada \emph{permutación} en $X.$
+
+Observe que las composiciones e inversas de permutaciones, así como la identidad, son tambi\'en permutaciones. En este caso, diremos que la permutación $\sigma$ \emph{actua} en $X.$
+
+Supongamos que la permutación $\sigma$ actúa en $X={x_{1},x_{2},x_{3}}$ de la siguiente manera:
+$$
+\sigma(x_{1})=x_{2}, \; \sigma(x_{2})=x_{3}, \; \sigma(x_{3})=x_{1}.
+$$
+
+Entonces, podemos representar la permutación de la siguiente manera
+$$\sigma=
+\begin{pmatrix}
+	1 & 2 & 3 \\
+	2 & 3 & 1,
+\end{pmatrix},
+$$  es decir, sólo nos fijamos de que manera actúa en el índice $j$ del elemento $x_{j}.$
+
+
+
+De manera general, numerando los elementos de $X=\set{x_{1},...,x_{N}},$ podemos identificar este conjunto con $A_{N}=\set{1,...,N}$ por medio de la biyección $x_{i} \mapsto i.$
+
+
+Ahora, consideremos una permutación $\sigma:A_{N}\to A_{N},$ tal que $\sigma(i)=\sigma_{i}.$ Entonces podemos representa $\sigma$ por medio de 
+$$\sigma=
+\begin{pmatrix}
+	1& ... & N \\
+	\sigma_{1}& ... & \sigma_{N}.
+\end{pmatrix}
+$$
+
+
+El conjunto de todas las permutaciones $:A_{N}\to A_{N}$ se denota por $S_{N}$ y tiene una cardinalidad 
+$n(S_{N})=N!.$
+
+\subsection{Cálculos con permutaciones}
+Si tenemos $n$ objetos distintos y queremos ordenarlos tendremos
+\begin{align*}
+	n \times (n-1) \times ... 2\times 1
+\end{align*} formas diferentes de hacerlo.
+
+{}
+\begin{definicion}[$n$ factorial]
+	\[
+		n! = \begin{cases}
+			1 & n=0 \\
+			n\times(n-1)! & n>0
+		\end{cases}
+	\]
+	
+\end{definicion}
+
+
+Si tenemos $n$ objetos distintos y queremos arreglar $r$ de estos en una linea, entonces tendremos una \emph{permutación} de $n$ en $r$ dada por
+\begin{align}
+	\label{1.25}
+	P^{n}_{r}=n\times(n-1)\times...\left( n-r+1 \right)
+\end{align} 
+o de manera equivalente
+\begin{align}
+	\label{1.27}
+	P^{n}_{r}=\dfrac{n!}{(n-r)!}
+\end{align}
+
+
+
+\subsection{Combinaciones}
+{}
+En una \emph{permutación}, uno está interesado en el orden de los objetos. Así $abc$ y $bca$ son permutaciones diferentes.  Pero en algunos problemas, uno está interesado sólo en elegir objetos sin importar su orden.  Tales selecciones se llaman \emph{combinaciones}.  Por ejemplo, $abc$ y $bca$ representan la misma combinación.
+
+
+
+El número de combinación $ C^{n}_{r} $ al elegir $r$ objetos de una colección de $n$ diferentes está dada por el \emph{número combinatorio}
+\begin{align}
+	\label{1.29}
+	C^{n}_{r} = \comb{n}{r}=\dfrac{n!}{r!\left( n-r \right)!}
+\end{align}
+
+
+
+{Algunas fórmulas combinatorias}
+\begin{align}
+	\label{1.30}
+	\comb{n}{r}&=\dfrac{P(n,r)}{r!} \\
+	\label{1.31}
+	\comb{n}{r}&=\comb{n}{n-r}\\
+	\comb{n}{r}&=\comb{n-1}{r-1}+\comb{n-1}{r}
+\end{align}
+
+
+\subsection{El Teorema del Binomio}
+
+\begin{teorema}[Teorema del binomio]
+	\begin{align}
+		\label{1.32}
+		\left( x+y \right)^{n} = \sum_{r=0}^{n}\comb{n}{r}x^{r}y^{n-r}
+	\end{align}
+	
+\end{teorema}
+
+%\begin{proposicion}[Aproximación de Stirling]
+%	\begin{align*}
+%		\label{1.33}
+%		n! \approx \sqrt{2\pi n}\left( n^{n}e^{-n} \right)
+%	\end{align*}
+%\end{proposicion}
+
+
+
+

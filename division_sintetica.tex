@@ -1,0 +1,150 @@
+%301
+\section{M\'etodo de Horner y Divisi\'on Sint\'etica}
+
+
+	\begin{problema}
+		Consideremos evaluar el siguiente polinomio
+		$$
+		p(x)=6x^{2}+3x-2
+		$$ en $x=9.$
+	\end{problema}
+	
+
+
+
+	\begin{align*}
+		p(9)&=6(9)^{2}+3(9)-2  \\
+		&=6(81)+3(9)-2  \\
+		&=486+27-2  \\
+		&=513-2=511
+	\end{align*}
+	
+
+
+
+	Consideraremos una forma alternativa de evaluar, conocida como \emph{m\'etodo de Horner.}
+
+
+
+	Primero, reescribimos el polinomio de la siguiente manera 
+	\begin{align*}
+		p(x)&=\left( \textcolor{blue}{6}x^{2} + \textcolor{green}{3}x \right) \textcolor{red}{-2}\\
+		&= \left( \textcolor{blue}{6}x+\textcolor{green}{3} \right)x\textcolor{red}{-2} \\
+		&= \left( (\textcolor{blue}{6}) x + \textcolor{green}{3} \right) x \textcolor{red}{-2}
+	\end{align*}
+	
+
+
+
+	Al evaluar, realizamos las siguientes operaciones
+	\begin{align*}
+		p(9)&=\left( (\textcolor{blue}{6}) 9  \textcolor{green}{+3} \right) 9 \textcolor{red}{-2}\\
+		&=\left( \textcolor{blue}{54} \textcolor{green}{+3} \right)9\textcolor{red}{-2} \\
+		&= \left( \textcolor{green}{57} \right)9\textcolor{red}{-2}\\
+		&=\textcolor{green}{513}\textcolor{red}{-2}\\
+		&=\textcolor{red}{511}
+	\end{align*}
+	
+
+
+
+	\begin{observacion}
+		Aunque con el m\'etodo anterior, hemos realizado algunos pasos más, hemos evitado el uso de \emph{exponentes}.  Ahora, todo se reduce a \emph{multiplicaciones y sumas.}
+	\end{observacion}
+	
+
+
+
+	El m\'etodo anterior se puede sintetizar de la siguiente manera
+	\begin{center}
+		\begin{tabular}{l|lll}
+			9 & \textcolor{blue}{6} & \textcolor{green}{+3} & \textcolor{red}{-2}\\
+			& $\downarrow$ & 54 & 513\\\hline
+			& 6 & 57 & 511
+		\end{tabular}
+	\end{center}
+	
+
+
+
+	De manera general, 
+	\begin{center}
+		\begin{tabular}{l|lll}
+			x & \textcolor{blue}{6} & \textcolor{green}{+3} & \textcolor{red}{-2}\\
+			& $\downarrow$ & $6x$ & $(6x+3)x$\\\hline
+			& $6$ & $6x+3$ & $\left( 6x+3 \right)x-2$
+		\end{tabular}
+	\end{center}
+	
+
+
+
+	\begin{observacion}
+		La última expresi\'on $\left( 6x+3 \right)x-2$ es igual a nuestro polinomio
+		$$
+		6x^{2}+3x-2.
+		$$
+		
+		
+		
+		Al procedimiento anterior se le conoce como \emph{divisi\'on sint\'etica.}
+	\end{observacion}
+	
+
+
+
+	\begin{problema}
+		Evalue $p(x)=2x^{3}-7x^{2}+5$ en $x=3$ utilizando
+		\begin{enumerate}
+			\item evaluaci\'on directa 
+			\item el m\'etodo de Horner 
+			\item divisi\'on sint\'etica
+		\end{enumerate}
+		
+		
+	\end{problema}
+	
+
+
+
+	\begin{problema}
+		Evalue $p(x)=3x^{5}+5x^{4}-4x^{3}+7x+3$ en $x=-2$ utilizando
+		\begin{enumerate}
+			\item evaluaci\'on directa 
+			\item el m\'etodo de Horner 
+			\item divisi\'on sint\'etica
+		\end{enumerate} 
+	\end{problema}
+
+
+
+	\begin{problema}
+		Evalue $p(x)=x^{3}-7x+6$ en $x=1$ utilizando
+		\begin{enumerate}
+			\item evaluaci\'on directa 
+			\item el m\'etodo de Horner 
+			\item divisi\'on sint\'etica
+		\end{enumerate} 
+	\end{problema}
+
+
+
+	\begin{definicion}
+		Si al evaluar un polinomio $p(x)$ en $x=c,$ obtenemos 
+		$$
+		{\color{red} p(c)=0},
+		$$
+		diremso que $c$ es un \emph{ra\'iz} o \emph{``cero''} del polinomio $p(x).$
+	\end{definicion}
+
+
+
+	\begin{problema}
+		Evalue $p(x)=x^{4}-3x^{3}-13x^{2}+15x$ en $x=-3,0,1,5$ utilizando
+		\begin{enumerate}
+			\item evaluaci\'on directa 
+			\item el m\'etodo de Horner 
+			\item divisi\'on sint\'etica
+		\end{enumerate} 
+	\end{problema} y compruebe que son \emph{ceros} del polinomio.
+

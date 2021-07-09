@@ -1,0 +1,318 @@
+\section{Valores propios}
+
+
+Como hemos visto, hacer cálculos que involucren matrices, por ejemplo multiplicar una matriz por un vector, puede ser
+complicados por la cantidad de operaciones involucradas. En cambio, multiplicar por escalares es muy sencillo.
+¿Podríamos encontrar alguna manera de convertir las operanciones con matrices en operaciones con escalares? En este
+capítulo trataremos de responder esta pregunta.
+
+\begin{definicion}
+ Sea $T:\R^{n}\to \R^{n}$ una transformación lineal y $A$ su representación matricial en la base estandar. Si $\lam\in
+\R$ y $v\in \R, \, v\neq 0$ tales que
+$$
+Av=\lam v,
+$$
+decimos que $\lam$ es un valor propio y $v$ un $\lam$-vector propio.
+\end{definicion}
+
+Supongamos que $F=\left( v_{1},...,v_{n} \right)$ es una base ordenada de vectores propios de $\R^{n},$ es decir,
+$$
+Av_{k}=\lam_{k}v_{k}, \, k=1,...n.
+$$
+
+Entonces, la representación matricial de $T:\R^{n}\to \R^{n}$ en la base $F$ es
+$$
+B=\begin{bmatrix}
+ \lam_{1} & 0 & \dots & \dots & \dots & 0 \\
+ 0 & \lam_{2} & \dots & \dots & \dots & 0 \\
+ \vdots & \vdots & \ddots & \dots & \dots & 0 \\
+ 0 & 0 & \dots & \lam_{k} & \dots & 0 \\
+ \vdots & \vdots &\vdots &\vdots &\vdots &\vdots \\
+ 0 & \dots & 0 & \dots & 0 & \lam_{n}
+\end{bmatrix}
+$$
+es decir, una matriz con los valores propios en la diagonal y ceros en otras partes.
+
+Si expresamos un vector $v\in \R^{n}$ en esta base, tendría la forma
+$$
+v=c_{1}v_{1}+...+c_{n}v_{n},
+$$
+y aplicando la transformación, o de manera equivalente, multiplicando por $B$, obtendriamos
+$$
+T(v)=c_{1}\lam_{1}v_{1}+...+c_{n}\lam_{n}v_{n},
+$$
+es decir, simplemente haríamos operaciones con escalares. Por esta razón, es importante estudiar los valores y vectores
+propios asociados a operadores en $\R^{n}$, es decir, transformaciones lineales $T:\R^{n}\to \R^{n}.$ Esta teoría se
+conoce como \emph{espectral.}
+
+\section{Valores propios}
+
+ El primer paso para desarrollar la teoría espectral de un operador es determinar sus valores
+propios. Antes, recordemos el siguiente criterio para determinar si un operador es invertible.
+
+\begin{proposicion}
+ Sea $T:\R^{n}\to \R^{n}$ una transformación lineal, y $A$ una representación lineal en alguna base de $\R^{n}$. Las
+siguientes proposiciones son equivalentes:
+\begin{enumerate}
+ \item $A$ es invertible,
+ \item $Av=0$ si y solo si $v=0,$
+ \item $\det(A)\neq 0$.
+\end{enumerate}
+\end{proposicion}
+
+La misma proposición se puede reescribir de la siguiente manera.
+
+\begin{proposicion}
+ Sea $T:\R^{n}\to \R^{n}$ una transformación lineal, y $M$ una representación lineal en alguna base de $\R^{n}$. Las
+siguientes proposiciones son equivalentes:
+\begin{enumerate}
+ \item $M$ no es invertible,
+ \item Existe un vector $v\neq 0,$ tal que $Mv=0,$
+ \item $\det(A)= 0$.
+\end{enumerate}
+\end{proposicion}
+
+
+
+Supongamos que $\lam$ es un valor propio de $A$ y $v$ un $\lam$-vector propio. Como $v = Iv,$ entonces
+$$
+Av=\lam v \ssi Av=\lam Iv \ssi (A-\lam I)v=0.
+$$
+Es decir, $v\in \ker(T)$ aunque $v\neq 0.$ Esto quiere decir que $A-\lam I$ no es invertible y por tanto,
+$$
+\det(A-\lam I)=0.
+$$
+
+Este es el criterio que buscabamos para localizar los valores propios.
+
+\begin{definicion}
+ Si $A\in M_{n\times n},$ entonces
+ $$
+p(\lam)=(-1)^{n}\det(A-\lam I)=\det(\lam I - A)
+ $$
+ se conoce como \emph{polinomio característico} de $A.$
+\end{definicion}
+
+\begin{observacion}
+ $\lam$ es valor propio de $A$ si y solo si es raíz de $p(\lam).$
+\end{observacion}
+
+\begin{problema}
+ Encuentre los valores propios, de la transformación lineal con representación matricial
+\[
+ \label{no:diagonal}
+ A=\begin{bmatrix}
+3 & 1 & -1 \\
+2 & 2 & -1 \\
+2 & 2 & 0
+  \end{bmatrix}.
+\]
+
+\end{problema}
+
+\begin{solucion}
+ Primero determinamos el polinomio característico:
+\begin{align*}
+ p(\lam)&= -
+\begin{vmatrix}
+3 - \lam & 1 & -1 \\
+2 & 2 - \lam & -1 \\
+2 & 2 & -\lam
+  \end{vmatrix}\\
+  &=\lam^{3}-5\lam^{2}+8\lam-4\\ &=(\lam-1)(\lam-2)^{2}.
+\end{align*}
+
+Los valores propios de $A$ son las raices de $p(\lam)=(x-1)(x-2)^{2},$ es decir,
+$$
+\lam_{1}=1, \lam_{2}=2.
+$$
+
+Podemos verificar nuestra respuesta en \texttt{WxMaxima}, de la siguiente manera:
+
+Primero, introducimos la matriz.
+
+%\begin{center}
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+matrix(
+ [3,1,-1],
+ [2,2,-1],
+ [2,2,0]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\begin{pmatrix}3 & 1 & -1\cr 2 & 2 & -1\cr 2 & 2 & 0\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+%\end{center}
+
+Posteriormente, calculamos el polinomio característico. En este caso, \texttt{WxMaxima} usará la definición $$
+p(x)=\det\left( A-xI \right).
+$$
+%\begin{center}
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i2)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+charpoly(%, x), expand;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+-{x}^{3}+5\,{x}^{2}-8\,x+4
+\end{math}
+%%%%%%%%%%%%%%%
+%\end{center}
+
+Finalmente, factorizamos el polinomio.
+%\begin{center}
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i8)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+factor(%o2);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+-{\left( x-2\right) }^{2}\,\left( x-1\right)
+\end{math}
+%%%%%%%%%%%%%%%
+%\end{center}
+
+Otra manera, más directa, es encontrar directamenta las raices del polinomio
+%\begin{center}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i13)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+realroots(%o2);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o13) }
+[x=2,x=1]
+\end{math}
+%%%%%%%%%%%%%%%
+
+%\end{center}
+
+Otra manera de obtener los valores propios es la siguiente:
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i21)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+eigenvalues(A);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o21) }
+[[1,2],[1,2]]
+\end{math}
+%%%%%%%%%%%%%%%
+En este caso, el primer arreglo nos dice los valores propios, mientras que el segundo, nos dice sus
+\emph{multiplicidades algebráicas,} que es el exponente que tienen asociado en el polinomio característico.
+\end{solucion}
+
+\subsection*{Ejemplos}
+
+%Los ejercicios de esta sección se pueden encontrar en \cite[sec. 6.3]{G}.
+
+\begin{problema}
+\label{exe:diagonal}
+ Encuentre los valores propios de las siguientes matrices. Verifique sus resultados usando \texttt{WxMaxima}.
+ \begin{enumerate}
+
+ \item $$
+A=\bm{-2&-2\\-5&1}
+ $$
+
+ \item$$A=\bm{2&-1\\5&-2}$$
+
+ \item$$A=\bm{3&2\\-5&1}$$
+ 
+ \item $$A=\begin{bmatrix}
+            4 & 2 \\
+            3 & 3
+           \end{bmatrix}
+$$
+
+\item$$
+A=\begin{bmatrix}
+   -6 & -3 & -25 \\
+   2 & 1 & 8 \\
+   2 & 2 & 7
+  \end{bmatrix}
+$$
+
+\item $$
+A=\begin{bmatrix}
+   1 & -1 & 4 \\
+   3 & 2 & -1 \\
+   2 & 1 & -1
+  \end{bmatrix}
+$$
+\item $$
+A=\begin{bmatrix}
+   3 & 2 & 4 \\
+   2 & 0 & 2 \\
+   4 & 2 & 3
+  \end{bmatrix}
+$$
+
+\item$$A=\bm{1&1&-2\\-1&2&1\\0&1&-1}$$
+
+\item$$A=\bm{7&-2&-4\\3&0&-2\\6&-2&-3}$$
+
+\item$$A=\bm{-3&-7&-5\\2&4&3\\1&2&2}$$
+\end{enumerate}
+\end{problema}
+
+
+

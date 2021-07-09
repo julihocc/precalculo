@@ -1,0 +1,313 @@
+\section{Números complejos}
+
+En estas notas, denotaremos por $\R$ el conjunto de números reales. En esta sección, procederemos de manera informal,
+para motivar la definición de un número complejo y formalizar sus propiedades, en secciones posteriores. 
+
+
+Supongamos que $a,b,c\in \R,$ y queremos resolver
+la ecuación
+$$
+ax^2+bx+c=0.
+$$
+
+De manera algebraíca encontramos que las soluciones estan dadas por la fórmula
+$$
+x=\dfrac{-b\pm \sqrt{D}}{2a}, \, D=b^2-4ac.
+$$
+
+Si $D \geq 0,$ entonces $D$ es un número real. Sin embargo, ¿qué sucede si $D<0$?. Por la \emph{ley de los signos} si
+$x,y\geq 0,$ entonces $xy\geq 0.$ De la misma manera, si $x,y<0,$ entonces $xy>0.$ En particular, para cualquier
+$x\in \R,$ tenemos que $x^{2}=x\cdot x\geq 0.$ Por lo tanto, $\sqrt{D} \notin \R$ si $D<0.$
+
+Una solución a este problema es definir el número $i=\sqrt{-1}.$ En este caso, si $D<0,$ entonces usando leyes de los
+exponentes tenemos que
+$$
+\sqrt{D}=\sqrt{(-1)(-D)}=\sqrt{-1}\sqrt{-D}=\sqrt{-D}i.
+$$
+En este caso, como $D<0,$ entonces $-D>0$ y $\sqrt{-D}\in \R.$
+
+\begin{problema}
+ Las soluciones de la ecuación $x^2+1=0$ son $x=0+i1$ y $x=0+i(-1),$ o simplemente, $x=\pm i.$
+\end{problema}
+
+\begin{problema}
+ Encuentre las soluciones de la siguientes ecuaciones:
+ \begin{enumerate}
+  \item $x^{4}+16=0,$
+  \item $x^{2}-2x+2=0.$
+ \end{enumerate}
+
+\end{problema}
+
+
+ Entonces, diremos que un número complejo es una cantidad de la forma
+ $$
+z=x+iy, \, x,y\in \R, \, i=\sqrt{-1}.
+ $$
+ Observe que si $x\in \R,$ podemos identificarlo con $x+i0.$
+
+Definimos la suma de números complejos $z=x+iy,z'=x+iy'$ de la siguiente manera:
+$$
+z+z'=(x+x')+i(y+y').
+$$
+
+\begin{problema}
+Demuestre que 
+\begin{enumerate}
+ \item $(x+iy)+(x'+iy')=(x'+iy')+(x+iy).$
+ \item $\left[ (x+iy)+(x'+iy') \right] +(x''+iy'')= (x+iy)+\left[ (x'+iy') +(x''+iy'') \right]$
+ \item $0+(x+iy)=x+iy$
+ \item $(x+iy)+((-x)+i(-y))=0$
+\end{enumerate}\end{problema}
+
+Diremos que $0=0+i0$ es el \emph{neutro aditivo} en los número complejos y que $-z:=-x-iy$ es el \emph{inverso aditivo}
+de $z=x+iy.$
+
+Ahora queremos definir la multiplicación $(x+iy)(x'+iy').$ Sigamos las reglas algebraicas usuales para números reales,
+salvo por la identidad $i^2=-1.$
+
+\begin{align*}
+(x+iy)(x'+iy')&= x(x'+iy')+iy(x'+iy')\\
+&= xx'+x(iy')+(iy)x'+(iy)(iy') \\
+&= xx' + ixy +iyx' + i^{2}yy' \\
+&= (xx'-yy')+i(xy'+yx').
+\end{align*}
+
+En resumen,
+ $$
+zz'= (xx'-yy')+i(xy'+yx') \in \C.
+ $$
+
+\begin{problema}
+Demostrar las siguientes propiedades de la multiplicación de número complejos
+\begin{enumerate}
+ \item $(x+iy)(x'+iy')=(x'+iy')(x+iy).$
+ \item $\left[ (x+iy)(x'+iy') \right] (x''+iy'')= (x+iy)\left[ (x'+iy') (x''+iy'') \right]$
+ \item $(1+i0)(x+iy)=x+iy$
+ \item $(x+iy)(x-iy)=x^2+y^2.$
+ \item $(x+iy)\left( \dfrac{x-iy}{x^2+y^2} \right)=1.$
+\end{enumerate}
+\end{problema}
+
+Diremos que $1=1+i0$ es el \emph{neutro multiplicativo} en los número complejos y que $$
+z^{-1}:=\dfrac{x-iy}{x^2+y^2} 
+$$ es el \emph{inverso multiplicativo} de $z=x+iy.$
+
+Si definimos $\bar{z}=x-iy,$ para $z=x+iy,$ podemos reescribir $$z^{-1}=\dfrac{\bar{z}}{z\bar{z}}.$$
+Diremos que $\bar{z}$ es el \emph{conjugado} de $z.$
+
+\begin{observacion}
+Los número reales se pueden identificar con una línea recta. Como $i$ no se puede identificar con un número en la línea
+recta, se decía que este número era \emph{imaginario.} Sin embargo, podemos visualizar los números complejos (es decir,
+¡dibujarlos!), para lo cuál necesitaremos ``más espacio''. Como requerimos dos números reales para describir un
+complejo, tendremos que dibujarlos en el plano.
+\end{observacion}
+
+\begin{problema}
+\label{exe:1.1.1}
+ Encuentre el resultado de las siguientes operaciones:
+ \begin{enumerate}
+  \item $\left( 1+i\sqrt{3} \right)\left( -1 +i\sqrt{3} \right)$
+  \item $\dfrac{\frac{1}{\sqrt{2}}+i\frac{1}{\sqrt{2}}}{\sqrt{3}+i1}$
+  \item $\left( \sqrt{2}+i\sqrt{6} \right)^{3}$
+ \end{enumerate}
+
+\end{problema}
+
+\subsection{Estructura algebraica de $\C$}
+
+\begin{definicion}El \emph{plano} es el conjunto
+	$$
+	\R^{2}=\set{(x,y)|x,y\in \R },
+	$$
+	de parejas ordenadas de números reales.
+\end{definicion}
+
+En este espacio, podemos definir varias operaciones. Cuando al conjunto lo dotamos de ciertas operaciones, decimos que
+es un \emph{estructura (matemática)} en el plano. Una de las más importantes es la estructura de \emph{espacio
+	vectorial,} que a continuación presentamos.
+
+\begin{definicion} El \emph{plano euclideano} es $\R^{2}$ dotado de las siguiente operaciones:
+	\begin{enumerate}
+		\item 
+		$
+		(x,y)+(x',y')=(x+x',y+y'),
+		$
+		\item Si $\a \in \R,$
+		$
+		\a\cdot(x,y)=(\a x,\a y),
+		$
+	\end{enumerate}
+\end{definicion}
+
+\begin{observacion}
+	En este caso, a los pares ordenados $(x,y)\in \R^{2}$ les llamaremos \emph{vectores (en el plano)}, mientras que a los
+	números reales los llamaremos \emph{escalares.} Entonces, nos referiremos a la primera operación como \emph{suma de
+		vectores,} mientras que a la segunda como \emph{multiplicación por escalares.} Estas son las operaciones \emph{usuales}
+	en el plano euclideano.
+\end{observacion}
+
+
+\begin{problema}
+	Encuentre y grafique los vectores resultantes.
+	\begin{enumerate}
+		\item $2(1,0)+3(0,1),$
+		\item $\frac{1}{5}(5,0)-1(0,2).$
+	\end{enumerate}
+	
+\end{problema}
+
+Con el plano euclideano en mente, podemos definir de manera formal el conjunto de número complejos. Observe que
+podríamos identificar $x+iy$ con el vector $(x,y).$ Observe que con esta identificación, el resultado de la suma de
+números complejos coincide con la de vectores. De igual manera, podemos identificar la multiplicación entre número
+complejo. Esto nos lleva a la definición formal de \emph{números complejos.}
+
+\begin{definicion}
+	El \emph{campo} de número complejos $\C$ es el conjunto $\R^{2}$ dotado de las siguientes operaciones:
+	\begin{enumerate}
+		\item
+		$
+		(x,y)+(x',y')=(x+x',y+y'),
+		$
+		\item
+		$
+		(x,y)(x',y')=(xx'-yy',xy'+yx').
+		$
+	\end{enumerate}
+\end{definicion}
+
+
+Si identificamos $\a \in \R,$ con $(a,0) \in \C,$ resulta que la multiplicación por escalares coindice con la
+multiplicación de números complejos para escalares reales, es decir, si $a\in \R,$
+$$
+a(x,y)=(a,0)(x,y).
+$$
+
+\begin{problema}
+	Verifique la afirmación anterior.
+\end{problema}
+
+
+\begin{problema}
+	Verifque las siguiente propiedades. Si $u,v,w \in \C \cong \R^{2},$ entonces
+	\begin{enumerate}
+		\item $u+v\in \C$ 
+		\item $(u+v)+w=u+(v+w)$
+		\item $u+v=v+u$
+		\item Existe $0\in \C,$ tal que $u+0=0$
+		\item Para cada $u\in \C,$ existe $-u\in\C,$ tal que $u+(-u)=0$
+		\item $uv \in \C$
+		\item $(uv)w=u(vw)$
+		\item $uv=vu$
+		\item Existe $1\in \C,$ tal que $1u=u$
+		\item Para cada $u\in C, u \neq 0,$ existe $u^{-1}\in \C,$ tal que $u u^{-1}=1$
+		\item $u(v+w)=uv+uw.$
+	\end{enumerate}
+	
+\end{problema}
+
+\begin{observacion}
+	Cualquier conjunto $S,$ con operaciones suma y multiplicación, que cumplan las propiedades anteriores, se conoce como
+	un \emph{campo.} Otros ejemplos de campos son las fracciones y los mismos números reales. En teoría número, ejemplos de
+	campos son los enteros \emph{módulo} $p$ $\mathbb{Z}_{p},$ con $p$ un número primo.
+\end{observacion}
+
+\subsection{Forma polar de los números complejos}
+
+En la presente sección, suponemos que el lector tiene conocimientos elementales de trigonometría y geometría analítica. 
+
+Como los números complejos son vectores, podemos calculas su longitud o \emph{norma.}
+
+\begin{definicion}
+	Si $z=x+iy\in \C,$ entonces la norma de $z$ se define como
+	$$
+	\norm{z}=\sqrt{x^{2}+y^{2}}.
+	$$
+\end{definicion}
+
+Como hicimos antes, definimos de manera formal el \emph{conjugado} de un número complejo.
+\begin{definicion}
+	Si $z=(x,y)\in \C,$ su \emph{conjugado} esta dado por
+	$$
+	\bar{z}=(x,-y)\in \C.
+	$$
+\end{definicion}
+
+De manera que $\norm{z}^{2}=z\bar{z}.$
+
+De la misma manera, siendo un vector podemos medir el ángulo que abre respecto al vector $(1,0)$, en el sentido de las
+manecillas del reloj, al cual llamaremos \emph{argumento} y definimos analíticamente de la siguiente forma.
+\begin{definicion}
+	El argumento $\theta(z)$ de $z=x+iy\in \C$ se define como
+	\begin{enumerate}
+		\item $\arctan\left( \dfrac{y}{x} \right)$ si $x>0$
+		\item $\pi + \arctan\left( \dfrac{y}{x} \right)$ si $x<0$
+		\item $\dfrac{\pi}{2}$ si $x=0, y> 0$
+		\item $-\dfrac{\pi}{2}$ si $x=0, y< 0$
+	\end{enumerate}
+	
+\end{definicion}
+
+\begin{definicion}
+	Si $z\in \C$ tiene norma $r>0$ y argumento $\th,$ decimos que $$
+	z=r\arg{\th},
+	$$
+	es la \emph{forma polar} de $z,$ donde $\arg{\cdot}:\R\to\R^{2},$
+	$$
+	\arg{\th}=\, \left( \cos(\th), \sin (\th) \right).
+	$$
+\end{definicion}
+
+\begin{problema}
+	Demostrar que
+	\begin{enumerate}
+		\item $\arg{0}=1$
+		\item $\arg{\th+2\pi}=\arg{\th}$
+		\item $\overline{\arg{\th}}=\arg{-\th}$
+		\item $\arg{\th+\tau}=\arg{\th}\arg{\tau}$
+		\item $\arg{n\th}=\left( \arg{\th} \right)^{n}$
+	\end{enumerate}
+	
+\end{problema}
+
+\begin{problema}
+	\begin{enumerate}
+		\item Si $z=r\arg{\th} \in \C,$ entonces
+		\begin{enumerate}
+			\item   $
+			z^{-1}=r^{-1} \overline{\arg{\th}}
+			$
+			\item Si $n$ es un número entero, $
+			z^{n}=r^{n}\arg{n \th}.
+			$
+		\end{enumerate}
+		
+		
+		\item Si $z=r\arg{\th}, w=s\arg{\tau} \in \C,$ entonces
+		\begin{enumerate}
+			\item   $
+			zw=rs\arg{\th+\tau}.
+			$
+			\item
+			$
+			\dfrac{z}{w}=\dfrac{r}{s}\arg{\th-\tau}
+			$
+		\end{enumerate}
+		
+		
+		
+		
+		
+	\end{enumerate}
+	
+\end{problema}
+
+Esta última identidad se conoce como \emph{identidad de De Moivre.}
+
+
+\begin{problema}
+	Convierta a su forma polar, cada uno de los números en el ejercicio \ref{exe:1.1.1} y realice las operaciones
+	correspondientes, usando los resultados anteriores. 
+\end{problema}
+
+

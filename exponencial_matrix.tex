@@ -1,0 +1,526 @@
+\section{Proyecto final: Ecuaciones diferenciales}
+
+\subsection*{Teoría}
+
+Consideremos la siguiente ecuación diferencial
+$$
+x'(t)=cx(t).
+$$
+Esta ecuación describe un modelos donde la razón de crecimiento instantaneo $x'$ es propocional al estado del sistema,
+en un momento determinado. Aplicaciones de este modelo incluyen:
+\begin{enumerate}
+ \item Crecimiento poblacional;
+ \item decaimiento radioactivo;
+ \item la Ley de Newton, para la temperatura de un cuerpos; y
+ \item interés compuesto.
+\end{enumerate}
+
+De hecho, si conocemos la condición \emph{inicial,} es decir, el valor del sistema en el tiempo $t=0,$ podemos
+encontrar una \emph{única solución al problema}.
+
+\begin{teorema}
+ La única solución \emph{continuamente diferenciable} a la ecuación diferencial
+ $$
+x'=cx,
+ $$
+ con condición incial $x(0)=x_{0}$ es
+\[
+ \label{sol:1dim}
+ x(t)=e^{tc}x_{0}.
+\]
+
+ \end{teorema}
+
+Es fácil comprobar que (\ref{sol:1dim}) es un solución derivando de manera usual; que esta sea la \emph{única solución}
+con derivada continua es resultado del \emph{teorema fundamental de las ecuaciones diferenciales ordinarias.}
+
+Sin embargo, este modelo solo describe un sistema con una cantidad que evoluciona con el tiempo, ¿como modelar un
+sistema con más cantidades?
+
+Podemos pensar que existen cantidades $x_{1}(t),...,x_{n}(t)$ de manera que la razón de cambio de cada una sea
+\emph{combinación lineal} de cada una de los estados del sistema, es decir, para $k=1,...,n$:
+$$
+x_{k}'(t)=a_{k,1}x_{1}(t)+...+a_{k,n}x_{n}(t).
+$$
+Esto es una manera de generalizar el hecho de que para una sola cantidad, su razón de cambio instantanea sea
+\emph{proporcional}.
+
+De manera matricial, podemos escribir este sistema como
+$$
+\bm{x_{1}'(t)\\ \vdots \\ x_{n}'(t)}=
+\bm{a_{1,1}&...&a_{1,n}\\ \vdots & & \vdots \\ a_{n,1} & ... & a_{n,n}}
+\bm{x_{1}(t)\\ \vdots \\ x_{n}(t)}.
+$$
+
+Si definimos
+$$
+\begin{cases}
+ x(t)=\bm{x_{1}(t)\\ \vdots \\ x_{n}(t)} \\
+ x'(t)=\bm{x_{1}'(t)\\ \vdots \\ x_{n}'(t)} \\
+ A=\bm{a_{1,1}&...&a_{1,n}\\ \vdots & & \vdots \\ a_{n,1} & ... & a_{n,n}}  
+\end{cases}
+$$
+el sistema anterior se puede reescribir como
+$$
+x'(t)=Ax(t).
+$$
+
+Note como se parece este sistema al de una sola variable. De hecho, así como podemos definir $e^{a}$ para $a\in \R,$ es
+posible definir $e^{A},$ donde $A$ es una matriz $n \times n.$ Para esto, necesitamos la siguiente definición de la
+función exponencial.
+
+\begin{definicion}
+ $$e^{x}=\sum_{k\geq 0} \dfrac{x^{k}}{k!}$$
+\end{definicion}
+
+Esta definición tiene sentido para matrices porque $A^{k}= A\cdots A$ un número $k$ de veces.
+
+\begin{teorema}
+ La única solución de la ecuación diferencial \emph{vectorial}
+ $$
+x'(t)=Ax(t), 
+ $$
+ para $x(t)\in \R^{n}$ para cada $t\in \R$ y $A\in M_{n},$ con condición inicial
+ $$
+x_{0}= \bm{x_{1,0} \\ \vdots \\ x_{n,0}} \in \R^{n}
+ $$
+ es $$
+x(t)=e^{tA}x_{0}.
+ $$
+\end{teorema}
+
+Sin embargo, calcular la $n$-ésima potencia de una matriz puede ser demasiado complicado... excepto para matrices
+diagonales.
+
+\begin{proposicion}
+ Si $$
+D=\bm{\lam_{1} & 0 & & \\ 0 & \lam_{2} & & \\ & & \ddots & \\ &&&\lam_{n}}
+ $$
+ es una matriz diagonal, entonces
+ $$
+D^{k}=\bm{\lam_{1}^{k} & 0 & & \\ 0 & \lam_{2}^{k} & & \\ & & \ddots & \\ &&&\lam_{n}^{k}}.
+ $$
+\end{proposicion}
+
+\begin{proof} 
+ La demostración se puede hacer por inducción. 
+\end{proof}
+
+Supongamos que $T:\R^{n}\to \R^{n}$ es una tranformación lineal, cuya representación matricial $A$ (en la base estandar
+$E$) es diagonalizable y $P$ es la matriz de paso de la base $F$ de vectores propios a la base $E$. Entonces si $D$ es
+la matriz que representa la misma transformación en la base $F$, sabemos que
+$$
+A= PDP^{-1}.
+$$
+
+Por inducción, no es difícil demostrar que
+$$
+A^{n}=P D^{n} P^{-1},
+$$
+y por tanto, multiplicando por un escalar $t\in \R$,
+$$
+tA^{n}=P (tD^{n}) P^{-1}.
+$$
+
+Antes de continuar, recordemos que por propiedades distributivas de las matrices
+$$
+R(M+N)S=RMS+RNS,
+$$
+o de manera más generalizar $$
+\sum\left( RM_{k}S \right)=R\left( \sum M_{k} \right) S. 
+$$
+
+Entonces
+\begin{align*}
+e^{tA}&= \sum_{k\geq 0} \dfrac{(tA)^{k}}{k!} \\
+&= \sum_{k\geq 0} \dfrac{\left( P (tD^{n}) P^{-1} \right)^{k}}{k!} \\
+&= P \left( \sum_{k\geq 0} \dfrac{\left( tD^{n} \right)^{k}}{k!} \right) P^{-1} \\
+&= P e^{tD} P^{-1}.
+\end{align*}
+
+Basta entonces encontrar $e^{tD}.$ Pero como vimos, calcular las potencias de $D$ no es dificil.
+
+\begin{align*}
+ e^{tD} &= \sum_{k\geq 0} \frac{1}{k!} (tD)^{k} \\
+&=\sum_{k\geq 0} \frac{1}{k!}
+\bm{(t\lam_{1})^{k} & 0 & & \\ 0 & (t\lam_{2})^{k} & & \\ & & \ddots & \\ &&&(t\lam_{n})^{k}} \\
+&= \bm{\sum_{k\geq 0} \frac{1}{k!}(t\lam_{1})^{k} & 0 & & \\ 0 & \sum_{k\geq 0} \frac{1}{k!}(t\lam_{2})^{k} & & \\ & &
+\ddots & \\ &&&\sum_{k\geq 0} \frac{1}{k!}(t\lam_{n})^{k}} \\
+&= \bm{e^{t\lam_{1}} & 0 & & \\ 0 & e^{t\lam_{2}} & & \\ & & \ddots & \\ &&&e^{t\lam_{n}}}.
+\end{align*}
+
+¡Listo!
+
+\subsection*{Ejemplos}
+
+\begin{problema}
+ Resuelva el siguiente sistema de ecuaciones diferenciales
+ $$\begin{cases}
+  x'=-x \\
+  y'=x+2y
+ \end{cases}$$
+ con condiciones inciales
+ $$
+x(0)=0, \, y(0)=3.
+ $$ 
+\end{problema}
+
+\begin{solucion}
+ Rescribimos $x=x_{1}, y=x_{2}$ y podemos escribir el sistema de forma matricial, en la siguiente manera
+ $$
+\bm{x_{1}'\\x_{2}'}=
+\bm{-1 & 0 \\ 1 & 2} \bm{x_{1}\\x_{2}}.
+ $$
+
+ Entonces $$
+A=\bm{-1 & 0 \\ 1 & 2}.
+ $$
+
+ Usando \texttt{WxMaxima}, podemos encontrar los valores y vectores propios.
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+A: matrix(
+ [-1,0],
+ [1,2]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\begin{pmatrix}-1 & 0\cr 1 & 2\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i2)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+eigenvectors(%);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+[[[-1,2],[1,1]],[[[1,-\frac{1}{3}]],[[0,1]]]]
+\end{math}
+%%%%%%%%%%%%%%%
+
+Esto quiere decir que $\lam_{1}=-1$ es un valor propio con vector propio $$
+\bm{1\\ -\frac{1}{3}},
+$$
+mientras que $\lam_{2}=2$ también lo es, con vector propio
+$$
+\bm{0 \\ 1}.
+$$
+
+\begin{observacion}
+Como tenemos dos vectores propios en un espacio de dimensión dos, basta verificar que son linealmente independiente,
+para saber que forman una base.  Para comprobar que son linealmente independientes, formamos una matriz que tenga
+como columnas a estos vectores y verificamos que esta matriz es invertible.
+\end{observacion}
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i4)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+P: matrix(
+ [1,0],
+ [-1/3,1]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+\begin{pmatrix}1 & 0\cr -\frac{1}{3} & 1\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i5)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+determinant(%);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+1
+\end{math}
+%%%%%%%%%%%%%%%
+
+Entonces, $F=\basis{\bm{1\\ -\frac{1}{3}}, \bm{0 \\ 1}}$ es una base de $\R^{2},$ de vectores propios de $A.$ Por tanto
+$A$ es diagonalizable. Como $P$ es la matriz de cambio de la base $F$ a la base estandar $E$, usamos la siguiente
+identidad
+$$
+D=P^{-1}AP,
+$$
+para encontrar la matriz diagonalizada $D.$ Denotaremos a $P^{-1}$ por $Q.$
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i6)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+Q:invert(P);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+\begin{pmatrix}1 & 0\cr \frac{1}{3} & 1\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i7)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+D:Q.A.P;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+\begin{pmatrix}-1 & 0\cr 0 & 2\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+Entonces, sabemos que
+\begin{align*}
+ e^{tD}=\bm{e^{-t} & 0 \\ 0 & e^{2t}},
+\end{align*}
+y podemos hallar $e^{tA}$ con la ecuación
+$$
+e^{tA}=Pe^{tD}P^{-1}.
+$$
+
+Podemos hacer los cálculos en \texttt{WxMaxima} de la siguiente manera
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i8)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+matrix(
+ [%e^(-t),0],
+ [0,%e^(2*t)]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+\begin{pmatrix}{e}^{-t} & 0\cr 0 & {e}^{2\,t}\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i9)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+P.%o8.Q;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o9) }
+\begin{pmatrix}{e}^{-t} & 0\cr \frac{{e}^{2\,t}}{3}-\frac{{e}^{-t}}{3} & {e}^{2\,t}\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+Es decir,
+$$
+e^{tA}=\begin{bmatrix}{e}^{-t} & 0\cr \frac{{e}^{2\,t}}{3}-\frac{{e}^{-t}}{3} & {e}^{2\,t}\end{bmatrix}
+$$
+
+Las condiciones inciales se pueden escribir en forma vectorial como
+$$
+\bm{0 \\ 3},
+$$
+y por tanto, nuestra solución sera
+$$
+\begin{bmatrix}{e}^{-t} & 0\cr \frac{{e}^{2\,t}}{3}-\frac{{e}^{-t}}{3} & {e}^{2\,t}\end{bmatrix}\bm{0 \\ 3}.
+$$
+
+Realizamos los cálculos en \texttt{WxMaxima} de la siguiente manera. Primero introducimos el vector como si fuera una
+matriz de dos reglos y una columnas
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i10)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+matrix(
+ [0],
+ [3]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o10) }
+\begin{pmatrix}0\cr 3\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+y posteriormente hacemos la multiplicación, recordando que \texttt{WxMaxima} le asigno la etiqueta \texttt{\%o9} a
+nuestra matriz $e^{tA}$, y la etiqueta \texttt{\%o10} a nuestro vector de condiciones inciales.
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i11)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+%o9.%o10;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o11) }
+\begin{pmatrix}0\cr 3\,{e}^{2\,t}\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+Por tanto, la solucion a nuestro sistema de ecuaciones diferenciales es
+$$
+\bm{x(t)\\y(t)}=
+\bm{0 \\ 3 e^{2t}}.
+$$
+
+\end{solucion}
+
+\subsection*{Proyecto final}
+
+Resuelva los siguientes sistema de ecuaciones diferenciales, como se hizo en el ejemplo anterior. Debe plantear de
+manera correcta todos los pasos, indicar los cálculos que hizo en \texttt{WxMaxima} y escribiendo de manera clara sus
+conclusiones. El proyecto puede ser elaborado por equipos de a lo más tres personas, y debe ser entregado en
+computadora el día del examen final.\footnote{Para copiar el cógido que introduzca en \texttt{WxMaxima}, seleccione con
+el botón izquierdo de su ratón, el lado
+izquierdo del código, de manera que cambie a color azul como en la figura \ref{fig:1} y posteriormente presione el
+botón derecho, y seleccione la opción copiar. }
+
+% \begin{figure}
+%  \centering
+%  \includegraphics[height=5cm,viewport=0 0 1024 576,keepaspectratio=true]{./pantalla.png}
+%  % pantalla.png: 1366x768 pixel, 96dpi, 36.14x20.32 cm, bb=0 0 1024 576
+%  \caption{WxMaxima}
+%  \label{fig:1}
+% \end{figure}
+
+\begin{enumerate}
+ \item
+ $$
+\begin{cases}
+ x_{1}'=2x_{1}+x_{2} \\
+ x_{2}'=x_{1} + x_{2}
+\end{cases}
+ $$
+con condiciones iniciales $x_{1}(0)=1, \, x_{2}(0)=1.$
+
+\item
+$$x'=Ax$$ con
+$$
+A=\bm{0 & 3 \\ 1 & -2}
+$$
+y condiciones iniciales
+$$
+x(0)=\bm{3 \\ 1}.
+$$
+
+\item
+$$
+x'=Ax
+$$
+con
+$$
+A=\bm{2&0&0\\0&-1&0\\0&2&-3}
+$$
+y condiciones iniciales
+$$
+x(0)=\bm{0\\-b\\b}.
+$$
+\end{enumerate}
+
+%Para una revisión con más detalle de este tema y un repaso de álgebra lineal, puede consultar \cite[capítulo 3]{HS}.

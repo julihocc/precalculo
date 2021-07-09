@@ -1,0 +1,94 @@
+\section{Criterios para evaluar raíces}
+
+\subsection{Regla de los signos de Descartes}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Variaciones de signo}
+Si un polinomio $P(x)$ tiene coeficientes reales, escritos sus \emph{exponentes en forma descendiente} y \emph{omitiendo exponentes con coeficiente cero}, entonces una \emph{variación de signo} ocurre siempre que dos signos opuestos. 
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+\begin{problema}
+\begin{itemize}
+\item $x^{2}+4x+1$ tiene $0$ variaciones de signo.
+\item $2x^{3}+x-6$ tiene $1$ variación de signo.
+\item $x^{4}-3x^{2}-x+4$ tiene $2$ variaciones de signo.
+\item $5x^{7}-3x^{5}-x^{4}+2x^{2}+x-3$ tiene  $3$ variaciones de signo.
+\end{itemize}
+
+\end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{Regla de los signos de Descartes}
+\begin{proposicion}
+Sea $P$ un polinomio con coeficientes reales
+\begin{enumerate}
+\item El número de \emph{ceros reales positivos} es o bien igual al número de variaciones de signo en $P(x)$ o bien menor este número por un número par. 
+\item El número de \emph{ceros reales negativos} es o bien igual al número de variaciones de signo en $P(-x)$ o bien menor este número por un número par. 
+\end{enumerate}
+
+\end{proposicion}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+\begin{problema}
+Use la regla de los signos de Descartes para estimar el número posible de ceros reales negativos y positivos del polinomio
+\begin{align*}
+P(x)= 3x^{6}+4x^{5}+3x^{3}-x-3
+\end{align*}
+
+\end{problema}
+
+\begin{solucion}
+	$P(x)= 3x^{6}+4x^{5}+3x^{3}-x-3$ tiene una única raíz real positiva y o bien tres o bien una raíces real negativas.
+\end{solucion}
+
+
+%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Teorema de las Cotas}
+%%%%%%%%%%%%%%%%%%%%%
+{}
+Diremos que $m\in \R$ es una \emph{cota inferior} y $M\in \R$ es una cota superior para el conjunto de \emph{ceros reales} de un polinomio si para cada raíz $c$ tenemos que 
+\begin{align*}
+	m \leq c \leq M.
+\end{align*}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+\begin{teorema}
+Sea $P(x)$ un polinomio con coeficientes reales.
+\begin{enumerate}
+\item Si se divide $P(x)$ entre $x-b$ con $b>0$ usando división sintética, y si la fila de coeficientes del cociente y residuo tiene entradas \emph{no negativas}, entonces $b$ es una cota superior para los ceros reales de $P(x)$.
+\item Si se divide $P(x)$ entre $x-a$ con $a<0$ usando división sintética, y si la fila de coeficientes del cociente y residuo tiene entradas \emph{alternantemente no positivas y no negativas}, entonces $a$ es una cota inferior para los ceros reales de $P(x)$.
+\end{enumerate}
+
+\end{teorema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+	\begin{problema}
+		Muestre que todos los ceros reales del polinomio \begin{align*}
+			P(x)=x^4-3x^{2}+2x-5
+		\end{align*}
+		están entre $-3$ y $2$.
+	\end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+	\begin{problema}
+		
+		Factorice completamente el polinomio 
+		$P(x)=2x^{5}+5x^{4}-8x^{3}-14x^{2}+6x+9$
+	\end{problema}
+
+\begin{solucion}
+	$P(x)=\left( x-1 \right)\left( 2x-3 \right)\left( x+1 \right)^{2}\left( x+3 \right)$
+\end{solucion}
+
+

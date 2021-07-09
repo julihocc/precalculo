@@ -1,0 +1,279 @@
+\section{Transformaciones lineales}
+
+\subsection*{Definici\'on y ejemplos}
+\begin{definicion} Sean $V,W$ espacios vectoriales. Decimos que $T:V \to W$ es una \emph{transformaci\'on lineal} si para
+todos $\a \in \R, u,v \in V$ se cumple
+\begin{enumerate}
+\item $T(u+v)=T(u)+T(v)$ ($T$ abre sumas)
+ \item $T(\a u)=\a T(u)$ ($T$ saca escalares)
+\end{enumerate}
+o de manera equivalente
+$$
+T(\a u +v)=\a T(u) + T(v),
+$$
+es decir, \emph{$T$ respeta la estructura de espacio vectorial.}
+
+En el caso $V=W,$ decimos que $T:V\to V$ es un operador y al conjunto de operadores en $V$ lo denotamos por $L(V).$
+En el caso $W=\R,$ decimos que $T:V\to \R$ es un funcional en $V.$
+\end{definicion}
+
+\begin{problema}
+ Sea $a=[a_{1},...,a_{n}]\in \R^{n}$ fijo y definamos $T:\R^{n}\to \R, \, T(u)=a \cdot u.$ Entonces, $T$ es una
+transformaci\'on lineal. 
+\end{problema}
+
+
+\begin{problema}
+\label{matriz:trans_lin}
+Sea $A=\begin{bmatrix}
+        a_{ij}
+       \end{bmatrix}
+$ una matriz de dimensi\'on $n \times m,$ donde $n$ indica el número  de columnas y $m$ el de renglones.
+
+Si definimos $T:\R^{n}\to \R^{m}, \, T(u)=Au,$ entonces $T$ es una tranformaci\'on lineal. En otras palabras, cada
+matriz define una transformaci\'on lineal. Lo inverso tambi\'en es cierto.
+
+Sea $$e_{k}=\begin{bmatrix}
+             0\\
+             \vdots \\
+             1 \\
+             \vdots \\
+             0             
+            \end{bmatrix}
+$$
+el vector columna con un $1$ en la $k-$\'esima posici\'on y ceros en el resto, y sea $T:\R^{n}\to \R^{m}$ una
+transformaci\'on lineal. Entonces, $T(e_{k})\in \R^{m}$ y digamos que es de la forma
+$$
+T(e_{k})=\begin{bmatrix}
+          a_{1k}\\
+          \vdots \\     
+          a_{mk} \\
+         \end{bmatrix}.
+$$
+
+Si definimos $A=[a_{ij}]\in M_{mn}$ entonces $T(e_{k})=Ae_{k}, \, k=1,...,n.$ Por linealidad tanto de $T$ como de $A,$
+obtenemos que $T(x)=Ax,$ para todo vector $x\in \R^{n}.$
+\end{problema}
+
+\begin{problema}
+Las siguientes transformaciones son lineales:
+\begin{itemize}
+ \item $T:C^{1}[0,1]\to C^{0}[0,1],$
+ $$
+T(f)(x)=f'(x).
+ $$
+ \item $T:C^{0}[0,1]\to \R,$
+$$
+T(f)=\int_{0}^{1}f(t)dt.
+$$
+\item $T:C^{0}[0,1]\to C^{1}[0,1],$
+$$
+T(f)(x)=C+\int_{0}^{x}f(t)dt, 
+$$
+donde $x\in[0,1]$ y $C\in \R$ es alguna constante.
+\end{itemize}
+
+\end{problema}
+
+\begin{problema}
+ Indique si la siguiente transformaci\'on $T:\R^{3}\to \R^{3}$ es lineal y de ser as\'i, encuentre su representaci\'on
+matricial.
+\[
+\label{trans_exmp}
+ T\begin{bmatrix}
+    x\\y\\z
+   \end{bmatrix}=
+   \begin{bmatrix}
+    x+2y \\ z-y\\ 2x+7y-3z
+   \end{bmatrix}
+\]
+
+\end{problema}
+
+\begin{solucion}
+ La prueba de que la transformaci\'on es lineal se deja al lector. Ahora bien,
+ $$
+T\begin{bmatrix}
+  1\\0\\0
+ \end{bmatrix}
+=\begin{bmatrix}
+  1\\0\\2
+ \end{bmatrix},
+ T\begin{bmatrix}
+  0\\1\\0
+ \end{bmatrix}
+=\begin{bmatrix}
+  2\\-1\\7
+ \end{bmatrix},
+T\begin{bmatrix}
+  0\\0\\1
+ \end{bmatrix}
+=\begin{bmatrix}
+  0\\1\\-3
+ \end{bmatrix}.
+ $$
+
+ Por lo tanto, la representaci\'on matricial de $T$ esta dada por
+ $$
+=\begin{bmatrix}
+1 & 2 & 0 \\
+0 & -1 & 1 \\
+2 & 7 & -3
+ \end{bmatrix}
+ $$
+\end{solucion}
+
+
+\subsection*{Operadores en  $\R^{n}$}
+
+Sean $T,S \in L(\R^{n}).$ La composici\'on $TS,$ es decir, $TS(x)=T(S(x))$ es de nuevo un operador y de hecho, si 
+$B=[b_{ij}]$ es la matriz asociada a $T$ como en el ejemplo \ref{matriz:trans_lin} y $A=[A_{ij}]$ la asociada a $S,$
+entonces la matriz asociada a $TS$ es $C=[c_{ij}]$ conjunto $$
+c_{ij}=\sum_{k}^{n}b_{ik}a_{kj}.
+$$
+Decimos que $C=BA$ es el producto de de $B$ con $A$ (es este orden), y esta composicion es asociativa.
+
+El operador de $T$ con $S$ suma esta definido como $(T+S)(u)=T(u)+S(u),$ y de hecho tiene asociada la matriz $$
+\begin{bmatrix}
+ b_{ij}+a_{ij}
+\end{bmatrix}.
+$$
+
+Dos operadores especiales en $R^{n}$ son la \emph{transformaci\'on cero} $0(x)=0$ y la \emph{identidad} $\id(x)=x.$
+\begin{problema}[\dag]
+ Encuentre la matriz asociada a los operadores cero e identidad. 
+\end{problema}
+
+Podemos definir la multiplicaci\'on de operadores por escalares de la siguiente forma. $(\a T)(u)=\a T(u).$ De esta
+manera, con la operaci\'on suma entre operadores y esta multiplicaci\'on por escalares, resulta que $L(\R^{n})$ es un
+espacio vectorial.
+
+Finalmente, si para $P\in L(\R^{n})$ existe $Q\in L(\R^{n}),$ de manera que $PQ=\id,$ decimos que $P$ es
+\emph{invertible} y que $Q$ es el operador inverso de $P.$ Tambi\'en podemos escribir $Q$ como $P^{-1}.$
+De hecho, si $A$ es la matriz asociada a $P,$ entonces $A^{-1}$ es la asociada a $P^{-1}.$
+
+
+
+
+\subsection*{Ejemplos}
+
+\begin{problema} \label{exe:trans}Verificar que las siguientes transformaciones son lineales, y encontrar la representaci\'on
+matricial de cada una.
+\begin{enumerate}
+ \item (Proyecci\'on sobre el plano)$$
+T\begin{bmatrix}
+  x \\ y \\z
+ \end{bmatrix}
+=\begin{bmatrix}
+  x \\ y \\0
+ \end{bmatrix}
+ $$
+
+ \item $$
+T\begin{bmatrix}
+  x \\ y \\z 
+ \end{bmatrix}
+ =\begin{bmatrix}
+  x - y\\ y+z \\ 2x - y - z \\ -x+y+2z
+ \end{bmatrix}
+ $$
+
+ \item $$
+T\begin{bmatrix}
+  x \\ y \\z
+ \end{bmatrix}
+ =\begin{bmatrix}
+  2x - y +3z\\ 4x-2y+6z \\ -6x +3 y - 9z
+ \end{bmatrix}
+ $$
+
+\item$$
+T\begin{bmatrix}
+  x \\ y 
+ \end{bmatrix}
+ =\begin{bmatrix}
+   2x-y\\ 2y-4x
+  \end{bmatrix}
+$$
+
+\item$$
+T\begin{bmatrix}
+  x \\ y 
+ \end{bmatrix}
+ =\begin{bmatrix}
+   2x \\ 3x-y
+  \end{bmatrix}
+$$
+
+\item$$
+T\begin{bmatrix}
+  x \\ y \\z
+ \end{bmatrix}
+ =\begin{bmatrix}
+   2x-y+3z \\ 6x -3y +9z
+  \end{bmatrix}
+$$
+
+\item $$
+T\begin{bmatrix}
+  x \\ y 
+ \end{bmatrix}
+ =\begin{bmatrix}
+2x+y \\ 2y-x \\ x+8y
+  \end{bmatrix}
+$$
+\item
+$$
+T\begin{bmatrix}
+  x\\y\\z
+ \end{bmatrix}
+=\begin{bmatrix}
+  1x  -3z \\
+   -y + 5z
+ \end{bmatrix}
+$$
+\item
+$$
+T\begin{bmatrix}
+  x \\ y
+ \end{bmatrix}
+=\begin{bmatrix}
+  2x+y\\
+  -4x + 2y \\
+  8x + 4y
+ \end{bmatrix}
+$$
+\item
+$$
+T=\begin{bmatrix}
+   x\\y\\z
+  \end{bmatrix}
+=\begin{bmatrix}
+  3x  -z \\
+  -y + 2z \\
+  15x  -2y  -z
+ \end{bmatrix}
+$$
+
+%  \item(Rotaci\'on en el plano)$$
+% T \begin{bmatrix}
+%    r\cos(t) \\
+%    r\sin(t)
+%   \end{bmatrix}
+% = \begin{bmatrix}
+%    r\cos(t+a) \\
+%    r\sin(t+a)
+%   \end{bmatrix}
+%  $$
+
+%  \item $T:P_{2} \to P_{3}, (Tp)(x)=xp(x).$
+% 
+%  \item $T:P_{3} \to P_{2}, T(a+bx+cx^{2}+dx^{3})=b+cx^{2}.$
+\end{enumerate}
+\end{problema}
+
+\begin{problema}
+ Encuentre una expresi\'on matemática para la transformaci\'on que rota un vector en el plano, con un ángulo $\phi$
+en el sentido positivo (contrario a las manecillas del reloj). Indique si esta transformaci\'on es lineal y de serlo,
+encuentre su representaci\'on matricial. \emph{Sugerencia: Exprese el vector en coordenadas polares.}
+\end{problema}

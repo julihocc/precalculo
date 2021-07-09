@@ -1,0 +1,247 @@
+\section{Técnicas de integaci\'on trigonométrica}
+
+\subsection{Integrados trigonométricos}
+
+
+\subsection{Caso 1}
+ Considérense las integrales de la forma 
+ $$
+ \int \sin^{k}(x)cos^{n}(x)dx, 
+ $$ con $k,n$ enteros no negativos.
+
+
+
+\subsection{Tipo 1.1}
+ Si Al menos uno de los números $k,n$ es impar, entonces podemos escoger $u=\cos(x)$ o $u=\sin(x).$
+
+
+
+ \begin{problema}
+  \label{ayr:32.1}
+  $$
+  \int \sin^{3}(x)\cos^{2}(x)dx.
+  $$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+ \label{ayr:32.2}
+  $$
+  \int sin^{4}(x)cos^{7}(x)dx
+  $$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{ayr:32.3}
+  $$
+  \int sin^{5}(x)dx
+  $$
+ \end{problema}
+
+
+
+
+\subsection{Tipo 1.2}
+ Si ambas potencias $k,n$ son pares. Entonces utilizaremos las identidades
+ $$\begin{cases}
+    cos^{2}(x)=\dfrac{1+cos(2x)}{2}\\
+    sin^{2}(x)=\dfrac{1-cos(2x)}{2}
+   \end{cases}
+$$
+
+
+
+ \begin{problema}
+  \label{ayr:32.4}
+  $$
+  \int cos^{2}(x)sin^{4}(x)dx
+  $$
+ \end{problema}
+
+
+
+
+\subsection{Caso 2}
+ Consideraremos integrales de la forma 
+ $$
+ \int tan^{k}(x)sec^{n}(x)dx.
+ $$
+  y utilizaremos la identidad
+$$
+sec^{2}(x)=1+tan^{2}(x).
+$$
+ 
+ 
+ 
+ \subsection{Tipo 2.1} Si $n$ es par, entonces se sustituye $u=\tan(x).$
+ 
+
+ 
+ 
+  \begin{problema}
+   \label{ayr:32.5}
+   $$
+   \int tan^{2}(x)sec^{4}(x)dx
+   $$
+  \end{problema}
+
+ 
+
+ 
+ \subsection{Tipo 2.2} Si $n,k$ son impares, se sustituye $u=sec(x).$
+ 
+
+ 
+
+ \begin{problema}
+  \label{ayr:32.6}
+  $$
+  \int tan^{3}(x)sec(x)dx.
+  $$
+ \end{problema}
+
+
+
+
+\subsection{Tipo 2.3}
+Si $n$ es impar y $k$ par, reducimos a los casos anteriores y utilizaremos la f\'ormula
+$$
+\displaystyle \int \sec(x)dx= \ln\abs{\tan(x)+\sec(x)}
+$$
+
+
+
+\begin{problema}
+ $$
+ \int \tan^{2}(x)\sec(x)dx=
+ $$
+\end{problema}
+
+
+
+\subsection{Caso 3} Consideremos ahora integrales de la forma $\int f(Ax)g(Bx)dx,$ donde $f,g$ pueden ser o bien $sin$ o bien $cos.$ 
+
+
+
+
+ Necesitaremos las identidades
+ \begin{align*}
+  sin(Ax)cos(Bx)&=\dfrac{1}{2}\left( sin\left( (A+B)x \right)+sin\left( (A-B)x \right) \right)\\
+  sin(Ax)sin(Bx)&=\dfrac{1}{2}\left( cos\left( (A-B)x \right)-cos\left( (A+B)x \right) \right)\\
+  cos(Ax)cos(Bx)&=\dfrac{1}{2}\left( cos\left( (A-B)x \right)+cos\left( (A+B)x \right) \right)
+ \end{align*}
+
+
+
+ \begin{problema}
+  \label{ayr:32.7}
+  $$
+  \int sin(7x)cos(3x)
+  $$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{ayr:exmp:32.8}
+  $$
+  \int sin(7x)cos(3x)
+  $$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{ayr:32.9}
+  $$
+  \int sin(7x)sin(3x)
+  $$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{ayr:32.10}
+  $$
+  \int cos(7x)cos(3x)
+  $$
+ \end{problema}
+
+
+
+\subsection{Sustituci\'on trigonométrica}
+
+
+Existen tres principales tipos de sustituci\'on trigonométrica. Introduciremos cada uno por medio de ejemplos típicos.
+
+
+
+\begin{problema}
+ \label{ayr:exmp:32.11}
+ Encuentre
+ $$
+ \displaystyle \int \dfrac{dx}{x^{2}\sqrt{4+x^{2}}}
+ $$
+\end{problema}
+
+
+
+% 
+% \subsection{Estrategia I}
+%  \begin{center}
+% % 
+% Si $\sqrt{a^{2}+x^{2}}$ aparece en el integrando, intente $x=a\tan(\theta)$
+% \end{center}
+%  
+% 
+
+%[c]
+%\begin{center}
+ \subsection{Estrategia I}
+  
+ Si $\sqrt{a^{2}+x^{2}}$ aparece en el integrando, intente $x=a\tan(\theta)$
+
+%\end{center}
+
+
+
+\begin{problema}
+ \label{ayr:exmp:32.12}
+ Encuentre $$
+ \displaystyle \int \dfrac{dx}{x^{2}\sqrt{9-x^{2}}}
+ $$
+\end{problema}
+
+
+
+%[c]
+\subsection{Estrategia II}
+ 
+ Si $\sqrt{a^{2}-x^{2}}$ aparece en un integrando, trate con la sustituci\'on $x=a\sin(\theta).$
+
+
+
+
+
+\begin{problema}
+\label{ayr:exmp:32.13}
+Encuentre 
+$$
+\displaystyle \int \dfrac{x^{2}}{\sqrt{x^{2}-4}}dx.
+$$
+\end{problema}
+
+
+
+\subsection{Estrategia III}
+  Si $\sqrt{x^{2}-a^{2}}$ aparece en un integrando, trate con la sustituci\'on $x=a\sec{\theta}.$
+
+

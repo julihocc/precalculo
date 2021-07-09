@@ -1,0 +1,233 @@
+\section*{Problemas}
+
+%\subsection*{Proposiones y Tablas de Verdad}
+
+
+\begin{problema}
+	Sea $p:\texttt{``Hace frío''}$ y $q:\texttt{``Está lloviendo''.}$ Proponga un enunciado verbal simple que describa cada una de las siguientes proposiciones:
+	\begin{enumerate}
+		\item $\neg p;$
+		\item $p \wed q;$
+		\item $p \vee q;$
+		\item $q \vee \neg p.$
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+
+\begin{problema}
+	Encuentre la tabla de verdad de $\neg p \wed q.$
+\end{problema}
+
+
+
+
+\begin{problema}
+	Demuestre que la propisición 
+	$$
+	p \vee \neg \left( p\wed q \right)
+	$$ es una tautología.
+\end{problema}
+
+
+
+
+\begin{problema}
+	Muestre que las proposiciones $\neg\left( p \wed q \right)$ y $\neg p \vee \neg q$ son lógicamente equivalentes.
+\end{problema}
+
+
+
+
+\begin{problema}
+	Use las leyes en la tabla \ref{fig:tabla:4.1} para mostrar que 
+	$$
+	\neg \left( p \wed q \right) \vee \left( \neg p \wed  q \right) \equiv \neg p
+	$$
+\end{problema}
+
+
+
+%\subsection*{Sentencias condicionales}
+
+
+\begin{problema}
+	\label{lip:sol:4.6}
+	Reescriba los siguientes enunciados sin usar el condicional:
+	\begin{enumerate}
+		\item Si hace frío, el usa sombrero. 
+		\item Si la productividad se incrementa, entonces el salario aumenta.
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{lip:sol:4.7}
+	Considere la proposición condicional $p \imply q.$ La proposiciones 
+	\begin{center}
+		${\color{red}q \imply p,} {\color{blue}\, \neg p \imply \neg q,} \, {\color{green}\neg q \imply \neg p}$
+	\end{center}
+	son llamadas {\color{red} conversa,} {\color{blue}inversa} y {\color{green} contrapositiva}, respectivamente.
+	
+	
+	?`Cuáles de estas proposiciones son lógicamente equivalente s a $p\imply q$?
+\end{problema}
+
+
+
+
+\begin{problema}
+	Determine la contrapositiva de cada enunciado:
+	\begin{enumerate}
+		\item Si Erik es poeta, entonces es pobre. 
+		\item Solo si Marcos estudia, pasará el examen. 
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+
+\begin{problema}
+	Escriba la negación de cada enunciado, tan simple como sea posible:
+	\begin{enumerate}
+		\item Si ella trabaja, ganará dinero. 
+		\item El nada si y solo si el agua está tibia. 
+		\item Si neva, entonce no manejar\'e.
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+%\subsection*{Argumentos}
+
+
+\begin{problema}
+	Muestre que el siguiente argumento es una falacia:
+	$$
+	p\imply q, \neg p \yields \neg q.
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	Muestre que el siguiente argumento es válido:
+	$$
+	p\imply q, \neg q \yields \neg p.
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	Muestre que el siguiente argumento siempre es válido:
+	$$
+	p \imply \neg q, r \imply q, r \yields \neg p.
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	Determine la validez del siguiente argumento:
+	\begin{center}
+		\begin{tabular}{l}
+			Si $7$ es menor que $4$, entonces $7$ no es número primo\\
+			$7$ no es menor que $4$\\\hline
+			$7$ no es número primo.
+		\end{tabular}
+	\end{center}
+	
+\end{problema}
+
+
+
+
+\begin{problema}
+	Determine la validez del siguiente argumento:
+	\begin{center}
+		\begin{tabular}{l}
+			Si dos lados de un triángulo son iguales, entonces los respectivos ángulos opuestos son iguales\\
+			Dos lados de un triángulo no son iguales\\\hline
+			Los respectivos ángulos opuestos no son iguales.
+		\end{tabular}
+	\end{center}
+	
+\end{problema}
+
+
+
+%\subsection*{Cuantificadores y Funciones Proposicionales}
+
+
+\begin{problema}
+	Sea $A=\set{1,2,3,4,5}.$ Determine el valor de verdad de cada uno de los siguientes enunciados:
+	\begin{enumerate}
+		\item $\exists x \in A: x+3=10;$ 
+		\item $\forall x \in A: x+3<10;$ 
+		\item $\exists x \in A: x+3<5;$ 
+		\item $\forall x \in A: x+3 \leq 7.$
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+
+\begin{problema}
+	Determine el valor de verdad de cada uno de las siguientes afirmaciones donde $U=\set{1,2,3}$ es el conjunto \emph{``universo''} (de referencia):
+	\begin{enumerate}
+		\item $\exists x \forall y: x^{2}< y+1;$ 
+		\item $\forall x \exists y: x^{2}+y^{2}<12;$ 
+		\item $\forall x \forall y: x^{2}+y^{3}<12.$
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+
+\begin{problema}
+	Encuentre la negación de cada una de las siguientes afirmaciones:
+	\begin{enumerate}
+		\item $\exists x \forall y: p(x,y);$ 
+		\item $\forall x \forall y: p(x,y);$ 
+		\item $\exists x \exists y \forall z: p(x,y,z).$
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+
+\begin{problema}
+	Sea $$p(x): x+2>5.$$ Indique cuando $p(x)$ es una función proposicional o no en cada uno de los siguientes conjuntos: 
+	\begin{enumerate}
+		\item $\N$ 
+		\item $\Z^{-}=\set{-1,-2,-3,...}$ 
+		\item $\mathbb{C}$
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+
+\begin{problema}
+	Niegue cada uno de las siguientes afirmaciones:
+	\begin{enumerate}
+		\item Todos los estudiantes viven en los dormitorios.
+		\item A todos los estudiantes de ingeniería le gusta el futbol.
+		\item Algunos estudiantes tienen 25 años o más.
+	\end{enumerate}
+\end{problema}

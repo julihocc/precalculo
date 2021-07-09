@@ -1,0 +1,148 @@
+    \section{Representación paramétrica de curvas}
+
+\subsection{Ecuaciones paramétricas}
+
+{}
+Si las coordenadas $(x,y)$ de un punto $P$ en una curva están dadas por las funciones
+\begin{align*}
+	\label{ecspar}
+	\tag{Ec.Par.}
+	x = f(t), y=g(t)
+\end{align*}
+de una tercera variable o \emph{parámetro} \(t\), entonces \eqref{ecspar} son llamadas \emph{ecuaciones paramétricas} de la curva.
+
+
+{}
+\begin{problema}  \label{ayr:exmp:37.1.a}
+	\begin{enumerate}[a]
+		\item           
+		\begin{align*}
+			x=\cos(t), y = \sin^2(t)
+		\end{align*}
+		son ecuaciones paramétricas de la parábola 
+		\begin{align*}
+			4x^2+y = 4.
+		\end{align*} 
+		\item 
+		\begin{align*}
+			x=\dfrac{1}{2}t, y = 4 - t^2
+		\end{align*}
+		es otra parametrización de la misma curva.
+		
+	\end{enumerate}            
+\end{problema}
+
+
+{}
+\begin{problema}
+	\begin{enumerate}
+		\item Las ecuaciones
+		\begin{align*}
+			x = r\cos(t), y=r \sin(t)
+		\end{align*}
+		representan el círculo con radio en el origen.
+		
+		\item 
+		Las ecuaciones 
+		\begin{align*}
+			x=a+r\cos(t), y=b+r\sin(t)
+		\end{align*}
+		representa el círculo de radio \( r \) y centro en \((a,b)\).
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+Supongamos que la curvas está dada por \eqref{ecspar}. Entonces las primera y segunda derivadas están dadas por 
+\begin{align}
+	\label{37.1}
+	D_{x}y &= \dfrac{D_{t}y}{D_{t}x}\\
+	\label{37.2}
+	D_{xx}y &= \dfrac{D_{tx}y}{D_{t}x}
+\end{align}
+
+
+
+\subsection{Longitud de arco}
+
+Si una curva está dada por \eqref{ecspar}, entonces la \emph{longitud de curva}  entre dos puntos correspondientes a los valores parámetricos \(t_{1}\) y \(t_{2}\) es
+\begin{align*}
+	L=\int_{t_{1}}^{t_{2}}
+	\sqrt{\left( D_{t}x \right)^{2}
+		+\left( D_{t}y \right)^{2}} dt
+\end{align*}
+
+
+\subsection{Ejemplos}
+
+\begin{problema} %37.1
+	Encuentre \(D_{x}y\), \(D_{xx}y\) para 
+	\begin{align*}
+		x=t-\sin(t), y = 1-\cos(t)
+	\end{align*}
+	
+\end{problema}
+
+
+
+\begin{problema} %37.2
+	Encuentre \(D_x y\) y \(D_{xx} y\) si \(x=e^t \cos(t), y = e^t\sin(t)\).
+\end{problema}
+
+
+
+\begin{problema} %37.3
+	Encuentre una ecuación a la línea tangente de la curva
+	\begin{align*}
+		x=\sqrt{t}, y=t-\dfrac{1}{\sqrt{t}}
+	\end{align*}
+	en el punto $t=4$.
+\end{problema}
+
+
+		
+\begin{problema} %37.4
+	La posición de una particula que se está moviendo a lo largo de una curva está dada al tiempo $t$ por las ecuaciones paramétricas
+	\begin{align*}
+		x=2-3\cos(t), y = 3+2 \sin(t)
+	\end{align*}
+	donde $x$ y $y$ están medidos en pies y $t$ en segundos.
+	
+	
+	Note que 
+	\begin{align*}
+		\dfrac{1}{9}(x-2)^2+\dfrac{1}{4} (y-3)^2 = 1 
+	\end{align*}
+	de manera que la curva es una elipse.\emph{¿Porqué?}
+\end{problema}	
+
+{Continuación}
+\begin{enumerate}			
+	\item Encuentre la tasa de cambio temporal de $x$ cuando $t=\dfrac{\pi}{3}$ 
+	\item Encuentre la tasa de cambio temporal de $y$ cuando $t=\dfrac{5\pi}{3}$ 
+	\item Encuentre la tasa de cambio temporal del ángulo de inclinación $\theta$ de la línea tangente cuando $t=\dfrac{2\pi}{3}$
+\end{enumerate}
+
+
+\begin{problema} %37.5
+	Encuentre la longitud de arco  de la curva
+	\begin{align*}
+		x=t^2, y=t^3
+	\end{align*}
+	desde $t=0$ a $t=4.$
+\end{problema}
+
+
+
+\begin{problema}
+	Encuentre la longitud de arco de la cicloide 
+	\begin{align*}
+		x = \theta -\sin \theta, y = 1 - \cos \theta
+	\end{align*}
+	entre $\theta = 0$ y $\theta = 2\pi$.
+	
+\end{problema}
+
+
+

@@ -1,0 +1,174 @@
+\section{Fracciones parciales}
+
+
+ La técnica de fracciones parciales se utiliza para integrar funciones racionales, es decir, aquellas de la forma $$\dfrac{N(x)}{D(x)},$$ donde $N, D$ son polinomios.
+
+
+
+ Por simplicidad, supondremos que
+ \begin{enumerate}
+  \item El coeficiente líder de $D(x)$ es igual a $1.$ 
+  \item El grado de $D(x)$ es mayor que el de $N(x).$
+ \end{enumerate}
+ Sin embargo, ninguna de estas dos condiciones son esenciales.
+
+
+
+ \begin{problema}
+  \label{ayr:exmp:33.1}
+  $$
+    \int\dfrac{2x^{3}}{5x^{8}+3x-4}dx=
+    \dfrac{1}{5}\int\dfrac{2x^{3}}{x^{8}+\frac{3}{5}x-\frac{4}{5}}
+  $$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  $$
+  \dfrac{2x^{5}+7}{x^{2}+3}=2x^{3}-6x+\dfrac{18x+7}{x^{2}+3}
+  $$
+ \end{problema}
+
+
+
+
+ \begin{definicion}
+  Un polinomio es irreducible si no se puede expresar como el producto de dos polinomios de grado menor. 
+ \end{definicion}
+
+
+
+
+	\begin{enumerate}
+		\item  Todo polinomio lineal es irreducible
+		
+		\item 
+		Un polinomio cuadrático 
+		$$g(x)=ax^{2}+bx+c, \, a\neq0$$ es irreducible si y solo $b^{4}-4ac<0.$
+		
+	\end{enumerate}
+
+
+
+ \begin{problema}
+  \label{ayr:exmp:33.3}
+  Verifique que 
+  \begin{enumerate}
+   \item $x^{2}+4$ es irreducible;
+   \item $x^{2}+x-4$ es reducible.
+  \end{enumerate}
+
+ \end{problema}
+
+
+
+
+ \begin{teorema}
+  \label{ayr:thm:33.1}
+  Todo polinomio cuyo coeficiente líder sea igual a $1$ se puede expresar como producto de factores lineales, o factores cuadráticos irreducibles.
+ \end{teorema}
+
+
+
+
+ \begin{problema}
+  \label{ayr:exmp:33.4}
+  \begin{enumerate}
+   \item $x^{3}-4x=$ 
+   \item $x^{3}+4x=$ 
+   \item $x^{4}-9=$ 
+   \item $x^{3}-3x^{2}-x+3=$
+  \end{enumerate}
+
+ \end{problema}
+
+
+
+\subsection{Método de Fracciones Parciales}
+
+
+\subsection{Caso I. $D(x)$ es producto de factores lineales distintos}
+ \begin{problema}
+  \label{ayr:exmp:33.5}
+  Resuelva $$\int \dfrac{dx}{x^{2}-4}$$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{ayr:exmp:33.6}
+  Resuelva $$\int\dfrac{(x+1)dx}{x^{3}+x^{2}-6x}$$
+ \end{problema}
+
+
+
+
+\subsection{Regla General para Caso 1}
+ El integrando se representa como una suma de términos de la form $\dfrac{A}{x-a},$ para cada factor $x-a,$ y $A$ una constante por determinar.
+
+
+
+\subsection{Caso 2. $D(x)$ es producto de factores lineales repetidos.}
+ \begin{problema}
+  \label{ayr:exmp:33.7}
+  Encuentre $$
+  \int\dfrac{(3x+5)dx}{x^{3}-x^{2}-x+1}
+  $$
+ \end{problema}
+
+
+
+
+ \begin{problema}
+  \label{ayr:33.8}
+  $$
+  \int \dfrac{(x+1)dx}{x^{3}(x-2)^{2}}
+  $$
+ \end{problema}
+
+
+
+
+\subsection{Regla General para el Caso 2.}
+ Para cada factor $x-c$ de multiplicidad $k,$ se utiliza la expresión
+ $$
+ \dfrac{A_{1}}{x-r}+\dfrac{A_{2}}{(x-r)^{2}}+...+\dfrac{A_{k}}{(x-r)^{k}}.
+ $$
+
+
+
+\subsection{Caso 3. Factores cuadráticos irreducibles distintos, y lineales repetidos}
+ A cada factor irreducible $x^{2}+bx+c$ de $D(x)$ le corresponde el integrando
+ $$
+ \dfrac{Ax+B}{x^{2}+bx+c}.
+ $$
+
+
+
+ \begin{problema}
+  Encuentre $$
+  \int \dfrac{(x-1)dx}{x(x^{2}+1)(x^{2}+2)}
+  $$
+ \end{problema}
+
+
+
+
+\subsection{Caso IV. Factores cuadráticos irreducibles repetidos}
+ 
+ A cada factor cuadráticos irreducible $x^{2}+bx+c$ de mutiplicidad $k$ le corresponde el integrando
+ $$
+ \sum_{i=1}^{k}\dfrac{A_{i}x+B_{i}}{(x^{2}+bx+c)^{i}}
+ $$
+ 
+
+
+
+ \begin{problema}
+  Encuentre $$\int\dfrac{2x^{2}+3}{(x^{2}+1)^{2}}dx.$$
+ \end{problema}
+
+

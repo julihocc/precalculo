@@ -1,0 +1,126 @@
+
+\section{Derivación implícita}
+
+
+
+    Denotaremos por $y'$ la derivada $\frac{dy}{dx}.$
+    
+    \begin{problema}
+        Si $$x^{2}+y^{2}=r^{2},$$
+        donde $r$ es una constante, encontrar $y'.$
+    \end{problema}
+
+
+    \begin{solucion}
+        Por regla de la cadena, $(y^{2})'=2yy'.$ Esto porque
+        $$
+        \dfrac{dy^{2}}{dx}=\dfrac{dy^{2}}{dy}\dfrac{dy}{dx}.
+        $$
+        Si derivamos el lado izquierdo de la ecuación, respecto de $x,$ usando linealidad, obtenemos
+        $
+        2x+2yy',
+        $
+        mientras que si derivamos el derecho, ya que $r^{2}$ es contante, obtenemos cero e igualando, tenemos que
+        $$
+        2x+2yy'=0.
+        $$
+        Después de despejar obtenemos que $$
+        y'=-\dfrac{x}{y}.
+        $$
+    \end{solucion}
+
+
+
+    \begin{observacion}
+        Observe que $$x^{2}+y^{2}=r^{2}$$ es la ecuación de un círculo con centro en el origen con radio $r>0.$ Use \texttt{Sagemath}
+        para graficar esta ecuación para un radio dado, por ejemplo, $r=5.$
+        \begin{enumerate}
+            \item Compare las pendientes de las rectas tangente en $\left( x,y \right)$ y $\left( -x,-y \right).$ ¿Que
+            relación sobre estás dos rectas podemos deducir?
+            \item Compare las pendiente de la recta tangente en $\left( x,y \right)$ y la recta que pasa por el origen y este punto.
+            ¿Que
+            relación sobre estás dos rectas podemos deducir?
+        \end{enumerate}
+    \end{observacion}
+
+
+
+    \begin{problema}
+        Si $$x^{3}+y^{3}=6xy,$$ encontrar $y'.$
+    \end{problema}
+
+
+    \begin{solucion}
+        Por regla de la cadena
+        $$
+        \dfrac{d}{dx}\left( y^{3} \right)=\dfrac{dy^{3}}{dy}\dfrac{dy}{dx},
+        $$
+        
+        es decir, $(y^{3})'=\left( 3y^{2} \right)\left( y' \right).$
+        
+        Además, por la regla de Leibniz,
+        $$
+        (xy)'=x'y+xy'=y+xy'.
+        $$
+        
+        Entonces, derivando ambos lados de la ecuación, y usando linealidad, tenemos que
+        $$
+        3x^{2}+3y^{2}y'=6\left(y+xy'  \right).
+        $$
+        
+        Despejando $y',$ obtenemos
+        $$
+        y'=\dfrac{2y-x^{2}}{y^{2}-2x}.
+        $$
+    \end{solucion}
+
+
+    \begin{problema}
+        Encuentre $y'$ en términos de $x$, si $y=\arcsin(x),$ con imagen $-\frac{\pi}{2}\leq y \leq \frac{\pi}{2}.$
+    \end{problema}
+
+{Solución}
+    En este caso $x=\sin(y).$ Por regla de la cadena obtenemos que
+    $$
+    \dfrac{d}{dx}\sin(y)=\dfrac{d}{dy}\sin(y)\dfrac{dy}{dx}=\cos(y)y'.
+    $$
+
+
+
+    Sin embargo,también sabemos que
+    $$
+    \dfrac{d}{dx}\sin(y)=\dfrac{dx}{dx}=1.
+    $$
+
+
+
+    Por lo cual $1=\cos(y)y',$ y entonces $y'=1/\cos(y).$ Pero también sabemos que, por la manera en que escogemos el
+    rango de $y$, $\cos(y)>0,$ y por tanto
+    $$
+    \cos(y)=\sqrt{1-\sin^{2}(y)}=\sqrt{1-x^{2}}.
+    $$
+
+
+
+    Es decir
+    $$
+    y'=\dfrac{1}{\sqrt{1-x^{2}}}.
+    $$
+    
+    
+
+
+
+    % Para resolver los siguientes ejercicios, puede consultar los ejemplos de \cite[sec. 3.5]{S}.
+    
+    \begin{problema} Encuentre $y'.$  %Grafique $y$  y $y'$ usando \texttt{Sagemath}.
+        \begin{enumerate}
+            \item $\sin(x+y)=y^{2}\cos(x),$
+            \item $x^{4}+y^{2}=16,$
+            \item $y=\arccos(x),$
+            \item $y=\arctan(x).$
+        \end{enumerate}
+    \end{problema}
+
+
+

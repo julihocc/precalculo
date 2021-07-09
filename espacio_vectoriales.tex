@@ -1,0 +1,164 @@
+\section{Definici\'on y ejemplos}
+
+\subsection*{Resumen}
+
+Hasta ahora hemos considerado a los vectores como elementos de un espacio $$\R^{n}=\set{(x_{1},...,x_{n}|x_{k}\in\R)},$$ por ejemplo vectores en el plano $\R^{2}=\set{(x,y)|x,y\in \R}$ o en el espacio $\R^{3}=\set{(x,y,z)|x,y,z\in \R}.$ En cada caso, ten\'iamos una suma entre vectores y una multiplicaci\'on por \emph{escalares,} es decir, n\'umero reales.
+
+\begin{exmp}
+ Si ${u}=(u_{1},u_{2})$ y ${v}=(v_{1},v_{2})$ son vectores en $\R^{2},$ y $\a \in \R,$ entonces $$(u_{1},u_{2})+(v_{1},v_{2})=(u_{1}+v_{1},u_{2}+v_{2}),$$ mientras que $$\a(u_{1},u_{2})=(\a u_{1},\a u_{2}).$$
+
+
+ En este caso, la suma tiene las siguientes propiedades:
+ \begin{enumerate}
+  \item(Cerradura)  ${u}+{v}=(u_{1},u_{2})+(v_{1},v_{2})=(u_{1}+v_{1},u_{2}+v_{2}),$ es un vector en $\R^{2},$
+  \item(Asociatividad) Si $w=(w_{1},w_{2})$ es otro vector en $\R^{2},$ entonces
+  \begin{align*}
+(u+v)+w&=\left( (u_{1},u_{2})+(v_{1},v_{2}) \right) + (w_{1},w_{2}) \\
+&=(u_{1},u_{2}) + \left( (v_{1},v_{2}) + (w_{1},w_{2}) \right) \\
+&=u+(v+w),
+  \end{align*}
+\item(Conmutatividad)
+$
+u+v=(u_{1}+v_{1},u_{2}+v_{2})=(v_{1}+u_{1},v_{2}+u_{2})=v+u
+$
+\item(Existencia de un elemento neutro)
+$
+u+\vec{0}=(u_{1},u_{2})+(0,0)=(u_{1},u_{2})=u,
+$
+y de la misma forma $\vec{0}+u=u.$
+\item(Inversos aditivos) Para $u=(u_{1},u_{2}),$ definimos $$-u=(-u_{1},-u_{2}),$$ y este elemento satisface que
+$$
+u+(-u)=(-u)+u=0.
+$$
+ \end{enumerate}
+
+
+ La multiplicaci\'on por escalares satisface las siguientes  propiedades
+ \begin{enumerate}
+ \item $\a u$ es de nuevo un vector en $\R^{2},$
+  \item $1u=1(u_{1},u_{2})=(1\cdot u_{1},1\cdot u_{2})=u,$
+  \item $(\a\b) u=\a(\b u_{1}, \b u_{2})=\a(\b u).$
+ \end{enumerate}
+
+ Finalmente, la suma de vectores y la multiplicaci\'on por escalares estan relacionadas por las siguiente leyes distributivas.
+ \begin{enumerate}
+  \item $(\a+\b)u=((\a+\b)u_{1},(\a+\b)u_{2})=(\a u_{1},\a u_{2})+(\b u_{1},\b u_{2})=\a u +\b u,$
+  \item $\a(u+v)=\a(u_{1}+v_{1},u_{2}+v_{2})=(\a(u_{1}+v_{1}),\a(u_{2}+v_{2}))=\a(u_{1},u_{2})+\a(v_{1},v_{2})=\a u +\a v.$
+ \end{enumerate}
+\end{exmp}
+
+\begin{pro}[\dag]
+ Verificar que las mismas propiedades se cumplen para $\R^{3},$ usando la suma de vectores y multiplicaci\'on por
+escalares conocida.
+\end{pro}
+
+Estas propiedades se cumplen para muchos y muy diferentes conjuntos, donde tenemos una operaci\'on suma entre sus elementos y podemos definir una multiplicaci\'on por n\'umeros reales. De hecho, estos conjuntos son los objetos de estudio en el \'algebra lineal.
+
+\begin{defn}
+ Sea $V$ un conjunto, con una operaci\'on $+:V \times V \to V$ y una operaci\'on $\cdot:\R \times V \to V.$ Decimos
+que $V$ es un \emph{espacio vectorial (sobre $\R$)} si para todo $u,v,w\in V$ y $\a,\b\in \R$ se cumplen las siguientes
+propiedades.
+ \begin{enumerate}
+  \item(Cerradura)$u+v\in V,$
+  \item(Asociatividad)$(u+v)+w=u+(v+w),$
+  \item(Conmutatividad)$u+v=v+u,$
+  \item(Elemento neutro) Existe $0\in V,$ tal que para todo $u\in V: u+0=0+u=u,$
+  \item(Elementos inversos) Para todo $u\in V,$ existe $-u \in V,$ tal que $u+(-u)=(-u)+u=0.$
+  \item $\a u \in V,$
+ \item $1u=u,$
+ \item $(\a\b)u=\a(\b u),$
+\item $(\a+\b)u=\a u+\b u,$
+\item $\a(u,v)=\a u + \a v.$
+\end{enumerate}
+
+A los elementos del espacio vectorial $V$ les llamamos \emph{vectores.}
+\end{defn}
+
+\begin{rem}
+ Cuando $V$ es un espacio vectorial, con operaci\'on suma $+:V \times V \to V$ y multiplicaci\'on por escalares
+$\cdot:\R \to V \to V,$ por brevedad, decimos que $(V, +, \cdot)$ es un espacio vectorial.
+\end{rem}
+
+
+
+\subsection*{Ejercicios}
+
+Para resolver los ejercicios de esta secci\'on puede consultar \cite[sec. 4.2]{G} y \cite[sec. 2.1]{HK}.
+
+\begin{exe}[\dag]
+Demuestre usando las propiedades anteriores, que en cualquier espacio vectorial se cumplen las siguientes propiedades.
+\begin{enumerate}
+ \item $0  u=\a  0=0.$ (Note que el cero escrito a la izquierda denota el cero como n\'umero, mientras que escrito a la izquierda o solo, denota el elemento neutro  del espacio vectorial.)
+ \item $-u=(-1) u.$ \emph{Sugerencia: Verifique que $u+(-1)u=0$.}
+ \item Si $\a u=0,$ entonces o bien $\a=0$ o $u=0.$
+ \item El elemento neutro $0$ es \'unico.
+ \item Para cada vector $u,$ su inverso aditivo $-u$ es \'unico.
+\end{enumerate}
+\end{exe}
+
+\begin{exe}
+ Compruebe que los siguientes conjuntos son espacios vectoriales (reales), con las operaciones suma y multiplicaci\'on por escalar usuales.
+ \begin{enumerate}
+ \item $\set{0}.$
+ \item $\set{(x,y)\in \R^{2}|y=mx}$ para $m\in \R$ fijo.
+ \item $\set{(x,y,z)\in \R^{3}| ax+by+cz=0}$ para $a,b,c\in \R.$
+ \item $\set{(x,y,z)\in \R^{3}|(a,b,c)\cdot (x,y,z)=0}$ para $a,b,c\in \R.$
+  \item $\set{f|f:S\to \R},$ donde $S$ puede ser cualquier conjunto fijos.
+  \item $\R^{m\times n},$ es decir, el conjunto de matrices $m\times n$ con entradas reales.
+  \item  El espacio de polin\'omios con coeficientes reales.
+  \item El espacio de polin\'omios con coeficientes reales de grado $\leq n,$ para $n \in \N$ fijo.
+  \item $C[a,b],$ el espacio de funciones continuas en el intervalo $[a,b].$
+  \item El conjunto de n\'umero reales \emph{positivos} con las operaciones $u\oplus v:= u,v$ y $\a \cdot u:=u^{\a}.$
+ \end{enumerate}
+\end{exe}
+
+% \begin{exe}
+%  Indique si los siguientes conjuntos son espacios vectoriales
+%  \begin{enumerate}
+%   \item El conjunto de matrices diagonales $2 \times 2,$ bajo la multiplicaci\'on, es decur, con la suma definida como $A\oplus B=AB.$
+%   \item Los vectores en el primer cuadrante del plano.
+%   \item $\set{(x,y)|y\geq 0}$
+%   \item El conjunto de vectores en $\R^{3}$ de la forma $(x,x,x).$
+%   \item El conjunto de matrices $2\times 2$ de la forma
+%   $$
+% \begin{pmatrix}
+%  0 & -a\\
+%  a & a\\
+% \end{pmatrix}
+%   $$
+% \item El conjunto de funciones continuas de valores reales definidas en $[0,1]$  con $f(0)=f(1)=0.$
+% \item $R^{2}$ con la suma definida como $$(x_{1},y_{1})\oplus (x_{2},y_{2})=(x_{1}+x_{2}+1, y_{1}+y_{2}+1),$$ y la multiplicaci\'on usual por escalares.
+% \item El conjunto de funciones diferenciables en $[0,1]$ con las operaciones usuales.
+% \item El conjunto de n\'umeros reales de la forma $a+b\sqrt{2},$ donde $a,b$ son n\'umeros racionales, bajo la suma usual y la multiplicaci\'on por escalares restringida a n\'umero racionales
+% \item $\R^{2}$ con la suma usual y la multiplicaci\'on por escalares definida como $\a\cdot u=(\a u_{1},u_{2}).$
+% \item $\R^{2}$ con las suma definida como
+% $$
+% u \oplus v:= u-v,
+% $$
+% y la multiplicaci\'on por escalares como
+% $$
+% \a \cdot u := -\a u.
+% $$
+% \item $\R^{2}$ con las suma definida como
+% $$
+% u \oplus v:= (u_{1}+v_{1},0),
+% $$
+% y la multiplicaci\'on por escalares como
+% $$
+% \a \cdot u := (\a u_{1},0).
+% $$
+% \end{enumerate}
+% \end{exe}
+
+\begin{pro}
+ Considere la ecuaci\'on diferencial de segundo orden homog\'enea
+ $$
+y''(x)+a(x)y'+b(x)y(x)=0
+ $$
+donde $a,b$ son funciones continuas. Demuestre que el conjunto de soluciones de la ecuaci\'on diferencial es un espacio vectorial bajo las reglas usuales para la suma de funciones y multiplicaci\'on por escalares.
+ \end{pro}
+
+
+
+
+

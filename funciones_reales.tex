@@ -1,0 +1,326 @@
+\section{Funciones reales}
+
+\subsection{Definición}
+{}
+  Una \emph{función} $f$ es una regla que asigna a cada elemento $x$ de un conjunto $A$ un único elemento $y$ de otro conjunto $B$. 
+  
+  En ese caso escribiremos $f:A \to B$
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+\begin{enumerate}[(i)]
+  %NUEVO ITEM
+  \item 
+  Para indicar dicha correspondencia escribimos $y=f(x)$ y decimos que $y$ es el \emph{valor} de $f$ en $x$. 
+  \item Al conjunto $A$ se le conoce como dominio. 
+  \item Mientras que al conjunto $B$, se le conoce como contradominio.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+  \begin{problema}
+   Evaluar $f(x)=x^{2}-3x+2$ en $x=2$
+  \end{problema}
+
+  \begin{proof}[Solución]
+     \begin{align*} 
+	f(2) &= (2)^{2}-3(2)+2 \\
+   &=  0
+   \end{align*}
+  \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+  \begin{definicion}
+   La \emph{gráfica} de una función $f: A \to B$ es el conjunto 
+       \begin{align*}    
+   \Gamma_{f} = \sett{\left( a,b \right)\in A\times B}{b=f(a)}
+    \end{align*}
+  \end{definicion}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+\begin{enumerate}[(i)]
+  %NUEVO ITEM
+  \item 
+  En el caso $A=B=\R^{n}$, diremos que la gráfica de $F:\R \to \R$ es una \emph{curva}. 
+  
+  \item Diremos que $x\in A$ es la variable \emph{independiente},  mientras que $y\in B$ es la variable \emph{dependiente}.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Polinomios}
+ 
+     \begin{align*}
+   f(x) = a_{n}x^{n}+a_{n-1}x^{n-1}+...+a_{0}
+   \end{align*}
+    
+   Si $a_{n}\neq 0$, diremos que $n$ es el grado del polinomio y $a_{n}$, su coeficiente líder. 
+   
+   
+   Denotaremos el grado del polinomio $f$ por $\mathrm{grd}(f)$.
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+Si $\mathrm{grd}(f)=n$, la ecuación polinomial $f(x)$ tiene exactamente $n$ raíces (posiblemente repetidas).
+
+
+\begin{problema}
+ Como $x^{3}-3x^{2}+3x-1=0$, se puede reescribir como $(x-1)^{3}$,  entonces la ecuación tiene una raíz $x=1$ repetida 3 veces. 
+\end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{Teorema del Binomio}
+  
+     \begin{align*}
+   \left( a+x \right)^{n} = 
+   a^{n}+\binom{n}{1}a^{n-1}x+\binom{n}{2}a^{n-2}x^{2}+...+x^{n}
+   \end{align*}
+
+donde $\binom{n}{k}=\dfrac{n!}{k!\left( n-k \right)!}$
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exponenciales y logaritmos}
+{Funciones exponenciales}
+     \begin{align*}
+   \exp_{a}(x) = a^{x}, a> 0
+   \end{align*}
+   
+
+%%%%%%%%%%%%%%%%%%%%%
+{Leyes de los exponentes}
+
+        \begin{align*}
+    \exp_a(m+n) &= 
+     \exp_{a}(m)\cdot \exp_{a}(n) \\
+     \exp_a(m-n) &=    
+     \dfrac{\exp_a(m)}{\exp_a(n)}     \\
+     \exp_a(nm) &=      
+     \left( \exp_a(m)\right)^{n}  \\       
+     \exp_a(0) &=  1 \\     
+     \exp_a(1) &=  a     
+     \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Logaritmos}
+  La función logarítmica $f(x)=\log_{a}(x)$ es la función inversa de $g(x) = \exp_{a}(x)$, 
+   es decir 
+       \begin{align*}
+    \forall x \in \R: \log_{a}\left( \exp_{a}(x) \right) = x
+    \end{align*}
+    
+         \begin{align*}
+     \forall x \in \R^{+}: \exp_{a}\left( \log_{a}(x) \right) = x
+     \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Leyes de los logaritmos}
+     \begin{align*}
+   \log_{a}(mn)&= \log_{a}(m)\cdot \log_{a}(n) \\
+   \log_{a}\left( \dfrac{m}{n} \right)&= \log_{a}(m)-\log_{a}(n) \\ 
+   \log_{a}(m^{p}) &= p\log_{a}(m) \\ 
+   \log_{a}(1)&= 0\\ 
+   \log_{a}(a)&=1
+   \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Logaritmo natural}
+  En el caso de que la base sea la constante de Euler, es decir $a=e\approx 2.718$, entonces reescribimos
+     \begin{align*}
+   \exp_{e}(x)=\exp(x)\\ 
+   \log_{e}(x)=\ln(x)
+   \end{align*}
+   
+   Esta última función se conoce como \emph{logaritmo natural}.
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Funciones trigonométricas}
+{Relaciones fundamentales}
+\begin{align*}
+\sin(x) &=\cos\left( \dfrac{\pi}{2}-x \right) \\    
+\cos(x) &= \sin\left( \dfrac{\pi}{2}-x \right) \\    
+\tan(x) &= \dfrac{\sin(x)}{\cos(x)} \\     
+\cot(x) &= \dfrac{\cos(x)}{\sin(x)}=\dfrac{1}{\tan(x)} \\    
+\sec(x) &= \dfrac{1}{\cos(x)} \\    
+\csc(x) &= \dfrac{1}{\sin(x)}
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Identidades pitagóricas}
+\begin{align*}
+\sin^{2}(x)+\cos^{2}(x)&= 1\\ 
+\sec^{2}(x)-\tan^{2}(x)&= 1\\ 
+\csc^{2}(x)-\cot^{2}(x)&= 1
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Paridad}
+     \begin{align*}
+   \sin(-x) &= -\sin(x) \\ 
+   \cos(-x) &= \cos(x) \\ 
+   \tan(-x) &= -\tan(x) 
+   \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Sumas de ángulos}
+     \begin{align*}
+   \sin(x\pm y) &= \sin(x)\cos(y)\pm\cos(x)\sin(y) \\   
+   \cos(x\pm y) &= \cos(x)\cos(y)\mp\sin(x)\sin(y) \\   
+   \tan(x\pm y) &= \dfrac{\tan(x)\pm \tan(y)}{1+\mp \tan(x)\tan(y)}
+   \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Ondas sinusoidales}
+     \begin{align*}
+   \begin{cases}
+A\cos(x)+B\sin(x) = \sqrt{A^{2}+B^{2}}\sin(x+\alpha)\\
+\tan(\alpha) = \dfrac{A}{B}
+\end{cases}
+   \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Periodicidad}
+  Las funciones $\sin(x)$ y $\cos(x)$ tiene periodo $T=2\pi$.   
+  Mientras que la función $\tan(x)$ tiene periodo $T=\pi$.
+  
+  
+%%%%%%%%%%%%%%%%%%%%%
+{Inversas trigonométricas}
+   Las funciones inversas de funciones trigonométricas estás sólo definidas \emph{localmente}:  Por ejemplo,
+      \begin{align*}
+     y = \sin(x) \iff x =\sin^{-1}(y)
+     \end{align*} 
+     siempre y cuando 
+          \begin{align*}
+      x\in\left[-\dfrac{\pi}{2}, \frac{\pi}{2} \right],
+      y\in\left[ -1,1 \right]
+      \end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Funciones hiperbólicas}
+{Relaciones fundamentales}
+ \begin{align*}
+\sinh(x) &= \dfrac{e^{x}-e^{-x}}{2}\\ 
+\cosh(x) &= \dfrac{e^{x}+e^{-x}}{2}
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+\begin{align*}
+\tanh(x) &= \dfrac{\sinh(x)}{\cosh(x)}\\ 
+&=\dfrac{e^{x}-e^{-x}}{e^{x}+e^{-x}}
+ \end{align*}  
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+\begin{align*}
+\coth(x) &= \dfrac{\cosh(x)}{\sinh(x)}\\ 
+& = \dfrac{1}{\tanh(x)}\\ 
+& = \dfrac{e^{x}+e^{-x}}{e^{x}-e^{-x}} 
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+ \begin{align*}
+\sech(x)&= \dfrac{1}{\cosh(x)} \\ 
+&= \dfrac{2}{e^{x}+e^{-x}}
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+\begin{align*}
+\csch(x)&= \dfrac{1}{\sinh(x)} \\ 
+&= \dfrac{2}{e^{x}-e^{-x}}
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Identidades pitagóricas}
+\begin{align*}
+\cosh^{2}(x)-\sinh^{2}(x)&= 1\\
+\sech^{2}(x)+\tanh^{2}(x)&= 1\\
+\coth^{2}(x)-\csch^{2}(x)&= 1
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+{Sumas de ángulos}
+ \begin{align*}
+\sinh(x\pm y) &= \sinh(x)\cosh(y)\pm \cosh(x)\sinh(y)\\
+\cosh(x\pm y) &= \cosh(x)\cosh(y)\pm \sinh(x)\sinh(y)\\
+\tanh(x\pm y) &= \dfrac{\tanh(x)\pm \tanh(y)}{1\pm \tanh(x)\tanh(y)}
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Ejemplos}
+{}
+\begin{problema}
+\label{solved 1.4}
+Si $f(x)=2x^{2}-3x+5$, encontrar
+\begin{enumerate}[(i)]
+ %NUEVO ITEM     
+ \item $f(h)-f(0)$
+ 
+ \item $f(h-1)-f(-1)$
+ 
+ \item $f(x+h)$
+ 
+ \item $f(x+h)-f(x)$
+ 
+ \item $\dfrac{f(x+h)-f(x)}{h}$
+\end{enumerate}
+\end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+  \begin{problema}
+   \label{solved 1.5}
+   Usando las leyes de los exponentes, demostrar las leyes de los logaritmos.
+  \end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+  \begin{problema}
+   \label{solved 1.6}
+   Demostrar que 
+   \begin{enumerate}[(i)]
+     %NUEVO ITEM
+     \item $\sin^{2}(x)=\dfrac{1}{2}\left( 1-\cos(2x) \right)$ 
+     
+     \item $\cos^{2}(x)=\dfrac{1}{2}\left( 1+\cos(2x) \right)$
+\end{enumerate}
+  \end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+  \begin{problema}
+   \label{solved 1.7}
+   Demostrar que \[A \cos(x) + B\sin(x) = \sqrt{A^{2}+B^{2}}\sin(x+\alpha)\] donde $\tan(\alpha)=\dfrac{A}{B}$.
+  \end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+  \begin{problema}
+   \label{solved 1.8}
+   Demostrar que 
+   \begin{enumerate}[(i)]
+     %NUEVO ITEM
+     \item $\cosh^{2}(x)-\sinh^{2}(x)=1$       
+     \item $\sech^{2}(x)+\tanh^{2}(x)=1$
+\end{enumerate}
+  \end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+{}
+  \begin{problema}
+   \label{solved 1.9}
+   Demostrar que $\cosh^{-1}(x)=\pm \ln\left( x+\sqrt{x^{2}-1} \right)$
+  \end{problema}
+
+
+%%%%%%%%%%%%%%%%%%%%%

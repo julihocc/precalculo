@@ -1,0 +1,328 @@
+\section{Diagonalización}
+
+
+
+\begin{definicion}
+ $A\in M_{n}$ se dice que es \emph{diagonalizable} si existe una base de $\R^{n}$ que consista de vectores propios de
+$A$. 
+\end{definicion}
+
+\begin{problema}
+ Determine si la matriz $A$ definida en (\ref{no:diagonal}) es diagonalizable.
+\end{problema}
+
+\begin{solucion}
+ Como vimos en las secciones anteriores, los valores propios de $A$ son $\lam_{1}=2$ y $\lam_{2}=1,$ con respectivos
+espacio propios
+$$
+\ker(A-2I)=\basis{\bm{1 \\ 1 \\ 2}}.
+$$
+y
+  $$
+\ker(A-I)=\basis{\bm{1\\0\\2}}.
+  $$
+
+  Como cualquier otro vector propio es o bien multiplo de $\bm{1 \\ 1 \\ 2}$ o bien de $\bm{1\\0\\2},$ tendríamos a los
+más una conjuto de dos vectores propios linealmente independientes. Sin embargo, cualquier base de $\R^{3}$ debe tener
+exactamente 3 vectores propios linealmente independientes. Por tanto $A$ no es diagonalizable.
+
+Podemos comprobar este resultado usando \texttt{WxMaxima} de la siguiente manera.
+
+Primero, introducimos la matriz de manera habitual.
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+A: matrix(
+ [3,1,-1],
+ [2,2,-1],
+ [2,2,0]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\begin{pmatrix}3 & 1 & -1\cr 2 & 2 & -1\cr 2 & 2 & 0\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+Y posteriormente usamos el comando \texttt{nondiagonalizable}, siempre calculando primero los vectores propios de la
+matriz.
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i4)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+eigenvectors(A);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+[[[1,2],[1,2]],[[[1,0,2]],[[1,1,2]]]]
+\end{math}
+%%%%%%%%%%%%%%%
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i5)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+nondiagonalizable;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+true
+\end{math}
+%%%%%%%%%%%%%%%
+
+Si la respuesta es \texttt{true}, esto quiere decir que en efecto, tal matriz no es diagonalizable. En otro caso,
+obtenendremo \texttt{false}.
+\end{solucion}
+
+¿Porqué decimos que una matriz es diagonalizable? Consideremos una transformación lineal $T:\R^{2}\to
+\R^{2},$ y una base $$
+F=\basis{v_{1}, v_{2}}
+$$
+de valores propios. Como $T(v_{1})=\lam_{1} v_{1}$, $T(v_{a})=\lam_{2} v_{2}$ y en terminos de esta base
+$$
+v_{1}=\bm{1\\0}_{F}, v_{2}=\bm{0\\1}_{F},
+$$
+entonces
+$$
+T\left( \bm{1\\0}_{F} \right)=\lam_{1}\bm{1\\0}_{F}=\bm{\lam_{1}\\0}_{F}
+$$
+y de manera similar
+$$
+T\left( \bm{0\\1}_{F} \right)=\lam_{2}\bm{0\\1}_{F}=\bm{0\\\lam_{2}}_{F}.
+$$
+Entonces, la representación matricial $D$ de la transformación $T$ en la base $F$ estará formada por los dos vectores
+columna, que resultan de aplicar la transformación a cada elemento de la base, es decir,
+$$
+D=\bm{\lam_{1} & 0 \\ 0 & \lam_{2}}.
+$$
+
+Este mismo razonamiento, lo podemos aplicar a cualquier tranformación lineal $T:\R^{n} \to \R^{n},$ si podemos obtener
+una base de vectores propios para su representación matricial $A$ (en la base estandar o de hecho, en cualquier otra
+base), es decir, si $A$ es diagonalizable.
+
+% \begin{figure}
+%  \centering
+%  \includegraphics[height=5cm,keepaspectratio=true]{./Sketch94203650.png}
+%  % Sketch94203650.png: 720x1024 pixel, 72dpi, 25.40x36.12 cm, bb=0 0 720 1024
+%  \caption{Diagonalización}
+%  \label{fig:cd}
+% \end{figure}
+
+
+En este caso, ¿cómo podemos relacionar las representaciones matriciales de $T:\R^{n} \to \R^{n},$ en la base estandar y
+en una base de vectores propios? Denotemos por $A$ a la primera y por $D$ a la segunda, mientras que por
+$V=(\R^{n},E)$ al espacio vectorial $\R^{n}$ en la base $E$ estandar, mientra que $V'=(\R^{n}, F)$ en la de valores
+propios. Considere el diagrama \ref{fig:cd}, donde $P$ denota la matriz cambio de base $P_{F,E}$. Es claro que
+$$
+AP=PD,
+$$
+y por tanto, multiplicando por $P^{-1}=P_{E,F}$ por la izquierda en ambos lados de la ecuación, $$D=P^{-1}AP.$$
+
+En este caso, decimos que $D$ es una matriz diagonal \emph{semejante} a $A.$
+Para un repaso de cambios de base, consulte la sección \ref{sec:coordenadas}.
+
+
+\begin{problema}
+ Determine si la matriz $$A=
+\begin{bmatrix}
+ 3 & 2 & 4 \\
+ 2 & 0 & 2 \\
+ 4 & 2 & 3
+\end{bmatrix}
+ $$
+ es diagonalizable y encuentre una matriz diagonal semejante.
+\end{problema}
+
+\begin{solucion}
+ Para encontrar los vectores propios, podemos proceder como en la sección \ref{sec:eigenvectors}. Para hacer más
+eficientes los cálculos, usaremos \texttt{WxMaxima}.
+ Primero, introducimos la matriz:
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+A: matrix(
+ [3,2,4],
+ [2,0,2],
+ [4,2,3]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\begin{pmatrix}3 & 2 & 4\cr 2 & 0 & 2\cr 4 & 2 & 3\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+Después, encontramos los valores propios:
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i2)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+eigenvectors(A);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+[[[8,-1],[1,2]],[[[1,\frac{1}{2},1]],[[1,0,-1],[0,1,-\frac{1}{2}]]]]
+\end{math}
+%%%%%%%%%%%%%%%
+
+La salida de la última instrucción quiere decir que $\lam=8$ es un vector propio, de multiplicidad 1 con vector propio$$
+v_{1}=\bm{1 \\ 1/2 \\ 1},
+$$
+mientras que $\lam_{1}=-1$ es un vector propio, de multiplicidad 2 y por tanto, los siguientes dos vectores
+$$
+v_{2}=\bm{1\\0\\-1}, v_{3}=\bm{0\\1\\-1/2}
+$$
+son vectores
+propios, linealmente independientes asociados a $\lam_{2}=-1.$
+
+Por lo tanto,
+$$
+P=\bm{1&1&0\\ 1/2 & 0 & 1 \\ 1 & -1 &-1/2 }.
+$$
+
+Introducimos esta matriz en \texttt{WxMaxima} y calculamos su inversa, a la que denotamos por $Q.$
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i5)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+P: matrix(
+ [1,1,0],
+ [1/2,0,1],
+ [1,-1,-1/2]
+);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+\begin{pmatrix}1 & 1 & 0\cr \frac{1}{2} & 0 & 1\cr 1 & -1 & -\frac{1}{2}\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i6)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+Q:invert(P);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+\begin{pmatrix}\frac{4}{9} & \frac{2}{9} & \frac{4}{9}\cr \frac{5}{9} & -\frac{2}{9} & -\frac{4}{9}\cr -\frac{2}{9} &
+\frac{8}{9} & -\frac{2}{9}\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+Finalmente, realizamos el calculo $P^{-1}AP$
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i7)
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}{\textwidth}{\color{blue}
+\begin{verbatim}
+Q.A.P;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\definecolor{labelcolor}{RGB}{100,0,0}
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+\begin{pmatrix}8 & 0 & 0\cr 0 & -1 & 0\cr 0 & 0 & -1\end{pmatrix}
+\end{math}
+%%%%%%%%%%%%%%%
+
+para verificar que, en efecto, la matriz resultante es diagonal, y en su diagonal estan ordenados los valores propios
+de $A.$
+\end{solucion}
+
+\subsection*{Ejemplos}
+
+\begin{problema}
+ Determine si cada matriz $A$ en el ejercicio  \ref{exe:diagonal} son diagonalizables, y en caso de serlo, encuentre
+ \begin{enumerate}
+  \item Una base $F$ de vectores propios de A;
+  \item la matriz $P=P_{F,E}$ cambio de base, donde  $E$ es la base estandar del respectivo espacio vectorial;
+  \item la matriz diagonal $D$ semejante a $A,$ usando la matriz cambio de base $P.$
+ \end{enumerate} 
+
+\end{problema}
+
+

@@ -1,0 +1,174 @@
+\section{Ecuaciones Diferenciales Lineales Homog\'eneas de Segundo Orden con Coeficientes Constantes}
+
+\subsection{La ecuaci\'on Caracter\'istica}
+
+
+Para la ec. dif.
+\[
+	\label{bron:9.1}
+	y''+a_{1}y'+a_{0}y=0
+\]
+con $a_{1},a_{0}$ constantes, asociaremos la ec. algebráica
+\[
+	\label{bron:9.2}
+	\lam^{2}+a_{1}\lam+a_{0}=0,
+\]
+la cual se conoce como \emph{ecuaci\'on caracter\'istica} de \eqref{bron:9.1}.
+
+
+
+\begin{problema}
+	La ecuaci\'on caracter\'istica de $$y''+3y'-4y=0$$ es  $$\lam^{2}+3\lam-4=0;$$  mientras que la ecuaci\'on caracter\'istica de $$y''-2y'+y=0$$ es  $$\lam^{2}-2\lam+1=0.$$
+\end{problema}
+
+
+
+
+Toda ecuaci\'on caracter\'istica se puede factorizar de la siguiente manera
+\[
+	\label{bron:9.3}
+	\left( \lam- \lam_{1} \right)\left( \lam-\lam_{2} \right)=0.
+\]
+
+
+
+\subsection{La Soluci\'on General}
+
+
+La soluci\'on general de \eqref{bron:9.1} se obtienen a partir de las raices de \eqref{bron:9.3}; consideraremos los siguientes 3 casos.
+
+
+
+
+\subsection{Caso 1. $\lam_{1}, \lam_{2}\in \R, \lam_{1}\neq \lam_{2}.$ }
+
+\[
+	\label{bron:9.4}
+	y=c_{1}e^{\lam_{1}x}+c_{2}e^{\lam_{2}x}.
+\]
+
+Si $\lam_{2}=-\lam_{1},$ \eqref{bron:9.4} se puede reescribir como
+$$
+y=k_{1}\cosh(\lam_{1}x)+k_{2}\sinh(\lam_{2}x).
+$$
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:9.1}
+	Resuelva
+	$$\begin{cases}
+		y''-y'-2y=0\\
+		y(0)=1, \; y'(0)=0
+	\end{cases}
+	$$
+\end{problema}
+
+
+
+
+
+
+\subsection{Caso 2. $\lam =a\pm ib\in \C, b\neq 0.$}
+En este caso, 
+\emph{necesariamente} $\lam_{2}=a-ib;$ y 
+la soluci\'on esta dada por
+\[
+	\label{bron:9.5}
+	y=d_{1}e^{\left( a+ib \right)x}
+	+d_{2}e^{\left( a-ib \right)x};
+\]
+que es algebraicamente equivalente a
+\[
+	\label{bron:9.6}
+	y=c_{1}e^{ax}\cos(bx)+c_{2}e^{ax}\sin(bx).
+\]
+
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:9.7}
+	Resuelva
+	$$\begin{cases}
+		y''+4y'+5y=0 \\
+		y(0)=2, \; y'(0)=1
+	\end{cases}
+	$$
+\end{problema}
+
+
+
+
+\subsection{Caso 3. $\lam_{1}=\lam_{2}.$}
+\[
+	\label{bron:9.7}
+	y=c_{1}e^{\lam_{1}x}+c_{2}xe^{\lam_{2}x}.
+\]
+
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:9.15}
+	Resuelva
+	$$\begin{cases}
+		100\dfrac{d^2{u}}{dt^{2}}
+		-20\dfrac{du}{dt}+u=0\\
+		u(0)=2, \; u'(0)=1
+	\end{cases}
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:9.2}
+	Resuelva $$y''-7y'=0.$$
+\end{problema}
+
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:9.3}
+	Resuelva
+	$$y''-5y=0.$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:9.4}
+	Vuelva a escribir el problema \ref{bron:exmp:9.3} en t\'erminos de funciones hiperb\'olicas.
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:9.5}
+	Resuelva
+	$$
+	\ddot{y}+10\dot{y}+21y=0.
+	$$
+\end{problema}
+
+
+
+
+\begin{problema}
+	\label{bron:exmp:9.8}
+	Resuelva
+	$$
+	y''+4y=0.
+	$$
+\end{problema}
+
+

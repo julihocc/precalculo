@@ -1,0 +1,369 @@
+\section{Inducción Matemática}
+
+\subsection{Introducción}
+
+
+	Una propiedad esencial de los naturales $\N=\set{1,2,3,...}$  es la siguiente
+	
+	
+	\begin{ax}[Principio de Inducción Matemática, versión I]
+		Sea $P$ una proposición definida en $\N,$ es decir, $P(n)$ toma valores de cierto o falso para cada $n\in \N.$
+		
+		Supongamos que
+		\begin{enumerate}
+			\item $P(1)$ es cierto;
+			\item $\forall k \in \N: P(k) \onlyif P(k+1).$
+		\end{enumerate}
+		
+		Entonces $P$ es {cierto} para todo entero positivo $n\in \N.$
+	\end{ax}
+	
+
+
+
+	\begin{ejemplo}
+		Sea $P(n):1+3+5+...+(2n-1)=n^2.$ Demostrar que $P(n)$ es cierta para toda $n \in \N.$ 
+	\end{ejemplo}
+
+
+
+	\begin{ax}[Principio de Inducción Matemática, versión II]
+		Sea $P$ una proposición definida en $\N$ tal que :
+		\begin{enumerate}
+			\item $P(1)$ es cierta;
+			\item $P(k)$ es cierta siempre que $P(j)$ para toda $1\leq j < k.$
+		\end{enumerate}
+		Entonces $P(n)$ es cierta para toda $n\in \N.$
+	\end{ax}
+	
+
+
+
+	\begin{observacion}
+		Algunas veces, uno desea demostrar que una proposición es cierta para algún conjunto de enteros
+		$$
+		\set{a,a+1, a+2,...}
+		$$
+		donde $a$ es un entero positivo, posiblemente cero. Esto puede hacerse simplemente reemplazando $1$ por $a$ en cualquier versión del Principio de Inducción Matemática. 
+	\end{observacion}
+	
+	\begin{ejemplo}
+	Demostrar que $$P(n): 1+2+3+...+n=\frac{1}{2}n\left( n+1 \right)$$
+	es cierto para todo $n \in \N.$
+\end{ejemplo}
+
+
+
+
+\begin{ejemplo}
+	Demostrar que $$P(n): 1+2+2^{2}+...+2^{n}=2^{n+1}-1$$
+	es cierto para todo $n \in \N.$
+\end{ejemplo}
+
+\subsection{Notación ``Sigma''}
+
+
+	La letra griega $\Sigma$ denota adición repetida:
+	
+	$$
+	\sum_{i=a}^{b} f(i)=f(a)+f(a+1)+...+f(b),
+	$$ siempre que $a\leq b.$
+
+
+
+	\begin{ejemplo}
+		\label{ayr:exmp23.1}
+		\begin{enumerate}
+			\item $\sum_{j=1}^{5} j = 1+2+3+4+5 =15$
+			\item $\sum_{i=0}^{3} \left( 2i+1 \right)=
+			1+3+5+7$
+			\item $\sum_{i=2}^{10} i^{2}=2^{2}+3^{2}+...+10^{2}$
+			\item $\sum_{j=1}^{4}\cos(j\pi)=
+			\cos\pi+ \cos 2\pi + \cos 3\pi +\cos 4\pi.$
+		\end{enumerate}
+		
+	\end{ejemplo}
+	
+
+
+
+	{Linealidad}
+	\begin{proposicion}
+		\label{suma:linealidad}
+		\begin{align*}
+			\sum_{i=a}^{b} cf(i)&=c \sum_{i=a}^{b} f(i)\\
+			\sum_{i=a}^{b} f(i)+g(i)&= \sum_{i=a}^{b} f(i)
+			+\sum_{i=a}^{b} g(i)
+		\end{align*}
+		
+	\end{proposicion}
+	
+
+
+
+	{Propiedades}
+	\begin{align*}
+		\sum_{k=a}^{b}f(k)&=\sum_{j=a}^{b}f(j)\\
+		\sum_{j=a}^{a}f(j)&=f(a) \\
+		\sum_{j=a}^{c}f(j)&=\sum_{j=a}^{b}f(j)+\sum_{j=b}^{c}f(j) \\
+		\sum_{j=a}^{b+1}f(j)&=\sum_{j=a}^{b}f(j)+f(b)
+	\end{align*}
+	
+
+
+
+	\begin{ejemplo}
+		Si $f(n)=(2n-1),$ entonces
+		$$
+		\sum_{i=1}^{n}f(j)=1+3+...+\left( 2n-1 \right)
+		$$ es la suma hasta el $n-$\'esimo natural impar.  Observe que 
+		\begin{enumerate}
+			\item $\sum_{j=1}^{1}f(j)=2(1)-1=1.$
+			\item $\sum_{i=1}^{n+1}f(j)=\left( \sum_{i=1}^{n}f(j) \right)+\left( 2n+1 \right)$
+		\end{enumerate}
+		
+	\end{ejemplo}
+	
+
+
+
+	\begin{ejemplo}
+		Si $f(n)=2^{n-1},$ entonces
+		$$
+		\sum_{i=1}^{n}f(j)=1+2+...+2^{n-1}
+		$$ es la suma de las primeras $n$ potencias de 2 (incluyendo $1=2^{0}$).  Observe que 
+		\begin{enumerate}
+			\item $\sum_{i=1}^{n+1}f(j)=1+2+...+2^{n}$
+			\item $\sum_{j=1}^{1}f(j)=2^{1-1}=1.$
+			\item $\sum_{i=1}^{n+1}f(j)=\left( \sum_{i=1}^{n}f(j) \right)+2^{n}.$
+		\end{enumerate}
+		
+	\end{ejemplo}
+	
+
+
+\subsection{Ejemplos Resueltos}
+
+
+	\begin{ejemplo}
+		Demostrar que $$P(n): 1+2+3+...+n=\frac{1}{2}n\left( n+1 \right)$$
+		es cierto para todo $n \in \N.$
+	\end{ejemplo}
+	
+
+
+
+	\begin{ejemplo}
+		Demostrar que $$P(n): 1+2+2^{2}+...+2^{n}=2^{n+1}-1$$
+		es cierto para todo $n \in \N.$
+	\end{ejemplo}
+	
+
+
+\subsection{Funciones definidas de manera recursiva}
+
+
+	Decimos que una función está \emph{definida recursivamente} si la definición de la función se refiere a sí misma.
+
+
+
+	Para que la función est\'e bien definida, debe tener las siguientes dos propiedades:
+	\begin{enumerate}
+		\item Deben existir ciertos argumentos, llamados \emph{valores base,} para los cuales la función no se refiera a sí misma.
+		\item Cada vez que la función se refiera a sí misma, el argumento de la función debe estár más cercano a un valor base.
+	\end{enumerate}
+	
+
+
+\subsection{La función factorial}
+
+
+	El producto de enteros positivos de $1$ hasta $n$ (incluído) es llamado \emph{$n$ factorial, $n!$}
+	
+	Es decir, 
+	$$
+	n!=n(n-1)\cdots 3\cdot 2 \cdot 1.$$
+	
+
+
+
+	Por razones combinatorias, es conveniente definir \emph{$0!=1,$} y de esta manera la función factorial quedará definida para todos los enteros no negativos.
+
+
+
+	\begin{observacion}
+		\begin{enumerate}
+			\item $1!=1\cdot0!$
+			\item $2!=2\cdot1!$
+			\item $3!=3\cdot2!$
+			\item $4!=4\cdot3!$
+		\end{enumerate}
+		
+	\end{observacion}
+	
+
+
+
+	Es fácil observar que para $n \in \N:$
+	$$
+	n!=n\cdot (n-1)!
+	$$
+
+
+
+	\begin{definicion}[Función factorial]
+		$$n!=
+		\begin{cases}
+			1 & n=0 \\
+			n\cdot(n-1)! & n>0
+		\end{cases}
+		$$
+	\end{definicion}
+	
+
+
+
+	\begin{observacion}
+		\begin{enumerate}
+			\item El valor de $n!$ factorial esta dado explicitamente para $n=0,$ de manera que $0$ es el valor base. 
+			\item El valor de $n!, n>0$ está dado en t\'erminos de $n-1,$ que es más cercano al valor base $0.$    
+		\end{enumerate}
+		
+		Por tanto, $n!$ es una función recursiva bien definida.
+	\end{observacion}
+	
+
+
+\begin{lstlisting}[language=python, caption=Implementación iterativa del \emph{factorial} en \texttt{Python}]
+def factorial(n):
+	result = 1
+	for i in range(1, n+1):
+		result *= i
+	return result
+\end{lstlisting}
+
+\begin{lstlisting}[language=python, caption=Implementación recursiva del \emph{factorial} en \texttt{Python}]
+def factorial(n):
+	z=1
+	if n>1:
+		z=n*factorial(n-1)
+	return z
+\end{lstlisting}
+
+Para más implementaciones, visite \href{https://rosettacode.org/wiki/Factorial}{Rosetta Code.}
+
+
+
+\subsection{Suceción de Fibonacci}
+
+
+	La celebre sucesión de Fibonacci (usualmente denotada por $F_{0}, F_{1}, F_{2},...$) es como sigue:
+	$$
+	0,0,1,2,3,5,8,13,21,34,55,...
+	$$
+	
+	Es decir, $F_{0}=0$  $F_{1}=1$ y cada t\'ermino sucesor es la suma de los dos precedentes.
+
+
+
+	Por ejemplo, los siguientes dos t\'erminos de la sucesión son
+	$$34+55=89 \texttt{ y }55+89=144.$$
+
+
+
+	\begin{definicion}[Sucesión de Fibonacci]
+		$$
+		F_{n}=
+		\begin{cases}
+			n & n=0,1 \\
+			F_{n}=F_{n-2}+F_{n-1} & n>1
+		\end{cases}
+		$$
+	\end{definicion}
+
+
+
+	Este ejemplo es una función recursiva bien definida, ya que la función hace referencia a sí misma, cuando se usan $ F_{n-2}$ y $F_{n-1},$ y
+	\begin{enumerate}
+		\item los valores base son $0$ y $1;$
+		\item los valores de $F_{n}$ están definidos en t\'erminos de valores más peque\~nos $n-2$ y $n-1$ que son más cercanos a los valores base.
+	\end{enumerate}
+	
+
+
+\begin{lstlisting}[language=Python, caption=Implentación iterativa de \emph{Fibonacci} en \texttt{Python}]		
+def fibIter(n):
+	if n < 2:
+		return n
+	fibPrev = 1
+	fib = 1
+	for num in xrange(2, n):
+		fibPrev, fib = fib, fib + fibPrev
+	return fib
+\end{lstlisting}
+	
+%\begin{lstlisting}
+%def fibIter(n):
+%	if n < 2:
+%		return n
+%	fibPrev = 1
+%	fib = 1
+%	for num in xrange(2, n):
+%		fibPrev, fib = fib, fib + fibPrev
+%	return fib
+%\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption=Implentación recursiva de \emph{Fibonacci} en \texttt{Python}]
+def fibRec(n):
+	if n < 2:
+		return n
+	else:
+		return fibRec(n-1) + fibRec(n-2)
+\end{lstlisting}
+
+Para más implementaciones, visita \href{http://rosettacode.org/wiki/Fibonacci\_sequence}{Rosetta Code.}
+
+
+\subsection{La función de Ackermann}
+
+
+	\begin{definicion}[Función (fallida) de Ackermann]
+		$$
+		A(m,n)=
+		\begin{cases}
+			n+1 & m=0\\
+			A(m-1,n) & m\neq0, n=0 \\
+			A(m-1, A(m,n-1)) & m\neq 0, n\neq 0
+		\end{cases}
+		$$
+	\end{definicion}
+	
+
+
+
+	\begin{definicion}[Función de Ackermann]
+		$$
+		A(m,n)=
+		\begin{cases}
+			n+1 & m=0\\
+			A(m-1,1) & m\neq0, n=0 \\
+			A(m-1, A(m,n-1)) & m\neq 0, n\neq 0
+		\end{cases}
+		$$
+	\end{definicion}
+	
+
+
+\begin{lstlisting}[caption=python, caption=Implentación recursiva de \emph{Ackermann} en \texttt{Python}]
+def ack2(M, N):
+	if M == 0:
+		return N + 1
+	elif N == 0:
+		return ack2(M - 1, 1)
+	else:
+		return ack2(M - 1, ack2(M, N - 1))
+\end{lstlisting}
+
+Para más implementaciones, visite \href{http://rosettacode.org/wiki/Ackermann\_function}{Rosetta Code.}
+
+
