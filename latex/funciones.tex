@@ -48,18 +48,18 @@ El conjunto $A$ es llamado \emph{dominio} de la función, y al conjunto $B$ se l
 
 La \emph{imagen} de una función $f:A\to B$ se define como
 \begin{align*}
-	\imagen{f}&={\color{red} f(A)}\\
-	&=\set{b \in B \mid \exists a \in A: b=f(a)}\\
-	&=\set{f(a)\in B \mid a \in A}
+	\imagen{f}&=f(A)\\
+	&=\set{b \in B : \exists a \in A, b=f(a)}\\
+	&=\set{f(a)\in B : a \in A}
 \end{align*}
 
 Frecuentemente, una función puede expresarse por medio de una fórmula matemática. 
-\begin{ejemplo}
+\begin{problema}
 	Consideremos la función que asigna a cada número real su cuadrado. Podemos describir esta función escribiendo
 	$$
 	f(x)=x^{2} \texttt{ o } x\mapsto x^{2} \texttt{ o } y=x^{2}.
 	$$
-\end{ejemplo}
+\end{problema}
 
 
 
@@ -76,18 +76,18 @@ $$
 
 
 
-\begin{ejemplo}
+\begin{problema}
 	La relación 
 	$$
 	R=\set{(x,y)\in \R^{2}\mid x^{2}+y^{2}=1}
 	$$
 	no induce una función.
-\end{ejemplo}
+\end{problema}
 
 
 
 
-\begin{ejemplo}
+\begin{problema}
 	Sea $A$ un conjunto arbitrario. La función $:A \to A$ que asigna a cada elemento $a\in A$ el mismo elemento es llamada \emph{identidad,} usualmente denotada por $\id_{A}$ o simplemente $\id$
 	
 	
@@ -97,12 +97,12 @@ $$
 	$$
 	\Gamma_{\id_{A}}=\triangle_{A}.
 	$$
-\end{ejemplo}
+\end{problema}
 
 
 
  
- \begin{ejemplo}
+ \begin{problema}
   Supongamos que $S \subset A.$ La \emph{inclusión} de $S$ en $A,$ denotada por $i: S \hookrightarrow A$ esta dada por $i(x)=x.$
  
  
@@ -113,7 +113,7 @@ $$
  $$
  f\mid_{S}: S \to B, \; x\mapsto f(x).
  $$
- \end{ejemplo}
+ \end{problema}
  
  
 
@@ -181,16 +181,16 @@ $$
 
 
 
-\begin{ejemplo}
+\begin{problema}
 	La función $f:\R \to \R, x \mapsto x^{2}$ no es sobre, pero como 
 	$$f(A)=\set{x^2\mid x\in\R}=\set{y\in \R \mid y\geq 0}$$
 	la función $f: \R\to \set{y \geq 0}, x \mapsto x^{2}$ sí lo es.
-\end{ejemplo}
+\end{problema}
 
 
 
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
 	\includegraphics[width=8cm,keepaspectratio=true]{./md/IMG-04_resticcion.png}
 	% IMG-04_resticcion.png: 0x0 pixel, 300dpi, 0.00x0.00 cm, bb=

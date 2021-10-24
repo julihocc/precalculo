@@ -2,16 +2,16 @@
 \setcounter{tocdepth}{1}
 \setcounter{secnumdepth}{1}
 
-\theoremstyle{theorem}
-\newtheorem{teorema}{Teorema}[section]
-\newtheorem{lema}{Lema}[section]
-\newtheorem{proposicion}{Proposición}[section]
+%\theoremstyle{theorem}
+\newtheorem{teorema}{Teorema}%[chapter]
+\newtheorem{lema}{Lema}%[section]
+\newtheorem{proposicion}{Proposición}%[section]
 \newtheorem*{corolario}{Corolario}%[section]
 %\newtheorem*{algoritmo}{Algoritmo}%[section]
 
 \theoremstyle{definition}
-\newtheorem{problema}{Problema}[section]
-\newtheorem*{definicion}{Definición}%[section]
+%\newtheorem{problema}{Problema}[section]
+%\newtheorem*{definicion}{Definición}%[section]
 \newtheorem*{axioma}{Axioma}%[section]
 \newtheorem*{propiedad}{Propiedad}%[section]
 %\newtheorem{ejemplo}{Ejemplo}[section]
@@ -19,38 +19,3 @@
 \theoremstyle{remark}
 \newtheorem*{observacion}{Observación}%[section]
 \newtheorem*{sugerencia}{Sugerencia}
-
-\newenvironment{solucion}{
-	\medskip
-	%\begin{framed}
-		\bgroup\color{Maroon}
-		{\textbf{Solución.}}
-	}{
-		\egroup
-	%\end{framed}
-	\medskip
-	}
-
-\newenvironment{ejemplo}{
-	\medskip
-	%\begin{framed}
-	\bgroup\color{Brown}
-	{\textbf{Ejemplo.}}
-}{
-	\egroup
-	%\end{framed}
-	\medskip
-}
-
-\newenvironment{algoritmo}[1]{
-	\medskip
-	%\begin{framed}
-	\bgroup
-	\color{Sepia}
-	{\textbf{Algoritmo. (#1)}}
-	\ttfamily
-}{
-	\egroup
-	%\end{framed}
-	\medskip
-}

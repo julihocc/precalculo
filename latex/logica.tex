@@ -13,7 +13,7 @@
 
     Una proposición es un enunciado declarativo que puede ser cierto o falso, pero no ambos. 
 
-    \begin{ejemplo}
+    \begin{problema}
         ?`Cuál de los siguientes enunciados es una proposición?
         \begin{multicols}{2}
             \begin{enumerate}
@@ -25,7 +25,7 @@
                 \item Haz tu tarea.
             \end{enumerate}
         \end{multicols}
-    \end{ejemplo}
+    \end{problema}
     
 
 
@@ -54,7 +54,7 @@
     En esta sección discutiremos las tres operaciones lógicas básicas: conjunción , disyunción  y la negación.
 
 
-\subsection{Conjunción $p \wed q$}
+\subsection{Conjunción}
 
 
     Cualesquiera dos proposiciones $p,q$ pueden ser combinadas por la palabra ``y'' para formar una proposición compuesta llamada \emph{conjunción} que se escribe $p\wed q.$
@@ -89,7 +89,7 @@
     	Construimos la tabla de verdad de la conjunción en el siguiente script \href{https://cloud.sagemath.com/projects/12787063-cafe-4f3b-a2e0-905f8b83cf3b/files/MD01_TRDV01_AND.sagews}{https://goo.gl/hEF5os}
     }
 
-\subsection{Disyunción $p \vee q$}
+\subsection{Disyunción}
 
 
     Cualesquiera dos proposiciones $p,q$ pueden ser combinadas por la palabra ``o'' para formar una proposición compuesta llamada \emph{disyunción} que se escribe $p \vee q .$
@@ -123,7 +123,7 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 
 
 
-\subsection{Negación $\neg p$}
+\subsection{Negación}
 
 
  Dada cualquier proposición $p,$ otra proposición llamada \emph{negación} de $p$ puede ser formada escribien \emph{``No es cierto que...''} o \emph{``Es falso que...''} antes de \texttt{p}.
@@ -159,11 +159,14 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
  
  Una manera simple y concisa de mostrar esta relación es a trav\'es de una \emph{tabla de verdad.}
 
- \begin{ejemplo}
+ \begin{problema}
   Contruir la tabla de verdad de la proposición
   $\neg \left( p \wed \neg q \right).$
+
+ \end{problema} \marginnote{ Construimos la tabla de verdad de la proposición anterior con el siguiente script \href{https://goo.gl/V2Axzi}{https://goo.gl/V2Axzi}}
+
 \begin{solucion}
-	   \begin{tdv}[$\neg\left( p \wed \neg q \right)$]
+	\begin{tdv}[$\neg\left( p \wed \neg q \right)$]
 		
 		\hfill
 		\begin{center}
@@ -177,7 +180,6 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 		\end{center}
 	\end{tdv}
 \end{solucion}
- \end{ejemplo} \marginnote{ Construimos la tabla de verdad de la proposición anterior con el siguiente script \href{https://goo.gl/V2Axzi}{https://goo.gl/V2Axzi}}
 
 
 \marginnote{
@@ -210,7 +212,7 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 
 
 
-\begin{ejemplo} Construya las tablas de verdad de las siguientes proposiciones
+\begin{problema} Construya las tablas de verdad de las siguientes proposiciones
 \begin{enumerate}
  \item $p\vee \neg p$
  \item $p\wed \neg p$
@@ -221,7 +223,7 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 \end{enumerate}
 
 
-\end{ejemplo}
+\end{problema}
 
 
  Algunas proposiciones $P(p,q,...)$ son siempre ciertas, no importa los valores de verdad de las variables $p,q,...$ 
@@ -251,18 +253,18 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 
 
 
- \begin{ejemplo} Demostremos que 
+ \begin{problema} Demostremos que 
   $$
   \neg\left( p \wed q \right) \equiv \neg p \vee \neg q
   $$
- \end{ejemplo}
+ \end{problema}
 
 
 
 
- \begin{ejemplo}
+ \begin{problema}
   Reescriba la frase ``No es cierto que: las rosas son rojas y las violetas son azules'', usando la equivalencia anterior.
- \end{ejemplo}
+ \end{problema}
 
 
 
@@ -338,14 +340,14 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 
 
 
- \begin{ejemplo}
+ \begin{problema}
   Demuestre que $$p\imply q \equiv \neg p \vee q.$$
- \end{ejemplo}
+ \end{problema}
 
 
 
 
- \begin{ejemplo} Determine cuales de las siguientes sentencias son tautologías, construyendo las correspondientes tablas de verdad.
+ \begin{problema} Determine cuales de las siguientes sentencias son tautologías, construyendo las correspondientes tablas de verdad.
   \begin{enumerate}
    \item $\neg\left( p \vee \neg q \right) \imply \neg p$
    \item $p \imply \left( q\imply r \right)$
@@ -357,7 +359,7 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
    \item $\left( \left( p\imply q \right) \wed \left( q \imply r \right) \right) \imply \left( p \imply r \right)$
   \end{enumerate}
 
- \end{ejemplo}
+ \end{problema}
 
 
 
@@ -402,7 +404,7 @@ Por ejemplo
 
 
 
- \begin{ejemplo}
+ \begin{problema}
  \label{lip:exmp:4.4}
   \begin{enumerate}
    \item Demuestre que $p, p\imply q \yields q$ es un argumento válido. 
@@ -411,7 +413,7 @@ Por ejemplo
    \item Demuestre que $p\imply q, \neg q \yields \neg p$ es un argumento válido.
   \end{enumerate}
 
- \end{ejemplo}
+ \end{problema}
 
 	% TODO: \usepackage{graphicx} required
 	\begin{figure}
@@ -463,7 +465,7 @@ Esta es la manera \emph{intensiva} de describir un conjunto.
 
 
 
- \begin{ejemplo}
+ \begin{problema}
   \label{lip:exmp:4.7}
   Encuentre el conjunto de verdad para cada función en $\N$:
   \begin{enumerate}
@@ -472,7 +474,7 @@ Esta es la manera \emph{intensiva} de describir un conjunto.
    \item $p(x): x+5>1$ 
   \end{enumerate}
 
- \end{ejemplo}
+ \end{problema}
 
 
 
@@ -500,7 +502,7 @@ Esta es la manera \emph{intensiva} de describir un conjunto.
 
 
 
- \begin{ejemplo}
+ \begin{problema}
   \label{lip:exmp:4.8}
   Verifique el valor de verdad de las siguientes afirmaciones:
   \begin{enumerate}
@@ -508,7 +510,7 @@ Esta es la manera \emph{intensiva} de describir un conjunto.
    \item $\forall n \in \N: n+2>8.$
   \end{enumerate}
 
- \end{ejemplo}
+ \end{problema}
 
 
 
@@ -584,7 +586,7 @@ Estos son ejemplos de la siguiente proposición
 
 
 
- \begin{ejemplo}
+ \begin{problema}
   \label{lip:exmp:4.10.a}
   La negación de la siguiente afirmación
   \begin{center}
@@ -595,12 +597,12 @@ es
  \emph{Existe un entero positivo $n$ tal que $n+2 \leq 8.$}
 \end{center}
 
- \end{ejemplo}
+ \end{problema}
 
 
 
 
- \begin{ejemplo}
+ \begin{problema}
   \label{lip:exmp:4.10.b}
   La negación de la siguiente afirmación
   \begin{center}
@@ -611,7 +613,7 @@ es
   \emph{Toda persona viva tiene menos de 150 a\~nos.}
  \end{center}
 
- \end{ejemplo}
+ \end{problema}
 
 
 
@@ -626,7 +628,7 @@ es
 
 
 
- \begin{ejemplo}
+ \begin{problema}
  \label{lip:4.11}
   \begin{enumerate}
    \item 
@@ -637,7 +639,7 @@ es
   Sin embargo, $\forall x \in \N: : x^{2}\leq x$ es siempre cierto.
   \end{enumerate}
 
- \end{ejemplo}
+ \end{problema}
 
 
 
