@@ -1,23 +1,163 @@
 % chapter format
+
+\usepackage{amsthm,thmtools,xcolor}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{1}
+%% paleta 1
+%\definecolor{mycolor1}{RGB}{8,32,50}
+%\definecolor{mycolor2}{RGB}{44,57,75}
+%\definecolor{mycolor3}{RGB}{51,71,86}
+%\definecolor{mycolor4}{RGB}{255,76,41}
+
+%%% paleta 2
+%\definecolor{mycolor1}{RGB}{17,29,94}
+%\definecolor{mycolor2}{RGB}{199,0,57}
+%\definecolor{mycolor3}{RGB}{243,113,33}
+%\definecolor{mycolor4}{RGB}{192,226,24}
+
+%% paleta 3
+%\definecolor{mycolor1}{RGB}{75,93,103}
+%\definecolor{mycolor2}{RGB}{50,47,61}
+%\definecolor{mycolor3}{RGB}{89,64,92}
+%%\definecolor{mycolor4}{RGB}{135,85,111}
+%
+%% paleta 4
+%\definecolor{mycolor1}{RGB}{26,26,46}
+%\definecolor{mycolor2}{RGB}{22,33,62}
+%\definecolor{mycolor3}{RGB}{15,52,96}
+%\definecolor{mycolor4}{RGB}{233,69,96}
+
+% paleta 4
+\definecolor{mycolor1}{RGB}{255, 201, 150}
+\definecolor{mycolor2}{RGB}{255, 132, 116}
+\definecolor{mycolor3}{RGB}{159, 95, 128}
+\definecolor{mycolor4}{RGB}{88, 61, 114}
+
+\colorlet{ColorVariable1}{mycolor1}
+\colorlet{ColorVariable2}{mycolor2}
+\colorlet{ColorVariable3}{mycolor3}
+\colorlet{ColorVariable4}{mycolor4}
+
+\hypersetup{
+	pdftitle={Precálculo},
+	pdfauthor={Juliho Castillo Colmenares},
+	colorlinks=true,	
+		linkcolor=ColorVariable4,
+		anchorcolor=ColorVariable4,
+		runcolor=ColorVariable4,		
+		filecolor=ColorVariable4,
+		citecolor = ColorVariable4,      
+		urlcolor=ColorVariable4,
+	frenchlinks=true
+}
+
 \titleformat{\chapter}%
-{\huge\rmfamily\itshape\color{BrickRed}}% format applied to label+text
-{\llap{\colorbox{BrickRed}{\parbox{1.5cm}{\hfill\itshape\huge\color{white}\thechapter}}}}% label
+{\huge\rmfamily\itshape\color{ColorVariable4}}% format applied to label+text
+{\llap{\colorbox{ColorVariable4}{\parbox{1.5cm}{\hfill\itshape\huge\color{white}\thechapter}}}}% label
 {2pt}% horizontal separation between label and title body
 {}% before the title body
 []% after the title body
 
 % section format
 \titleformat{\section}%
-{\normalfont\Large\itshape\color{BrickRed}}% format applied to label+text
-{\llap{\colorbox{BrickRed}{\parbox{1.5cm}{\hfill\color{white}\thesection}}}}% label
+{\normalfont\Large\itshape\color{ColorVariable4}}% format applied to label+text
+{\llap{\colorbox{ColorVariable4}{\parbox{1.5cm}{\hfill\color{white}\thesection}}}}% label
 {1em}% horizontal separation between label and title body
 {}% before the title body
 []% after the title body
 
 % subsection format
 \titleformat{\subsection}%
-{\normalfont\large\itshape\color{BrickRed}}% format applied to label+text
-{\llap{\colorbox{White}{\parbox{1.5cm}{\hfill\color{BrickRed}\thesubsection}}}}% label
+{\normalfont\large\itshape\color{ColorVariable4}}% format applied to label+text
+{\llap{\colorbox{ColorVariable4}{\parbox{1.5cm}{\hfill\color{white}\thesubsection}}}}% label
 {1em}% horizontal separation between label and title body
 {}% before the title body
 []% after the title body
+
+
+%\newenvironment{problema}{
+%	\medskip
+%	%\begin{framed}
+%	\bgroup\color{ColorVariable1}
+%	{\textbf{Problema.}}
+%}{
+%	\egroup
+%	%\end{framed}
+%	\medskip
+%}
+
+\declaretheoremstyle[
+headfont=\color{ColorVariable1}\normalfont\bfseries,
+bodyfont=\color{ColorVariable2}\normalfont\itshape,
+]{colored}
+
+\declaretheoremstyle[
+headfont=\color{ColorVariable3}\normalfont\bfseries,
+bodyfont=\color{ColorVariable3}\normalfont\itshape,
+]{colored-2}
+
+\declaretheorem[
+style=colored,
+name=Problema,
+numberwithin=section, 
+%shaded={rulecolor=Lavender,
+%	rulewidth=2pt, 
+%	bgcolor={rgb}{1,1,1}}
+]{problema}
+
+\declaretheorem[
+style=colored,
+name=Solución,
+numbered = no
+]{solucion}
+
+\declaretheorem[
+style=colored,
+name= Ejemplo,
+numberwithin=section
+]{ejemplo}
+
+\declaretheorem[
+style=colored-2,
+name= Definición,
+numbered = no
+]{definicion}
+
+\newenvironment{algoritmo}[1]{
+	\medskip
+	%\begin{framed}
+	\bgroup
+	\color{ColorVariable3}
+	{\textbf{Algoritmo. (#1)}}
+	\ttfamily
+}{
+	\egroup
+	%\end{framed}
+	\medskip
+}
+
+%\newtheorem{teorema}{Teorema}%[chapter]
+
+\declaretheorem[
+style=colored,
+name=Teorema,
+]{teorema}
+
+%\newtheorem{proposicion}{Proposición}%[chapter]
+
+\declaretheorem[
+style=colored,
+name=Proposición,
+]{proposicion}
+
+%\newtheorem{observacion}{Observación}%[chapter]
+
+\declaretheorem[
+style=colored-2,
+name=Observación,
+numbered = no
+]{observacion}
+
+\newtheorem{axioma}{Axioma}%[chapter]
+\newtheorem{sugerencia}{Sugerencia}%[chapter]
+\newtheorem{corolario}{Corolario}%[chapter]
