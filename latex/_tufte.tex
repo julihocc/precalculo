@@ -27,27 +27,29 @@
 %\definecolor{mycolor3}{RGB}{15,52,96}
 %\definecolor{mycolor4}{RGB}{233,69,96}
 
-% paleta 4
-\definecolor{mycolor1}{RGB}{255, 201, 150}
-\definecolor{mycolor2}{RGB}{255, 132, 116}
-\definecolor{mycolor3}{RGB}{159, 95, 128}
-\definecolor{mycolor4}{RGB}{88, 61, 114}
+% paleta 6
+\definecolor{mycolor1}{RGB}{251, 54, 64}
+\definecolor{mycolor2}{RGB}{96, 95, 94}
+\definecolor{mycolor3}{RGB}{29, 52, 97}
+\definecolor{mycolor4}{RGB}{31, 72, 126}
+\definecolor{mycolor5}{RGB}{36, 123, 160}
 
 \colorlet{ColorVariable1}{mycolor1}
 \colorlet{ColorVariable2}{mycolor2}
 \colorlet{ColorVariable3}{mycolor3}
 \colorlet{ColorVariable4}{mycolor4}
+\colorlet{ColorVariable5}{mycolor5}
 
 \hypersetup{
 	pdftitle={Precálculo},
 	pdfauthor={Juliho Castillo Colmenares},
 	colorlinks=true,	
-		linkcolor=ColorVariable4,
-		anchorcolor=ColorVariable4,
-		runcolor=ColorVariable4,		
-		filecolor=ColorVariable4,
-		citecolor = ColorVariable4,      
-		urlcolor=ColorVariable4,
+	linkcolor=ColorVariable5,
+	anchorcolor=ColorVariable5,
+	runcolor=ColorVariable5,		
+	filecolor=ColorVariable5,
+	citecolor = ColorVariable5,      
+	urlcolor=ColorVariable5,
 	frenchlinks=true
 }
 
@@ -76,15 +78,15 @@
 
 
 %\newenvironment{problema}{
-%	\medskip
-%	%\begin{framed}
-%	\bgroup\color{ColorVariable1}
-%	{\textbf{Problema.}}
-%}{
-%	\egroup
-%	%\end{framed}
-%	\medskip
-%}
+	%	\medskip
+	%	%\begin{framed}
+	%	\bgroup\color{ColorVariable1}
+	%	{\textbf{Problema.}}
+	%}{
+	%	\egroup
+	%	%\end{framed}
+	%	\medskip
+	%}
 
 \declaretheoremstyle[
 headfont=\color{ColorVariable1}\normalfont\bfseries,
@@ -101,8 +103,8 @@ style=colored,
 name=Problema,
 numberwithin=section, 
 %shaded={rulecolor=Lavender,
-%	rulewidth=2pt, 
-%	bgcolor={rgb}{1,1,1}}
+	%	rulewidth=2pt, 
+	%	bgcolor={rgb}{1,1,1}}
 ]{problema}
 
 \declaretheorem[
