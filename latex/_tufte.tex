@@ -1,8 +1,8 @@
 % chapter format
 
 \usepackage{amsthm,thmtools,xcolor}
-\setcounter{tocdepth}{1}
-\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 %% paleta 1
 %\definecolor{mycolor1}{RGB}{8,32,50}
 %\definecolor{mycolor2}{RGB}{44,57,75}
@@ -106,6 +106,15 @@ numberwithin=section,
 	%	rulewidth=2pt, 
 	%	bgcolor={rgb}{1,1,1}}
 ]{problema}
+
+\declaretheorem[
+style=colored,
+name=Problema Resuelto,
+numberwithin=section, 
+%shaded={rulecolor=Lavender,
+	%	rulewidth=2pt, 
+	%	bgcolor={rgb}{1,1,1}}
+]{resuelto}
 
 \declaretheorem[
 style=colored,

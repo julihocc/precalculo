@@ -13,7 +13,7 @@
 
     Una proposición es un enunciado declarativo que puede ser cierto o falso, pero no ambos. 
 
-    \begin{problema}
+    \begin{resuelto}
         ?`Cuál de los siguientes enunciados es una proposición?
         \begin{multicols}{2}
             \begin{enumerate}
@@ -25,7 +25,7 @@
                 \item Haz tu tarea.
             \end{enumerate}
         \end{multicols}
-    \end{problema}
+    \end{resuelto}
     
 
 
@@ -115,7 +115,7 @@
 Construimos la tabla de verdad de la disyunción en el siguiente script \href{https://cloud.sagemath.com/projects/12787063-cafe-4f3b-a2e0-905f8b83cf3b/files/MD01_TDV02_OR.sagews}{https://goo.gl/5kXzNI} 
 }
  \begin{observacion}
-  Algunas veces \texttt{``p o q''} se entiende en el sentido exclusivo: Puede ocurrir \texttt{p} o \texttt{q}, \emph{pero no ambos,} que es diferente a la definición anterior. Sin embargo, existe un conector llamado de hecho \texttt{o exclusivo,} que cumple esta definición y consideraremos más adelante. 
+  Algunas veces \texttt{``p o q''} se entiende en el sentido exclusivo: Puede ocurrir \texttt{p} o \texttt{q}, \emph{pero no ambos,} que es diferente a la definición anterior. Sin embargo, existe un conector llamado \texttt{o exclusivo,} que cumple esta definición y consideraremos más adelante. 
  \end{observacion}
 
 
@@ -156,11 +156,11 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
  
  Una manera simple y concisa de mostrar esta relación es a través de una \emph{tabla de verdad.}
 
- \begin{problema}
+ \begin{resuelto}
   Contruir la tabla de verdad de la proposición
   $\neg \left( p \wed \neg q \right).$
 
- \end{problema} \marginnote{ Construimos la tabla de verdad de la proposición anterior con el siguiente script \href{https://goo.gl/V2Axzi}{https://goo.gl/V2Axzi}}
+ \end{resuelto} \marginnote{ Construimos la tabla de verdad de la proposición anterior con el siguiente script \href{https://goo.gl/V2Axzi}{https://goo.gl/V2Axzi}}
 
 \begin{solucion}
 	\begin{tdv}[$\neg\left( p \wed \neg q \right)$]
@@ -209,7 +209,7 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 
 
 
-\begin{problema} Construya las tablas de verdad de las siguientes proposiciones
+\begin{resuelto} Construya las tablas de verdad de las siguientes proposiciones
 \begin{enumerate}
  \item $p\vee \neg p$
  \item $p\wed \neg p$
@@ -220,7 +220,7 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 \end{enumerate}
 
 
-\end{problema}
+\end{resuelto}
 
 
  Algunas proposiciones $P(p,q,...)$ son siempre ciertas, no importa los valores de verdad de las variables $p,q,...$ 
@@ -243,22 +243,22 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 \subsection{Equivalencias Lógicas}
 
 
- Diremos que dos proposiciones $P(p,q,...)$ y $Q(p,q,...)$ son \emph{lógicamente equivalentes} si tienen tablas de verdad idénticas. En tal caso, escribimos $$P(p,q,..)\equiv Q(p,q,...)$$
+ Diremos que dos proposiciones $P(p,q,...)$ y $Q(p,q,...)$ son \emph{lógicamente equivalentes} si tienen tablas de verdad idénticas. En tal caso, escribimos $$P(p,q,\dots)\equiv Q(p,q,\dots)$$
 
 
 
- \begin{problema} Demostrar que
+ \begin{resuelto} Demostrar que
   $$
   \neg\left( p \wed q \right) \equiv \neg p \vee \neg q
   $$
- \end{problema}
+ \end{resuelto}
 
 
 
 
- \begin{problema}
+ \begin{resuelto}
   Reescriba la frase ``Es falso que el precio del petroleo este a la baja y que los autos ahora cuesten más.'', usando la equivalencia anterior.
- \end{problema}
+ \end{resuelto}
 
 
 
@@ -285,7 +285,7 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 \subsection{Sentencias condicionales y bicondicionales}
 
 
- Muchas sentencias, particularmente en matemáticas, son de la forma \texttt{``si $p$ entonces $q$''}.  Tales sentencias son llamadas \emph{condicionales} y son denotadas por 
+ Muchas sentencias, particularmente en matemáticas, son de la forma \texttt{``si p entonces q''}.  Tales sentencias son llamadas \emph{condicionales} y son denotadas por 
  $$
  p \imply q.
  $$ 
@@ -334,14 +334,14 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
 
 
 
- \begin{problema}
+ \begin{resuelto}
   Demuestre que $$p\imply q \equiv \neg p \vee q.$$
- \end{problema}
+ \end{resuelto}
 
 
 
 
- \begin{problema} Determine cuales de las siguientes sentencias son tautologías, construyendo las correspondientes tablas de verdad.
+ \begin{resuelto} Determine cuales de las siguientes sentencias son tautologías, construyendo las correspondientes tablas de verdad.
   \begin{enumerate}
    \item $\neg\left( p \vee \neg q \right) \imply \neg p$
    \item $p \imply \left( q\imply r \right)$
@@ -353,7 +353,7 @@ Construimos la tabla de verdad de la disyunción en el siguiente script \href{ht
    \item $\left( \left( p\imply q \right) \wed \left( q \imply r \right) \right) \imply \left( p \imply r \right)$
   \end{enumerate}
 
- \end{problema}
+ \end{resuelto}
 
 
 
@@ -392,7 +392,7 @@ Por ejemplo
 
 
 
- \begin{problema}
+ \begin{resuelto}
  \label{lip:exmp:4.4}
   \begin{enumerate}
    \item Demuestre que $p, p\imply q \yields q$ es un argumento válido. 
@@ -401,7 +401,7 @@ Por ejemplo
    \item Demuestre que $p\imply q, \neg q \yields \neg p$ es un argumento válido.
   \end{enumerate}
 
- \end{problema}
+ \end{resuelto}
 
 	% TODO: \usepackage{graphicx} required
 	\begin{figure}
@@ -453,7 +453,7 @@ Esta es la manera \emph{intensiva} de describir un conjunto.
 
 
 
- \begin{problema}
+ \begin{resuelto}
   \label{lip:exmp:4.7}
   Encuentre el conjunto de verdad para cada función en $\N$:
   \begin{enumerate}
@@ -462,7 +462,7 @@ Esta es la manera \emph{intensiva} de describir un conjunto.
    \item $p(x): x+5>1$ 
   \end{enumerate}
 
- \end{problema}
+ \end{resuelto}
 
 
 
@@ -481,7 +481,7 @@ Esta es la manera \emph{intensiva} de describir un conjunto.
 
 
 
- \begin{problema}
+ \begin{resuelto}
   \label{lip:exmp:4.8}
   Verifique el valor de verdad de las siguientes afirmaciones:
   \begin{enumerate}
@@ -489,7 +489,7 @@ Esta es la manera \emph{intensiva} de describir un conjunto.
    \item $\forall n \in \N: n+2>8.$
   \end{enumerate}
 
- \end{problema}
+ \end{resuelto}
 
 
 
@@ -565,7 +565,7 @@ Estos son ejemplos de la siguiente proposición
 
 
 
- \begin{problema}
+ \begin{resuelto}
   \label{lip:exmp:4.10.a}
   La negación de la siguiente afirmación
   \begin{center}
@@ -576,12 +576,12 @@ es
  \emph{Existe un entero positivo $n$ tal que $n+2 \leq 8.$}
 \end{center}
 
- \end{problema}
+ \end{resuelto}
 
 
 
 
- \begin{problema}
+ \begin{resuelto}
   \label{lip:exmp:4.10.b}
   La negación de la siguiente afirmación
   \begin{center}
@@ -592,7 +592,7 @@ es
   \emph{Toda persona viva tiene menos de 150 a\~nos.}
  \end{center}
 
- \end{problema}
+ \end{resuelto}
 
  \begin{observacion}
   Para negar una afirmación del tipo $$\forall x \in A: p(x)$$ sólo necesitamos encontrar un elemento $x_{0}\in A$ tal que $p(x)$ sea \emph{falso.}
@@ -601,7 +601,7 @@ es
   A un elemento $x_{0}$ así se le conoce como \emph{contraejemeplo.}
  \end{observacion}
 
- \begin{problema}
+ \begin{resuelto}
  \label{lip:4.11}
   \begin{enumerate}
    \item 
@@ -612,7 +612,7 @@ es
   Sin embargo, $\forall x \in \N: : x^{2}\leq x$ es siempre cierto.
   \end{enumerate}
 
- \end{problema}
+ \end{resuelto}
 
 
 
