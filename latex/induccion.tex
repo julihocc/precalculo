@@ -4,38 +4,38 @@
 
 
 	Una propiedad esencial de los naturales $\N=\set{1,2,3,...}$  es la siguiente
-	
-	
-	\begin{ax}[Principio de Inducción Matemática, versión I]
+
+
+	\begin{axioma}[Principio de Inducción Matemática, versión I]
 		Sea $P$ una proposición definida en $\N,$ es decir, $P(n)$ toma valores de cierto o falso para cada $n\in \N.$
-		
+
 		Supongamos que
 		\begin{enumerate}
 			\item $P(1)$ es cierto;
 			\item $\forall k \in \N: P(k) \onlyif P(k+1).$
 		\end{enumerate}
-		
+
 		Entonces $P$ es {cierto} para todo entero positivo $n\in \N.$
-	\end{ax}
-	
+	\end{axioma}
+
 
 
 
 	\begin{problema}
-		Sea $P(n):1+3+5+...+(2n-1)=n^2.$ Demostrar que $P(n)$ es cierta para toda $n \in \N.$ 
+		Sea $P(n):1+3+5+...+(2n-1)=n^2.$ Demostrar que $P(n)$ es cierta para toda $n \in \N.$
 	\end{problema}
 
 
 
-	\begin{ax}[Principio de Inducción Matemática, versión II]
+	\begin{axioma}[Principio de Inducción Matemática, versión II]
 		Sea $P$ una proposición definida en $\N$ tal que :
 		\begin{enumerate}
 			\item $P(1)$ es cierta;
 			\item $P(k)$ es cierta siempre que $P(j)$ para toda $1\leq j < k.$
 		\end{enumerate}
 		Entonces $P(n)$ es cierta para toda $n\in \N.$
-	\end{ax}
-	
+	\end{axioma}
+
 
 
 
@@ -44,9 +44,9 @@
 		$$
 		\set{a,a+1, a+2,...}
 		$$
-		donde $a$ es un entero positivo, posiblemente cero. Esto puede hacerse simplemente reemplazando $1$ por $a$ en cualquier versión del Principio de Inducción Matemática. 
+		donde $a$ es un entero positivo, posiblemente cero. Esto puede hacerse simplemente reemplazando $1$ por $a$ en cualquier versión del Principio de Inducción Matemática.
 	\end{observacion}
-	
+
 	\begin{problema}
 	Demostrar que $$P(n): 1+2+3+...+n=\frac{1}{2}n\left( n+1 \right)$$
 	es cierto para todo $n \in \N.$
@@ -64,7 +64,7 @@
 
 
 	La letra griega $\Sigma$ denota adición repetida:
-	
+
 	$$
 	\sum_{i=a}^{b} f(i)=f(a)+f(a+1)+...+f(b),
 	$$ siempre que $a\leq b.$
@@ -81,9 +81,9 @@
 			\item $\sum_{j=1}^{4}\cos(j\pi)=
 			\cos\pi+ \cos 2\pi + \cos 3\pi +\cos 4\pi.$
 		\end{enumerate}
-		
+
 	\end{problema}
-	
+
 
 
 
@@ -95,9 +95,9 @@
 			\sum_{i=a}^{b} f(i)+g(i)&= \sum_{i=a}^{b} f(i)
 			+\sum_{i=a}^{b} g(i)
 		\end{align*}
-		
+
 	\end{proposicion}
-	
+
 
 
 
@@ -108,7 +108,7 @@
 		\sum_{j=a}^{c}f(j)&=\sum_{j=a}^{b}f(j)+\sum_{j=b}^{c}f(j) \\
 		\sum_{j=a}^{b+1}f(j)&=\sum_{j=a}^{b}f(j)+f(b)
 	\end{align*}
-	
+
 
 
 
@@ -116,14 +116,14 @@
 		Si $f(n)=(2n-1),$ entonces
 		$$
 		\sum_{i=1}^{n}f(j)=1+3+...+\left( 2n-1 \right)
-		$$ es la suma hasta el $n-$\'esimo natural impar.  Observe que 
+		$$ es la suma hasta el $n-$\'esimo natural impar.  Observe que
 		\begin{enumerate}
 			\item $\sum_{j=1}^{1}f(j)=2(1)-1=1.$
 			\item $\sum_{i=1}^{n+1}f(j)=\left( \sum_{i=1}^{n}f(j) \right)+\left( 2n+1 \right)$
 		\end{enumerate}
-		
+
 	\end{problema}
-	
+
 
 
 
@@ -131,15 +131,15 @@
 		Si $f(n)=2^{n-1},$ entonces
 		$$
 		\sum_{i=1}^{n}f(j)=1+2+...+2^{n-1}
-		$$ es la suma de las primeras $n$ potencias de 2 (incluyendo $1=2^{0}$).  Observe que 
+		$$ es la suma de las primeras $n$ potencias de 2 (incluyendo $1=2^{0}$).  Observe que
 		\begin{enumerate}
 			\item $\sum_{i=1}^{n+1}f(j)=1+2+...+2^{n}$
 			\item $\sum_{j=1}^{1}f(j)=2^{1-1}=1.$
 			\item $\sum_{i=1}^{n+1}f(j)=\left( \sum_{i=1}^{n}f(j) \right)+2^{n}.$
 		\end{enumerate}
-		
+
 	\end{problema}
-	
+
 
 
 \subsection{Ejemplos Resueltos}
@@ -149,7 +149,7 @@
 		Demostrar que $$P(n): 1+2+3+...+n=\frac{1}{2}n\left( n+1 \right)$$
 		es cierto para todo $n \in \N.$
 	\end{problema}
-	
+
 
 
 
@@ -157,7 +157,7 @@
 		Demostrar que $$P(n): 1+2+2^{2}+...+2^{n}=2^{n+1}-1$$
 		es cierto para todo $n \in \N.$
 	\end{problema}
-	
+
 
 
 \subsection{Funciones definidas de manera recursiva}
@@ -172,18 +172,18 @@
 		\item Deben existir ciertos argumentos, llamados \emph{valores base,} para los cuales la función no se refiera a sí misma.
 		\item Cada vez que la función se refiera a sí misma, el argumento de la función debe estár más cercano a un valor base.
 	\end{enumerate}
-	
+
 
 
 \subsection{La función factorial}
 
 
 	El producto de enteros positivos de $1$ hasta $n$ (incluído) es llamado \emph{$n$ factorial, $n!$}
-	
-	Es decir, 
+
+	Es decir,
 	$$
 	n!=n(n-1)\cdots 3\cdot 2 \cdot 1.$$
-	
+
 
 
 
@@ -198,9 +198,9 @@
 			\item $3!=3\cdot2!$
 			\item $4!=4\cdot3!$
 		\end{enumerate}
-		
+
 	\end{observacion}
-	
+
 
 
 
@@ -219,19 +219,19 @@
 		\end{cases}
 		$$
 	\end{definicion}
-	
+
 
 
 
 	\begin{observacion}
 		\begin{enumerate}
-			\item El valor de $n!$ factorial esta dado explicitamente para $n=0,$ de manera que $0$ es el valor base. 
-			\item El valor de $n!, n>0$ está dado en t\'erminos de $n-1,$ que es más cercano al valor base $0.$    
+			\item El valor de $n!$ factorial esta dado explicitamente para $n=0,$ de manera que $0$ es el valor base.
+			\item El valor de $n!, n>0$ está dado en t\'erminos de $n-1,$ que es más cercano al valor base $0.$
 		\end{enumerate}
-		
+
 		Por tanto, $n!$ es una función recursiva bien definida.
 	\end{observacion}
-	
+
 
 
 \begin{lstlisting}[language=python, caption=Implementación iterativa del \emph{factorial} en \texttt{Python}]
@@ -261,7 +261,7 @@ Para más implementaciones, visite \href{https://rosettacode.org/wiki/Factorial}
 	$$
 	0,0,1,2,3,5,8,13,21,34,55,...
 	$$
-	
+
 	Es decir, $F_{0}=0$  $F_{1}=1$ y cada t\'ermino sucesor es la suma de los dos precedentes.
 
 
@@ -288,10 +288,10 @@ Para más implementaciones, visite \href{https://rosettacode.org/wiki/Factorial}
 		\item los valores base son $0$ y $1;$
 		\item los valores de $F_{n}$ están definidos en t\'erminos de valores más peque\~nos $n-2$ y $n-1$ que son más cercanos a los valores base.
 	\end{enumerate}
-	
 
 
-\begin{lstlisting}[language=Python, caption=Implentación iterativa de \emph{Fibonacci} en \texttt{Python}]		
+
+\begin{lstlisting}[language=Python, caption=Implentación iterativa de \emph{Fibonacci} en \texttt{Python}]
 def fibIter(n):
 	if n < 2:
 		return n
@@ -301,7 +301,7 @@ def fibIter(n):
 		fibPrev, fib = fib, fib + fibPrev
 	return fib
 \end{lstlisting}
-	
+
 %\begin{lstlisting}
 %def fibIter(n):
 %	if n < 2:
@@ -337,7 +337,7 @@ Para más implementaciones, visita \href{http://rosettacode.org/wiki/Fibonacci\_
 		\end{cases}
 		$$
 	\end{definicion}
-	
+
 
 
 
@@ -351,7 +351,7 @@ Para más implementaciones, visita \href{http://rosettacode.org/wiki/Fibonacci\_
 		\end{cases}
 		$$
 	\end{definicion}
-	
+
 
 
 \begin{lstlisting}[caption=python, caption=Implentación recursiva de \emph{Ackermann} en \texttt{Python}]

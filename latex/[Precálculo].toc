@@ -71,88 +71,88 @@
 \contentsline {subsection}{\numberline {3.3.5}La función factorial}{57}{subsection.3.3.5}%
 \contentsline {subsection}{\numberline {3.3.6}Suceción de Fibonacci}{58}{subsection.3.3.6}%
 \contentsline {subsection}{\numberline {3.3.7}La función de Ackermann}{59}{subsection.3.3.7}%
-\contentsline {chapter}{\numberline {4}Sistemas numéricos}{61}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Los números racionales}{61}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Simplificaci\'on}{61}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Conversi\'on y comparaci\'on}{62}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Operaciones}{63}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Razones y proporciones}{65}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Razones inversas}{66}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Ejemplos}{66}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Números Reales}{67}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Conjuntos numéricos}{67}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Orden}{68}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Reglas de álgebra}{68}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Ejemplos}{69}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Funciones reales}{70}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Definición}{70}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Polinomios}{71}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Exponenciales y logaritmos}{71}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Funciones trigonométricas}{72}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Identidades pitagóricas}{72}{subsection.4.4.5}%
-\contentsline {subsection}{\numberline {4.4.6}Funciones hiperbólicas}{73}{subsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.4.7}Ejemplos}{74}{subsection.4.4.7}%
-\contentsline {chapter}{\numberline {5}Sistemas lineales}{77}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Sistemas de Ecuaciones Lineales Simultáneas}{77}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Sistemas de Dos Ecuaciones Lineales}{77}{subsection.5.1.1}%
-\contentsline {paragraph}{M\'etodo de sustituci\'on}{77}{paragraph*.7}%
-\contentsline {paragraph}{M\'etodo de igualaci\'on}{77}{paragraph*.8}%
-\contentsline {section}{\numberline {5.2}Determinantes}{78}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Tipos de sistemas}{78}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Determinantes de Segundo Orden}{78}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Método de Cramer}{79}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Sistemas Indeterminados}{79}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Fracciones parciales}{80}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Caso I. $D(x)$ es producto de factores lineales distintos}{81}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Caso 2. $D(x)$ es producto de factores lineales repetidos.}{81}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Caso 3. Factores cuadráticos irreducibles distintos, y lineales repetidos}{81}{subsection.5.3.3}%
-\contentsline {chapter}{\numberline {6}Álgebra}{85}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Reducci\'on de t\'erminos semejantes}{85}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Supresi\'on de signos de agrupaci\'on}{86}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Mutiplicaci\'on de polinomios}{87}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Productos notables}{89}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Sumas y diferencias de potencias}{90}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Factorización}{93}{chapter.7}%
-\contentsline {section}{\numberline {7.1}M\'etodo de Horner y Divisi\'on Sint\'etica}{93}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Teorema de los ceros racionales}{95}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Algoritmo de factorización}{97}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Diferencias de potencias}{97}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Divisores de un polinomio}{98}{subsection.7.3.2}%
-\contentsline {subsection}{\numberline {7.3.3}Raíces irracionales}{99}{subsection.7.3.3}%
-\contentsline {section}{\numberline {7.4}Criterios para evaluar raíces}{100}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Regla de los signos de Descartes}{100}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Teorema de las Cotas}{101}{subsection.7.4.2}%
-\contentsline {section}{\numberline {7.5}Ecuaciones de segundo grado}{101}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Complemento de cuadrados}{101}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Intersecciones con los ejes}{102}{subsection.7.5.2}%
-\contentsline {subsection}{\numberline {7.5.3}Diferencia de cuadrados}{103}{subsection.7.5.3}%
-\contentsline {subsection}{\numberline {7.5.4}Ejemplos}{103}{subsection.7.5.4}%
-\contentsline {subsection}{\numberline {7.5.5}Factorizaci\'on}{104}{subsection.7.5.5}%
-\contentsline {subsection}{\numberline {7.5.6}Aplicaciones}{105}{subsection.7.5.6}%
-\contentsline {chapter}{\numberline {8}Trigonometría}{107}{chapter.8}%
-\contentsline {section}{\numberline {8.1}La geometría de los triángulos: congruencia, similitud y el teorema de Pitágoras}{107}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Triángulos congruentes}{107}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Triángulos semejantes}{108}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}El teorema de Pitágoras}{109}{subsection.8.1.3}%
-\contentsline {section}{\numberline {8.2}Los ángulos y sus medidas}{110}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Terminología básica}{110}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Radianes}{112}{subsection.8.2.2}%
-\contentsline {subsection}{\numberline {8.2.3}Conversión entre grados y radianes}{113}{subsection.8.2.3}%
-\contentsline {subsection}{\numberline {8.2.4}Área de un sector de un círculo}{114}{subsection.8.2.4}%
-\contentsline {subsection}{\numberline {8.2.5}Movimiento circular}{115}{subsection.8.2.5}%
-\contentsline {section}{\numberline {8.3}Funciones trigonométricas: El enfoque del círculo unitario}{116}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}El círculo unitario}{116}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Funciones trigonométricas de ángulos}{117}{subsection.8.3.2}%
-\contentsline {section}{\numberline {8.4}Funciones trigonométricas inversas}{119}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Funciones inversas}{119}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Tangente inversa}{120}{subsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.4.3}Vectores}{121}{subsection.8.4.3}%
-\contentsline {subsection}{\numberline {8.4.4}Optimización}{122}{subsection.8.4.4}%
-\contentsline {section}{\numberline {8.5}Propiedades de funciones trigonométricas}{123}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Suma y diferencias de ángulos}{127}{section.8.6}%
-\contentsline {chapter}{\numberline {9}Números complejos}{129}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Introducción a los números complejos}{129}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Estructura algebraica de $\PazoBB {C}$}{131}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Forma polar de los números complejos}{133}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Bibliograf\'{\i }a}{135}{chapter.10}%
+\contentsline {chapter}{\numberline {4}Sistemas numéricos}{63}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Los números racionales}{63}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Simplificaci\'on}{63}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Conversi\'on y comparaci\'on}{64}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Operaciones}{65}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Razones y proporciones}{67}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Razones inversas}{68}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Ejemplos}{68}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Números Reales}{69}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Conjuntos numéricos}{69}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Orden}{70}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Reglas de álgebra}{70}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Ejemplos}{71}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Funciones reales}{72}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Definición}{72}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Polinomios}{73}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Exponenciales y logaritmos}{73}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Funciones trigonométricas}{74}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Identidades pitagóricas}{74}{subsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.4.6}Funciones hiperbólicas}{75}{subsection.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.7}Ejemplos}{76}{subsection.4.4.7}%
+\contentsline {chapter}{\numberline {5}Sistemas lineales}{79}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Sistemas de Ecuaciones Lineales Simultáneas}{79}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Sistemas de Dos Ecuaciones Lineales}{79}{subsection.5.1.1}%
+\contentsline {paragraph}{M\'etodo de sustituci\'on}{79}{paragraph*.7}%
+\contentsline {paragraph}{M\'etodo de igualaci\'on}{79}{paragraph*.8}%
+\contentsline {section}{\numberline {5.2}Determinantes}{80}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Tipos de sistemas}{80}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Determinantes de Segundo Orden}{80}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Método de Cramer}{81}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Sistemas Indeterminados}{81}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Fracciones parciales}{82}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Caso I. $D(x)$ es producto de factores lineales distintos}{83}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Caso 2. $D(x)$ es producto de factores lineales repetidos.}{83}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Caso 3. Factores cuadráticos irreducibles distintos, y lineales repetidos}{83}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Álgebra}{87}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Reducci\'on de t\'erminos semejantes}{87}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Supresi\'on de signos de agrupaci\'on}{88}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Mutiplicaci\'on de polinomios}{89}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Productos notables}{91}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Sumas y diferencias de potencias}{92}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Factorización}{95}{chapter.7}%
+\contentsline {section}{\numberline {7.1}M\'etodo de Horner y Divisi\'on Sint\'etica}{95}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Teorema de los ceros racionales}{97}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Algoritmo de factorización}{99}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Diferencias de potencias}{99}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Divisores de un polinomio}{100}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Raíces irracionales}{101}{subsection.7.3.3}%
+\contentsline {section}{\numberline {7.4}Criterios para evaluar raíces}{102}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Regla de los signos de Descartes}{102}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Teorema de las Cotas}{103}{subsection.7.4.2}%
+\contentsline {section}{\numberline {7.5}Ecuaciones de segundo grado}{103}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Complemento de cuadrados}{103}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Intersecciones con los ejes}{104}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Diferencia de cuadrados}{105}{subsection.7.5.3}%
+\contentsline {subsection}{\numberline {7.5.4}Ejemplos}{105}{subsection.7.5.4}%
+\contentsline {subsection}{\numberline {7.5.5}Factorizaci\'on}{106}{subsection.7.5.5}%
+\contentsline {subsection}{\numberline {7.5.6}Aplicaciones}{107}{subsection.7.5.6}%
+\contentsline {chapter}{\numberline {8}Trigonometría}{109}{chapter.8}%
+\contentsline {section}{\numberline {8.1}La geometría de los triángulos: congruencia, similitud y el teorema de Pitágoras}{109}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Triángulos congruentes}{109}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Triángulos semejantes}{110}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}El teorema de Pitágoras}{111}{subsection.8.1.3}%
+\contentsline {section}{\numberline {8.2}Los ángulos y sus medidas}{112}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Terminología básica}{112}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Radianes}{114}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Conversión entre grados y radianes}{115}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Área de un sector de un círculo}{116}{subsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.2.5}Movimiento circular}{117}{subsection.8.2.5}%
+\contentsline {section}{\numberline {8.3}Funciones trigonométricas: El enfoque del círculo unitario}{118}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}El círculo unitario}{118}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Funciones trigonométricas de ángulos}{119}{subsection.8.3.2}%
+\contentsline {section}{\numberline {8.4}Funciones trigonométricas inversas}{121}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Funciones inversas}{121}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Tangente inversa}{122}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Vectores}{123}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.4}Optimización}{124}{subsection.8.4.4}%
+\contentsline {section}{\numberline {8.5}Propiedades de funciones trigonométricas}{125}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Suma y diferencias de ángulos}{129}{section.8.6}%
+\contentsline {chapter}{\numberline {9}Números complejos}{131}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Introducción a los números complejos}{131}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Estructura algebraica de $\PazoBB {C}$}{133}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Forma polar de los números complejos}{135}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Bibliograf\'{\i }a}{137}{chapter.10}%
 \contentsfinish 
